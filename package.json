@@ -4,6 +4,7 @@
   "description": "Projekt von Studentinnen der HTW Berlin, Wintersemester 2016/17.",
   "main": "index.js",
   "scripts": {
+    "prestart": "node ./node_modules/webpack/bin/webpack.js --progress --colors",
     "start": "hoodie",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
