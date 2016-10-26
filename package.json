@@ -1,0 +1,23 @@
+{
+  "name": "dein-semesterplaner",
+  "version": "1.0.0",
+  "description": "Projekt von Studentinnen der HTW Berlin, Wintersemester 2016/17.",
+  "main": "index.js",
+  "scripts": {
+    "start": "hoodie",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauralindal/dein-semesterplaner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauralindal/dein-semesterplaner/issues"
+  },
+  "homepage": "https://github.com/lauralindal/dein-semesterplaner#readme",
+  "dependencies": {
+    "hoodie": "^24.3.0"
+  }
+}
