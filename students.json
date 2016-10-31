@@ -6,44 +6,58 @@
       "matriculation_date": "1.10.2013",
       "password": "password",
       "degree_program": {
-        "name": "fiw",
+        "title": "fiw",
         "max_CP": "180",
         "modules": {
-          "module1": {
-            "name": "Datenschutz",
-            "description": "ein sehr spannender Kurs",
+          "module1_2": {
+            "title": "Grundlegende Konzepte der Informatik",
+            "description": "Hackhack",
+            "cp": "5",
+            "status": "urgent",
+            "prerequisite": "false"
+          },
+          "module1_3": {
+            "title": "Mathematik",
+            "description": "Yay",
             "cp": "5",
             "status": "todo",
             "prerequisite": "false"
           },
-          "module2": {
-            "name": "Webtech",
-            "description": "hier lernt ihr Websites zu programmieren",
-            "cp": "6",
+          "module2_1": {
+            "title": "Programmierung 2",
+            "description": "Mehr als Kara",
+            "cp": "5",
             "status": "todo",
-            "prerequisite": "false",
+            "prerequisite": "false"
           },
-          "module3": {
-            "name": "Rechnungswesen",
+          "module2_5": {
+            "title": "Rechnungswesen",
             "description": "Soll an Haben",
             "cp": "5",
-            "status": "urgent",
-            "prerequisite": "false",
-          },
-          "module3": {
-            "name": "Programmieren 2",
-            "description": "Mehr als Kara",
-            "cp": "6",
             "status": "started",
-            "prerequisite": "true",
+            "prerequisite": "false"
           },
-          "module4": {
-            "name": "Programmieren 1",
-            "description": "Kara",
-            "cp": "6",
-            "status": "done",
-            "prerequisite": "false",
-          }
+          "module3_2": {
+            "title": "Datenbanksysteme",
+            "description": "SQL",
+            "cp": "5",
+            "status": "todo",
+            "prerequisite": "false"
+          },
+          "module6_3": {
+            "title": "Bachelorarbeit",
+            "description": "Der Ernst vorm Ende",
+            "cp": "12",
+            "status": "todo",
+            "prerequisite": "true"
+          },
+          "module6_4": {
+            "title": "Bachelorkolloquium",
+            "description": "Arbeit besprechen",
+            "cp": "3",
+            "status": "todo",
+            "prerequisite": "false"
+          },
         }
       }
     },
@@ -53,52 +67,66 @@
       "matriculation_date": "1.10.2013",
       "password": "password",
       "degree_program": {
-        "name": "fiw",
+        "title": "fiw",
         "max_CP": "180",
         "modules": {
-          "module1": {
-            "name": "Datenschutz",
-            "description": "ein sehr spannender Kurs",
-            "cp": "5",
-            "status": "todo",
-            "prerequisite": "false"
-          },
-          "module2": {
-            "name": "Rechnernetze",
-            "description": "Terminal, Terminal, Terminal",
-            "cp": "6",
-            "status": "done",
-            "prerequisite": "false",
-          },
-          "module3": {
-            "name": "Rechnungswesen",
-            "description": "Soll an Haben",
-            "cp": "5",
-            "status": "urgent",
-            "prerequisite": "false",
-          },
-          "module3": {
-            "name": "Programmieren 2",
-            "description": "Mehr als Kara",
-            "cp": "6",
-            "status": "urgent",
-            "prerequisite": "true",
-          },
-          "module4": {
-            "name": "Programmieren 1",
-            "description": "Kara",
-            "cp": "6",
-            "status": "done",
-            "prerequisite": "false",
-          },
-          "module5": {
-            "name": "Wissenschaftliches Arbeiten",
-            "description": "sehr interessant!",
-            "cp": "2",
-            "status": "done",
-            "prerequisite": "false",
-          }
-        }
+        },
+        "module3_5": {
+          "title": "Projekte in der Wirtschaft",
+          "description": "Ernst des Lebens",
+          "cp": "10",
+          "status": "todo",
+          "prerequisite": "false"
+        },
+        "module4_1": {
+          "title": "Praxisphase",
+          "description": "Praktikum und Karrieremanagement",
+          "cp": "25",
+          "status": "todo",
+          "prerequisite": "true"
+        },
+        "module5_3": {
+          "title": "Besondere Kapitel der Wirtschaftsinformatik",
+          "description": "Bitte wählen",
+          "cp": "5",
+          "status": "started",
+          "prerequisite": "false"
+        },
+        "module1_5": {
+          "title": "Grundlagen der BWL",
+          "description": "Wirtschaftskram",
+          "cp": "5",
+          "status": "started",
+          "prerequisite": "false"
+        },
+        "module1_6": {
+          "title": "Fremdsprache 1",
+          "description": "zB Englisch",
+          "cp": "4",
+          "status": "started",
+          "prerequisite": "false"
+        },
+        "module6_3": {
+          "title": "Bachelorarbeit",
+          "description": "Der Ernst vorm Ende",
+          "cp": "12",
+          "status": "todo",
+          "prerequisite": "false"
+        },
+        "module6_4": {
+          "title": "Bachelorkolloquium",
+          "description": "Arbeit besprechen",
+          "cp": "3",
+          "status": "todo",
+          "prerequisite": "false"
+        },
+        "module1_3": {
+          "title": "Mathematik",
+          "description": "Yay",
+          "cp": "5",
+          "status": "urgent",
+          "prerequisite": "false"
+        },
       }
     },
     "student2":{
@@ -107,44 +135,65 @@
       "matriculation_date": "1.10.2013",
       "password": "password",
       "degree_program": {
-        "name": "fiw",
+        "title": "fiw",
         "max_CP": "180",
         "modules": {
-          "module1": {
-            "name": "Rechnerarchitektur und Betriebssysteme",
-            "description": "Computer aufschrauben",
+          "module1_2": {
+            "title": "Grundlegende Konzepte der Informatik",
+            "description": "Hackhack",
             "cp": "5",
             "status": "todo",
             "prerequisite": "false"
           },
-          "module2": {
-            "name": "Webtech",
-            "description": "hier lernt ihr Wesites zu programmieren",
-            "cp": "6",
+          "module1_3": {
+            "title": "Mathematik",
+            "description": "Yay",
+            "cp": "5",
+            "status": "todo",
+            "prerequisite": "false"
+          },
+          "module1_4": {
+            "title": "Rechnerarchitektur / Betriebssysteme",
+            "description": "Computer aufschrauben",
+            "cp": "5",
             "status": "urgent",
-            "prerequisite": "false",
+            "prerequisite": "false"
           },
-          "module3": {
-            "name": "Modellierung",
-            "description": "Modelle bauen",
+          "module2_2": {
+            "title": "Softwaretechnik",
+            "description": "Diagramme",
+            "cp": "5",
+            "status": "urgent",
+            "prerequisite": "false"
+          },
+          "module2_3": {
+            "title": "Betriebliche Anwendungen",
+            "description": "SAP",
             "cp": "5",
             "status": "started",
-            "prerequisite": "false",
+            "prerequisite": "false"
           },
-          "module3": {
-            "name": "Programmieren 2",
-            "description": "Mehr als Kara",
+          "module6_2": {
+            "title": "Usability",
+            "description": "Programmieren mit Sinn",
             "cp": "6",
-            "status": "started",
-            "prerequisite": "true",
+            "status": "todo",
+            "prerequisite": "false"
           },
-          "module4": {
-            "name": "BWL1",
-            "description": "Alles über Wirtschaft",
-            "cp": "5",
-            "status": "done",
-            "prerequisite": "false",
-          }
+          "module6_3": {
+            "title": "Bachelorarbeit",
+            "description": "Der Ernst vorm Ende",
+            "cp": "12",
+            "status": "todo",
+            "prerequisite": "false"
+          },
+          "module6_4": {
+            "title": "Bachelorkolloquium",
+            "description": "Arbeit besprechen",
+            "cp": "3",
+            "status": "todo",
+            "prerequisite": "false"
+          },
         }
       }
     }
