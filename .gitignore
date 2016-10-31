@@ -1,3 +1,4 @@
 node_modules
 .hoodie
 npm-debug.log
+public/main.js

@@ -9,6 +9,6 @@ You can find a Mockup at http://12q5wx.axshare.com/main_page_simple.html
 1. Clone the repository
 > git clone git@github.com:lauralindal/dein-semesterplaner.git
 2. Install all the necessary modules and such
-> npm install
+`npm install`
 3. Start the App
-> npm start
+`npm start`
