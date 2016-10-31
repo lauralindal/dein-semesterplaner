@@ -1,0 +1,211 @@
+{
+  "degree_program": {
+    "name": "fiw",
+    "max_cp": "180",
+    "modules": {
+      "module1_1": {
+        "title": "Programmierung 1",
+        "description": "Kara",
+        "cp": "6",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module1_2": {
+        "title": "Grundlegende Konzepte der Informatik",
+        "description": "Hackhack",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module1_3": {
+        "title": "Mathematik",
+        "description": "Yay",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module1_4": {
+        "title": "Rechnerarchitektur / Betriebssysteme",
+        "description": "Computer aufschrauben",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module1_5": {
+        "title": "Grundlagen der BWL",
+        "description": "Wirtschaftskram",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module1_6": {
+        "title": "Fremdsprache 1",
+        "description": "zB Englisch",
+        "cp": "4",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module2_1": {
+        "title": "Programmierung 2",
+        "description": "Mehr als Kara",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module2_2": {
+        "title": "Softwaretechnik",
+        "description": "Diagramme",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module2_3": {
+        "title": "Betriebliche Anwendungen",
+        "description": "SAP",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module2_4": {
+        "title": "Rechnernetze",
+        "description": "Terminal",
+        "cp": "6",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module2_5": {
+        "title": "Rechnungswesen",
+        "description": "Soll an Haben",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module2_6": {
+        "title": "Fremdsprache 2",
+        "description": "zB Englisch",
+        "cp": "4",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module3_1": {
+        "title": "Webtechnologien",
+        "description": "HTML CSS Ruby/PHP",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module3_2": {
+        "title": "Datenbanksysteme",
+        "description": "SQL",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module3_3": {
+        "title": "Teamarbeit",
+        "description": "Projektmanagement und Konfliktmanagement",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module3_4": {
+        "title": "Datenschutz und Datensicherheit",
+        "description": "Webserver absichern",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module3_5": {
+        "title": "Projekte in der Wirtschaft",
+        "description": "Ernst des Lebens",
+        "cp": "10",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module4_1": {
+        "title": "Praxisphase",
+        "description": "Praktikum und Karrieremanagement",
+        "cp": "25",
+        "status": "done",
+        "prerequite": "true"
+      },
+      "module4_2": {
+        "title": "Besondere Kapiter der Informatik",
+        "description": "Hier bitte Kurs wählen",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module5_1": {
+        "title": "Modellierung von Informationssystemen",
+        "description": "UMLle",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module5_2": {
+        "title": "Praxis in Forschung und Entwicklung",
+        "description": "Projekt und Wissenschaftliches Arbeiten",
+        "cp": "10",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module5_3": {
+        "title": "Besondere Kapitel der Wirtschaftsinformatik",
+        "description": "Bitte wählen",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module5_4": {
+        "title": "Verteilte Systeme",
+        "description": "Wie funktioneren Netze",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module5_5": {
+        "title": "Betriebswirtschaftliches Denken und Handeln",
+        "description": "Ih-Commerce",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module5_6": {
+        "title": "AWE 1 & 2",
+        "description": "Hier auch wählen",
+        "cp": "4",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module6_1": {
+        "title": "Aktuelle Trends Informations- / Kommunikationstechnik",
+        "description": "Ähhhh",
+        "cp": "5",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module6_2": {
+        "title": "Usability",
+        "description": "Programmieren mit Sinn",
+        "cp": "6",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module6_3": {
+        "title": "Bachelorarbeit",
+        "description": "Der Ernst vorm Ende",
+        "cp": "12",
+        "status": "done",
+        "prerequite": "false"
+      },
+      "module6_4": {
+        "title": "Bachelorkolloquium",
+        "description": "Arbeit besprechen",
+        "cp": "3",
+        "status": "done",
+        "prerequite": "false"
+      },
+    }
+  }
+}
