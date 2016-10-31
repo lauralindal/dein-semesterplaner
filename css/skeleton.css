@@ -381,6 +381,34 @@ hr {
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
 
+section#symbology{
+  border: 1px solid grey;
+  padding: 10px;
+}
+section#courseplan{
+  border: 1px solid grey;
+  padding: 10px;
+}
+section#planningSection{
+  border: 1px solid grey;
+  padding: 10px;
+}
+section#sum_total{
+  border: 1px solid grey;
+  padding: 10px;
+}
+section#sum_current{
+  border: 1px solid grey;
+  padding: 10px;
+}
+section#coursePool{
+  border: 1px solid grey;
+  padding: 10px;
+}
+section#schedule{
+  border: 1px solid grey;
+  padding: 10px;
+}
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
