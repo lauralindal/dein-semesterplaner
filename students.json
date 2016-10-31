@@ -1,0 +1,152 @@
+{
+  "students":{
+    "student1":{
+      "name": "Sarah",
+      "matriculation_number": "544827",
+      "matriculation_date": "1.10.2013",
+      "password": "password",
+      "degree_program": {
+        "name": "fiw",
+        "max_CP": "180",
+        "modules": {
+          "module1": {
+            "name": "Datenschutz",
+            "description": "ein sehr spannender Kurs",
+            "cp": "5",
+            "status": "todo",
+            "prerequisite": "false"
+          },
+          "module2": {
+            "name": "Webtech",
+            "description": "hier lernt ihr Websites zu programmieren",
+            "cp": "6",
+            "status": "todo",
+            "prerequisite": "false",
+          },
+          "module3": {
+            "name": "Rechnungswesen",
+            "description": "Soll an Haben",
+            "cp": "5",
+            "status": "urgent",
+            "prerequisite": "false",
+          },
+          "module3": {
+            "name": "Programmieren 2",
+            "description": "Mehr als Kara",
+            "cp": "6",
+            "status": "started",
+            "prerequisite": "true",
+          },
+          "module4": {
+            "name": "Programmieren 1",
+            "description": "Kara",
+            "cp": "6",
+            "status": "done",
+            "prerequisite": "false",
+          }
+        }
+      }
+    },
+    "student2":{
+      "name": "Laura",
+      "matriculation_number": "544049",
+      "matriculation_date": "1.10.2013",
+      "password": "password",
+      "degree_program": {
+        "name": "fiw",
+        "max_CP": "180",
+        "modules": {
+          "module1": {
+            "name": "Datenschutz",
+            "description": "ein sehr spannender Kurs",
+            "cp": "5",
+            "status": "todo",
+            "prerequisite": "false"
+          },
+          "module2": {
+            "name": "Rechnernetze",
+            "description": "Terminal, Terminal, Terminal",
+            "cp": "6",
+            "status": "done",
+            "prerequisite": "false",
+          },
+          "module3": {
+            "name": "Rechnungswesen",
+            "description": "Soll an Haben",
+            "cp": "5",
+            "status": "urgent",
+            "prerequisite": "false",
+          },
+          "module3": {
+            "name": "Programmieren 2",
+            "description": "Mehr als Kara",
+            "cp": "6",
+            "status": "urgent",
+            "prerequisite": "true",
+          },
+          "module4": {
+            "name": "Programmieren 1",
+            "description": "Kara",
+            "cp": "6",
+            "status": "done",
+            "prerequisite": "false",
+          },
+          "module5": {
+            "name": "Wissenschaftliches Arbeiten",
+            "description": "sehr interessant!",
+            "cp": "2",
+            "status": "done",
+            "prerequisite": "false",
+          }
+        }
+      }
+    },
+    "student2":{
+      "name": "Tanja",
+      "matriculation_number": "544000",
+      "matriculation_date": "1.10.2013",
+      "password": "password",
+      "degree_program": {
+        "name": "fiw",
+        "max_CP": "180",
+        "modules": {
+          "module1": {
+            "name": "Rechnerarchitektur und Betriebssysteme",
+            "description": "Computer aufschrauben",
+            "cp": "5",
+            "status": "todo",
+            "prerequisite": "false"
+          },
+          "module2": {
+            "name": "Webtech",
+            "description": "hier lernt ihr Wesites zu programmieren",
+            "cp": "6",
+            "status": "urgent",
+            "prerequisite": "false",
+          },
+          "module3": {
+            "name": "Modellierung",
+            "description": "Modelle bauen",
+            "cp": "5",
+            "status": "started",
+            "prerequisite": "false",
+          },
+          "module3": {
+            "name": "Programmieren 2",
+            "description": "Mehr als Kara",
+            "cp": "6",
+            "status": "started",
+            "prerequisite": "true",
+          },
+          "module4": {
+            "name": "BWL1",
+            "description": "Alles über Wirtschaft",
+            "cp": "5",
+            "status": "done",
+            "prerequisite": "false",
+          }
+        }
+      }
+    }
+  }
+}
