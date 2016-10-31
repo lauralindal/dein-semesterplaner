@@ -10,53 +10,25 @@
         "max_CP": "180",
         "modules": {
           "module1_2": {
-            "title": "Grundlegende Konzepte der Informatik",
-            "description": "Hackhack",
-            "cp": "5",
             "status": "urgent",
-            "prerequisite": "false"
           },
           "module1_3": {
-            "title": "Mathematik",
-            "description": "Yay",
-            "cp": "5",
             "status": "todo",
-            "prerequisite": "false"
           },
           "module2_1": {
-            "title": "Programmierung 2",
-            "description": "Mehr als Kara",
-            "cp": "5",
             "status": "todo",
-            "prerequisite": "false"
           },
           "module2_5": {
-            "title": "Rechnungswesen",
-            "description": "Soll an Haben",
-            "cp": "5",
             "status": "started",
-            "prerequisite": "false"
           },
           "module3_2": {
-            "title": "Datenbanksysteme",
-            "description": "SQL",
-            "cp": "5",
             "status": "todo",
-            "prerequisite": "false"
           },
           "module6_3": {
-            "title": "Bachelorarbeit",
-            "description": "Der Ernst vorm Ende",
-            "cp": "12",
             "status": "todo",
-            "prerequisite": "true"
           },
           "module6_4": {
-            "title": "Bachelorkolloquium",
-            "description": "Arbeit besprechen",
-            "cp": "3",
             "status": "todo",
-            "prerequisite": "false"
           },
         }
       }
@@ -72,60 +44,28 @@
         "modules": {
         },
         "module3_5": {
-          "title": "Projekte in der Wirtschaft",
-          "description": "Ernst des Lebens",
-          "cp": "10",
           "status": "todo",
-          "prerequisite": "false"
         },
         "module4_1": {
-          "title": "Praxisphase",
-          "description": "Praktikum und Karrieremanagement",
-          "cp": "25",
           "status": "todo",
-          "prerequisite": "true"
         },
         "module5_3": {
-          "title": "Besondere Kapitel der Wirtschaftsinformatik",
-          "description": "Bitte wählen",
-          "cp": "5",
           "status": "started",
-          "prerequisite": "false"
         },
         "module1_5": {
-          "title": "Grundlagen der BWL",
-          "description": "Wirtschaftskram",
-          "cp": "5",
           "status": "started",
-          "prerequisite": "false"
         },
         "module1_6": {
-          "title": "Fremdsprache 1",
-          "description": "zB Englisch",
-          "cp": "4",
           "status": "started",
-          "prerequisite": "false"
         },
         "module6_3": {
-          "title": "Bachelorarbeit",
-          "description": "Der Ernst vorm Ende",
-          "cp": "12",
           "status": "todo",
-          "prerequisite": "false"
         },
         "module6_4": {
-          "title": "Bachelorkolloquium",
-          "description": "Arbeit besprechen",
-          "cp": "3",
           "status": "todo",
-          "prerequisite": "false"
         },
         "module1_3": {
-          "title": "Mathematik",
-          "description": "Yay",
-          "cp": "5",
           "status": "urgent",
-          "prerequisite": "false"
         },
       }
     },
@@ -139,60 +79,28 @@
         "max_CP": "180",
         "modules": {
           "module1_2": {
-            "title": "Grundlegende Konzepte der Informatik",
-            "description": "Hackhack",
-            "cp": "5",
             "status": "todo",
-            "prerequisite": "false"
           },
           "module1_3": {
-            "title": "Mathematik",
-            "description": "Yay",
-            "cp": "5",
             "status": "todo",
-            "prerequisite": "false"
           },
           "module1_4": {
-            "title": "Rechnerarchitektur / Betriebssysteme",
-            "description": "Computer aufschrauben",
-            "cp": "5",
             "status": "urgent",
-            "prerequisite": "false"
           },
           "module2_2": {
-            "title": "Softwaretechnik",
-            "description": "Diagramme",
-            "cp": "5",
             "status": "urgent",
-            "prerequisite": "false"
           },
           "module2_3": {
-            "title": "Betriebliche Anwendungen",
-            "description": "SAP",
-            "cp": "5",
             "status": "started",
-            "prerequisite": "false"
           },
           "module6_2": {
-            "title": "Usability",
-            "description": "Programmieren mit Sinn",
-            "cp": "6",
             "status": "todo",
-            "prerequisite": "false"
           },
           "module6_3": {
-            "title": "Bachelorarbeit",
-            "description": "Der Ernst vorm Ende",
-            "cp": "12",
             "status": "todo",
-            "prerequisite": "false"
           },
           "module6_4": {
-            "title": "Bachelorkolloquium",
-            "description": "Arbeit besprechen",
-            "cp": "3",
             "status": "todo",
-            "prerequisite": "false"
           },
         }
       }
