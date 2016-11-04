@@ -129,20 +129,10 @@ body {
 .wrapper{
   margin: 30px 30px;
 }
-
-aside.sum{
-  float: left;
-}
-
-section#planningSection{
-  border: 3px solid blue;
-}
-.clearfix{
-  clear: both;
-}
 footer{
   text-align: center;
   padding: 20px;
+  border: 1px solid grey;
 }
 
 /* Typography
@@ -404,6 +394,7 @@ section#symbology{
   margin-bottom: 5px;
 }
 section#courseplan{
+  text-align: right;
   border: 1px solid grey;
   padding: 10px;
   margin-bottom: 5px;
@@ -413,23 +404,27 @@ section#planningSection{
   padding: 10px;
   margin-bottom: 5px;
 }
-section#sum_total{
+div#sum_total{
   border: 1px solid grey;
   padding: 10px;
+  margin-bottom: 5px;
 }
-section#sum_current{
+div#sum_current{
   border: 1px solid grey;
   padding: 10px;
+  margin-bottom: 5px;
 }
-section#coursePool{
+div#coursePool{
   border: 1px solid grey;
   padding: 10px;
+  text-align: center;
+  vertical-align: center;
 }
 section#schedule{
   border: 1px solid grey;
   padding: 10px;
+  margin-bottom: 5px;
 }
-
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
