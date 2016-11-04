@@ -130,6 +130,21 @@ body {
   margin: 30px 30px;
 }
 
+aside.sum{
+  float: left;
+}
+
+section#planningSection{
+  border: 3px solid blue;
+}
+.clearfix{
+  clear: both;
+}
+footer{
+  text-align: center;
+  padding: 20px;
+}
+
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
@@ -357,7 +372,9 @@ ul,
 ol,
 form {
   margin-bottom: 2.5rem; }
-
+div{
+  margin: 5px;
+}
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -384,14 +401,17 @@ hr {
 section#symbology{
   border: 1px solid grey;
   padding: 10px;
+  margin-bottom: 5px;
 }
 section#courseplan{
   border: 1px solid grey;
   padding: 10px;
+  margin-bottom: 5px;
 }
 section#planningSection{
   border: 1px solid grey;
   padding: 10px;
+  margin-bottom: 5px;
 }
 section#sum_total{
   border: 1px solid grey;
@@ -409,6 +429,7 @@ section#schedule{
   border: 1px solid grey;
   padding: 10px;
 }
+
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
