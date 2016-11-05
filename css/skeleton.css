@@ -131,7 +131,7 @@ body {
 }
 footer{
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid grey;
 }
 
@@ -430,6 +430,7 @@ div#coursePool{
 section#schedule{
   border: 1px solid grey;
   padding: 10px;
+  height: 500px;
   margin-bottom: 5px;
 }
 .float-left{
