@@ -1,268 +1,268 @@
 {
   "degree_course": {
     "title": "fiw",
-    "max_creditpoints": "180",
+    "max_creditpoints": 180,
     "modules": [
       {
-        "id": "1",
+        "id": 1,
         "title": "Programmierung 1",
         "description": "Kara",
-        "cp": "6",
+        "cp": 6,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "1"
+        "prerequisite": false,
+        "recommended_semester": 1
       },
       {
-        "id": "2",
+        "id": 2,
         "title": "Grundlegende Konzepte der Informatik",
         "description": "Hackhack",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "1"
+        "prerequisite": false,
+        "recommended_semester": 1
       },
       {
-        "id": "3",
+        "id": 3,
         "title": "Mathematik",
         "description": "Yay",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "1"
+        "prerequisite": false,
+        "recommended_semester": 1
       },
       {
-        "id": "4",
+        "id": 4,
         "title": "Rechnerarchitektur / Betriebssysteme",
         "description": "Computer aufschrauben",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "1"
+        "prerequisite": false,
+        "recommended_semester": 1
       },
       {
-        "id": "5",
+        "id": 5,
         "title": "Grundlagen der BWL",
         "description": "Wirtschaftskram",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "1"
+        "prerequisite": false,
+        "recommended_semester": 1
       },
       {
-        "id": "6",
+        "id": 6,
         "title": "Fremdsprache 1",
         "description": "zB Englisch",
-        "cp": "4",
+        "cp": 4,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "1"
+        "prerequisite": false,
+        "recommended_semester": 1
       },
       {
-        "id": "7",
+        "id": 7,
         "title": "Programmierung 2",
         "description": "Mehr als Kara",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "2"
+        "prerequisite": false,
+        "recommended_semester": 2
       },
       {
-        "id": "8",
+        "id": 8,
         "title": "Softwaretechnik",
         "description": "Diagramme",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "2"
+        "prerequisite": false,
+        "recommended_semester": 2
       },
       {
-        "id": "9",
+        "id": 9,
         "title": "Betriebliche Anwendungen",
         "description": "SAP",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "2"
+        "prerequisite": false,
+        "recommended_semester": 2
       },
       {
-        "id": "10",
+        "id": 10,
         "title": "Rechnernetze",
         "description": "Terminal",
-        "cp": "6",
+        "cp": 6,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "2"
+        "prerequisite": false,
+        "recommended_semester": 2
       },
       {
-        "id": "11",
+        "id": 11,
         "title": "Rechnungswesen",
         "description": "Soll an Haben",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "2"
+        "prerequisite": false,
+        "recommended_semester": 2
       },
       {
-        "id": "12",
+        "id": 12,
         "title": "Fremdsprache 2",
         "description": "zB Englisch",
-        "cp": "4",
+        "cp": 4,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "2"
+        "prerequisite": false,
+        "recommended_semester": 2
       },
       {
-        "id": "13",
+        "id": 13,
         "title": "Webtechnologien",
         "description": "HTML CSS Ruby/PHP",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "3"
+        "prerequisite": false,
+        "recommended_semester": 3
       },
       {
-        "id": "14",
+        "id": 14,
         "title": "Datenbanksysteme",
         "description": "SQL",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "3"
+        "prerequisite": false,
+        "recommended_semester": 3
       },
       {
-        "id": "15",
+        "id": 15,
         "title": "Teamarbeit",
         "description": "Projektmanagement und Konfliktmanagement",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "3"
+        "prerequisite": false,
+        "recommended_semester": 3
       },
       {
-        "id": "16",
+        "id": 16,
         "title": "Datenschutz und Datensicherheit",
         "description": "Webserver absichern",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "3"
+        "prerequisite": false,
+        "recommended_semester": 3
       },
       {
-        "id": "17",
+        "id": 17,
         "title": "Projekte in der Wirtschaft",
         "description": "Ernst des Lebens",
-        "cp": "10",
+        "cp": 10,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "3"
+        "prerequisite": false,
+        "recommended_semester": 3
       },
       {
-        "id": "18",
+        "id": 18,
         "title": "Praxisphase",
         "description": "Praktikum und Karrieremanagement",
-        "cp": "25",
+        "cp": 25,
         "status": "done",
-        "prerequisite": "true",
-        "recommended_semester": "4"
+        "prerequisite": true,
+        "recommended_semester": 4
       },
       {
-        "id": "19",
+        "id": 19,
         "title": "Besondere Kapiter der Informatik",
         "description": "Hier bitte Kurs wählen",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "4"
+        "prerequisite": false,
+        "recommended_semester": 4
       },
       {
-        "id": "20",
+        "id": 20,
         "title": "Modellierung von Informationssystemen",
         "description": "UMLle",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "5"
+        "prerequisite": false,
+        "recommended_semester": 5
       },
       {
-        "id": "21",
+        "id": 21,
         "title": "Praxis in Forschung und Entwicklung",
         "description": "Projekt und Wissenschaftliches Arbeiten",
-        "cp": "10",
+        "cp": 10,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "5"
+        "prerequisite": false,
+        "recommended_semester": 5
       },
       {
-        "id": "22",
+        "id": 22,
         "title": "Besondere Kapitel der Wirtschaftsinformatik",
         "description": "Bitte wählen",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "5"
+        "prerequisite": false,
+        "recommended_semester": 5
       },
       {
-        "id": "23",
+        "id": 23,
         "title": "Verteilte Systeme",
         "description": "Wie funktioneren Netze",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "5"
+        "prerequisite": false,
+        "recommended_semester": 5
       },
       {
-        "id": "24",
+        "id": 24,
         "title": "Betriebswirtschaftliches Denken und Handeln",
         "description": "Ih-Commerce",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "5"
+        "prerequisite": false,
+        "recommended_semester": 5
       },
       {
-        "id": "25",
+        "id": 25,
         "title": "AWE 1 & 2",
         "description": "Hier auch wählen",
-        "cp": "4",
+        "cp": 4,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "5"
+        "prerequisite": false,
+        "recommended_semester": 5
       },
       {
-        "id": "26",
+        "id": 26,
         "title": "Aktuelle Trends Informations- / Kommunikationstechnik",
         "description": "Ähhhh",
-        "cp": "5",
+        "cp": 5,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "6"
+        "prerequisite": false,
+        "recommended_semester": 6
       },
       {
-        "id": "27",
+        "id": 27,
         "title": "Usability",
         "description": "Programmieren mit Sinn",
-        "cp": "6",
+        "cp": 6,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "6"
+        "prerequisite": false,
+        "recommended_semester": 6
       },
       {
-        "id": "28",
+        "id": 28,
         "title": "Bachelorarbeit",
         "description": "Der Ernst vorm Ende",
-        "cp": "12",
+        "cp": 12,
         "status": "done",
-        "prerequisite": "true",
-        "recommended_semester": "6"
+        "prerequisite": true,
+        "recommended_semester": 6
       },
       {
-        "id": "29",
+        "id": 29,
         "title": "Bachelorkolloquium",
         "description": "Arbeit besprechen",
-        "cp": "3",
+        "cp": 3,
         "status": "done",
-        "prerequisite": "false",
-        "recommended_semester": "6"
+        "prerequisite": false,
+        "recommended_semester": 6
       }
       ]
     }
