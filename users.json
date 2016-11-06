@@ -1,0 +1,119 @@
+{
+  "students":[
+    {
+      "id":"1",
+      "name": "Sarah",
+      "matriculation_number": "544827",
+      "matriculation_date": "1.10.2013",
+      "password": "password",
+      "tracked_modules": [
+        {
+          "module_id": "1",
+          "status": "urgent",
+        },
+        {
+          "module_id": "3",
+          "status": "todo",
+        },
+        {
+          "module_id": "7",
+          "status": "todo",
+        },
+        {
+          "module_id": "11",
+          "status": "started",
+        },
+        {
+          "module_id": "14",
+          "status": "todo",
+        },
+        {
+          "module_id": "28",
+          "status": "todo",
+        },
+        {
+          "module_id": "29",
+          "status": "todo",
+        }
+      ]
+    }
+    {
+      "id":"2",
+      "name": "Laura",
+      "matriculation_number": "544049",
+      "matriculation_date": "1.10.2013",
+      "password": "password",
+      "tracked_modules": [
+        {
+          "module_id": "6",
+          "status": "urgent",
+        },
+        {
+          "module_id": "9",
+          "status": "todo",
+        },
+        {
+          "module_id": "10",
+          "status": "todo",
+        },
+        {
+          "module_id": "11",
+          "status": "started",
+        },
+        {
+          "module_id": "22",
+          "status": "todo",
+        },
+        {
+          "module_id": "28",
+          "status": "todo",
+        },
+        {
+          "module_id": "29",
+          "status": "todo",
+        }
+      ]
+    }
+    {
+      "id":"3",
+      "name": "Tanja",
+      "matriculation_number": "544000",
+      "matriculation_date": "1.10.2013",
+      "password": "password",
+      "tracked_modules": [
+        {
+          "module_id": "2",
+          "status": "todo",
+        },
+        {
+          "module_id": "3",
+          "status": "todo",
+        },
+        {
+          "module_id": "4",
+          "status": "urgent",
+        },
+        {
+          "module_id": "8",
+          "status": "urgent",
+        },
+        {
+          "module_id": "9",
+          "status": "started",
+        },
+        {
+          "module_id": "27",
+          "status": "todo",
+        },
+        {
+          "module_id": "28",
+          "status": "todo",
+        },
+        {
+          "module_id": "29",
+          "status": "todo",
+        }
+      ]
+    }
+  ]
+}
