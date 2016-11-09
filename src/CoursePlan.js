@@ -1,21 +1,22 @@
 import React from 'react';
 import Semester from './Semester';
+import $ from 'jquery';
 
 class CoursePlan extends React.Component {
   constructor() {
     super();
     this.state = {
-      semester: []
+      semester: {}
     };
   }
 
-  // componentWillMount() {
-  //   this.ajaxCall();
-  // }
+  componentWillMount() {
+    this.ajaxCall();
+  }
 
   ajaxCall() {
     $.ajax({
-      url: `courseplan.json`, //what is the correct url?
+      url: '/courseplan.json',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
@@ -34,7 +35,10 @@ class CoursePlan extends React.Component {
     return (
       <div>
         Regelstudienplan
-        <Semester />
+        {this.state.semester.degree_course ?
+          <Semester semester={this.state.semester.degree_course.modules}/> : 'loading'
+        }
+
         <div id="sem_02">
           <legend>2. Semester</legend>
           <p id="sem02_mod01" className="button">Programmierung 2</p>
