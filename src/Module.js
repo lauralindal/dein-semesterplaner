@@ -12,7 +12,8 @@ class Module extends React.Component {
   render() {
     return (
       <div>
-        <p id="sem01_mod01" className="button" onMouseOver={this.props.changeStatus}>Programmierung 1</p>
+        {console.log(this.props.module)}
+        <p id="sem01_mod01" className="button">{this.props.module.title}</p>
       </div>
     )
   }
