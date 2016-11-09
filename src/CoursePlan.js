@@ -2,6 +2,34 @@ import React from 'react';
 import Semester from './Semester';
 
 class CoursePlan extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      semester: []
+    };
+  }
+
+  // componentWillMount() {
+  //   this.ajaxCall();
+  // }
+
+  ajaxCall() {
+    $.ajax({
+      url: `courseplan.json`, //what is the correct url?
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      method: 'GET',
+      dataType: 'json',
+      success: function (data) {
+        if (data !== undefined && data !== null) {
+          this.setState({ semester: data });
+        }
+      }.bind(this)
+    });
+  }
+
   render() {
     return (
       <div>

@@ -2,6 +2,7 @@ import React from 'react';
 import Module from './Module';
 
 class Semester extends React.Component {
+
   render() {
     return (
       <div id="sem_01">
