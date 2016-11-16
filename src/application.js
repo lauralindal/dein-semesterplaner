@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ModulePlan from './ModulePlan';
+import Home from './Home';
 
-ReactDOM.render(<ModulePlan />, document.getElementById('ModulePlan'));
+ReactDOM.render(<Home />, document.getElementById('ModulePlan'));

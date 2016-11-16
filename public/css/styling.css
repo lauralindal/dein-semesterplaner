@@ -1,0 +1,7 @@
+.semester {
+  display: inline;
+}
+
+.hover:hover {
+  background-color: red; 
+}
