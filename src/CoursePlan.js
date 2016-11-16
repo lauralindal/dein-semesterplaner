@@ -1,43 +1,38 @@
 import React from 'react';
 import Semester from './Semester';
-import $ from 'jquery';
+import courseplan from './courseplan.json';
 
 class CoursePlan extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      semester: {}
-    };
-  }
-
-  componentWillMount() {
-    this.ajaxCall();
-  }
-
-  ajaxCall() {
-    $.ajax({
-      url: '/courseplan.json',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      method: 'GET',
-      dataType: 'json',
-      success: function (data) {
-        if (data !== undefined && data !== null) {
-          this.setState({ semester: data });
-        }
-      }.bind(this)
-    });
-  }
 
   render() {
+    var modules = courseplan.degree_course.modules;
+    var firstSemester = modules.filter(function(module) {
+      return module.recommended_semester === 1;
+    });
+
+    var secondSemester = modules.filter(function(module) {
+      return module.recommended_semester === 2;
+    });
+
+    var thirdSemester = modules.filter(function(module) {
+      return module.recommended_semester === 3;
+    });
+
+    var fourthSemester = modules.filter(function(module) {
+      return module.recommended_semester === 4;
+    });
+
+    var fifthSemester = modules.filter(function(module) {
+      return module.recommended_semester === 5;
+    });
+
+    var sixthSemester = modules.filter(function(module) {
+      return module.recommended_semester === 6;
+    });
     return (
       <div>
         Regelstudienplan
-        {this.state.semester.degree_course ?
-          <Semester semester={this.state.semester.degree_course.modules}/> : 'loading'
-        }
+        <Semester semester={firstSemester} />
 
         <div id="sem_02">
           <legend>2. Semester</legend>

@@ -7,17 +7,10 @@ class Semester extends React.Component {
     return (
       <div id="sem_01">
         <legend>1. Semester</legend>
-        {this.props.semester.map((e, i) => (
-          <Module module={e} key={i} />
-        ))
-      }
-
-        {console.log(this.props.semester)}
-        // <p id="sem01_mod02" className="button">RABS</p>
-        // <p id="sem01_mod03" className="button">Konzepte d. Informatik</p>
-        // <p id="sem01_mod04" className="button">BWL 1 / Grundlagen</p>
-        // <p id="sem01_mod05" className="button">Mathe</p>
-        // <p id="sem01_mod06" className="button">Fremdsprache 1</p>
+        {this.props.semester.map((e, i) =>
+          (<Module module={e} key={i} />)
+        )
+        }
       </div>
     )
   }
