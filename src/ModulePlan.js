@@ -1,11 +1,11 @@
 import React from 'react';
 import Semester from './Semester';
-import courseplan from './courseplan.json';
+import moduleplan from './moduleplan.json';
 
-class CoursePlan extends React.Component {
+class ModulePlan extends React.Component {
 
   render() {
-    var modules = courseplan.degree_course.modules;
+    var modules = moduleplan.degree_course.modules;
     var maxSemester = 6;
     var semesters = [1,2,3,4,5,6].map(function (semester) {
       return modules.filter(function(module) {
@@ -27,4 +27,4 @@ class CoursePlan extends React.Component {
   }
 }
 
-export default CoursePlan
+export default ModulePlan

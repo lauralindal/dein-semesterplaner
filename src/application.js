@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CoursePlan from './CoursePlan';
+import ModulePlan from './ModulePlan';
 
-ReactDOM.render(<CoursePlan />, document.getElementById('coursePlan'));
+ReactDOM.render(<ModulePlan />, document.getElementById('ModulePlan'));
