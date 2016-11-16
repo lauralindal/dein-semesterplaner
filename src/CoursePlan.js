@@ -32,7 +32,7 @@ class CoursePlan extends React.Component {
     return (
       <div>
         Regelstudienplan
-        <Semester semester={firstSemester} />
+        <Semester semester={1} modules={firstSemester}/>
 
         <div id="sem_02">
           <legend>2. Semester</legend>

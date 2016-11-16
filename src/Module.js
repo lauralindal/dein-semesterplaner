@@ -12,7 +12,6 @@ class Module extends React.Component {
   render() {
     return (
       <div>
-        {console.log(this.props.module)}
         <p id="sem01_mod01" className="button">{this.props.module.title}</p>
       </div>
     )
