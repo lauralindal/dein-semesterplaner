@@ -8,7 +8,6 @@
         "title": "Programmierung 1",
         "description": "Kara",
         "cp": 6,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 1
       },
@@ -17,7 +16,6 @@
         "title": "Grundlegende Konzepte der Informatik",
         "description": "Hackhack",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 1
       },
@@ -26,7 +24,6 @@
         "title": "Mathematik",
         "description": "Yay",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 1
       },
@@ -35,7 +32,6 @@
         "title": "Rechnerarchitektur / Betriebssysteme",
         "description": "Computer aufschrauben",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 1
       },
@@ -44,7 +40,6 @@
         "title": "Grundlagen der BWL",
         "description": "Wirtschaftskram",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 1
       },
@@ -53,7 +48,6 @@
         "title": "Fremdsprache 1",
         "description": "zB Englisch",
         "cp": 4,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 1
       },
@@ -62,7 +56,6 @@
         "title": "Programmierung 2",
         "description": "Mehr als Kara",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 2
       },
@@ -71,7 +64,6 @@
         "title": "Softwaretechnik",
         "description": "Diagramme",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 2
       },
@@ -80,7 +72,6 @@
         "title": "Betriebliche Anwendungen",
         "description": "SAP",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 2
       },
@@ -89,7 +80,6 @@
         "title": "Rechnernetze",
         "description": "Terminal",
         "cp": 6,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 2
       },
@@ -98,7 +88,6 @@
         "title": "Rechnungswesen",
         "description": "Soll an Haben",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 2
       },
@@ -107,7 +96,6 @@
         "title": "Fremdsprache 2",
         "description": "zB Englisch",
         "cp": 4,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 2
       },
@@ -116,7 +104,6 @@
         "title": "Webtechnologien",
         "description": "HTML CSS Ruby/PHP",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 3
       },
@@ -125,7 +112,6 @@
         "title": "Datenbanksysteme",
         "description": "SQL",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 3
       },
@@ -134,7 +120,6 @@
         "title": "Teamarbeit",
         "description": "Projektmanagement und Konfliktmanagement",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 3
       },
@@ -143,7 +128,6 @@
         "title": "Datenschutz und Datensicherheit",
         "description": "Webserver absichern",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 3
       },
@@ -152,7 +136,6 @@
         "title": "Projekte in der Wirtschaft",
         "description": "Ernst des Lebens",
         "cp": 10,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 3
       },
@@ -161,7 +144,6 @@
         "title": "Praxisphase",
         "description": "Praktikum und Karrieremanagement",
         "cp": 25,
-        "status": "done",
         "prerequisite": true,
         "recommended_semester": 4
       },
@@ -170,7 +152,6 @@
         "title": "Besondere Kapiter der Informatik",
         "description": "Hier bitte Kurs wählen",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 4
       },
@@ -179,7 +160,6 @@
         "title": "Modellierung von Informationssystemen",
         "description": "UMLle",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 5
       },
@@ -188,7 +168,6 @@
         "title": "Praxis in Forschung und Entwicklung",
         "description": "Projekt und Wissenschaftliches Arbeiten",
         "cp": 10,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 5
       },
@@ -197,7 +176,6 @@
         "title": "Besondere Kapitel der Wirtschaftsinformatik",
         "description": "Bitte wählen",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 5
       },
@@ -206,7 +184,6 @@
         "title": "Verteilte Systeme",
         "description": "Wie funktioneren Netze",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 5
       },
@@ -215,7 +192,6 @@
         "title": "Betriebswirtschaftliches Denken und Handeln",
         "description": "Ih-Commerce",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 5
       },
@@ -224,7 +200,6 @@
         "title": "AWE 1 & 2",
         "description": "Hier auch wählen",
         "cp": 4,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 5
       },
@@ -233,7 +208,6 @@
         "title": "Aktuelle Trends Informations- / Kommunikationstechnik",
         "description": "Ähhhh",
         "cp": 5,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 6
       },
@@ -242,7 +216,6 @@
         "title": "Usability",
         "description": "Programmieren mit Sinn",
         "cp": 6,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 6
       },
@@ -251,7 +224,6 @@
         "title": "Bachelorarbeit",
         "description": "Der Ernst vorm Ende",
         "cp": 12,
-        "status": "done",
         "prerequisite": true,
         "recommended_semester": 6
       },
@@ -260,7 +232,6 @@
         "title": "Bachelorkolloquium",
         "description": "Arbeit besprechen",
         "cp": 3,
-        "status": "done",
         "prerequisite": false,
         "recommended_semester": 6
       }
