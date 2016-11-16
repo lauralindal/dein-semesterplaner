@@ -11,7 +11,7 @@ class Module extends React.Component {
 
   render() {
     return (
-      <div>
+      <div key={this.props.module.title}>
         <p id="sem01_mod01" className="button">{this.props.module.title}</p>
       </div>
     )

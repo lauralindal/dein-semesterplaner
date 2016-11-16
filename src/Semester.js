@@ -5,7 +5,7 @@ class Semester extends React.Component {
 
   render() {
     return (
-      <div id="sem_01">
+      <div key={this.props.semester} id="sem_01">
         <legend>{this.props.semester}. Semester</legend>
         {this.props.modules.map((e, i) =>
           (<Module module={e} key={i} />)
