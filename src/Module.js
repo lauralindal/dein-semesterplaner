@@ -1,8 +1,6 @@
 import React from 'react';
 
 class Module extends React.Component {
-
-
   render() {
     return (
       <div key={this.props.module.title} className="semester">
