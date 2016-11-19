@@ -37,3 +37,14 @@ You can find a Mockup at http://12q5wx.axshare.com/main_page_simple.html
 | status_urgent(red)     | Started module needs to be completed this semester as to comply with the repetition period.                                                                                                                              |
 | total credit points    | Credit points that the student has accumulated with previously completed modules.                                                                                                                                        |
                                                                                                                                                                                                                          |
+## Terminology for html and components (Work-in-progress)
+
+| Term            | Description                                                                                                                    | Abbreviation |
+|-----------------|--------------------------------------------------------------------------------------------------------------------------------|--------------|
+| course schedule | All sections of selected courses for the current semester displayed in a weekly calendar format.                               |              |
+| current credits | Graphic display of current credits (Explanation see above).                                                                    |              |
+| legend          | Graphic explanation of the course statuses.                                                                                    |              |
+| module plan     | Graphic representation of all module requirements in the degree program sorted by semester.                                    |              |
+| module pool     | Graphic representation of selected modules for the current semester. Course are dragged from the module plan and dropped here. |              |
+| total credits   | Graphic display of total credits (Explantation see above)                                                                      |              |
+
