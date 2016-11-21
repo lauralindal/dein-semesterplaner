@@ -1,5 +1,6 @@
 import React from 'react';
 import ModulePool from './ModulePool';
+import CurrentCredits from './CurrentCredits';
 
 class PlanningSection extends React.Component {
   render() {
@@ -10,10 +11,7 @@ class PlanningSection extends React.Component {
             <h5>Alle Leistungspunkte</h5>
             Du hast bisher [xxx] Leistungspunkte gesammelt.
           </div>
-          <div id="sum_current">
-            <h5>Aktuelle Leistungspunkte</h5>
-              Du hast in diesem Semester [xxx] Kurse mit insgesamt [xxx]Leistungspunkten belegt.
-          </div>
+          <CurrentCredits />
         </div>
         <ModulePool />
         <p className="u-cf"></p>
