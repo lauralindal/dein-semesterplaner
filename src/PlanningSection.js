@@ -1,4 +1,5 @@
 import React from 'react';
+import ModulePool from './ModulePool';
 
 class PlanningSection extends React.Component {
   render() {
@@ -14,11 +15,7 @@ class PlanningSection extends React.Component {
               Du hast in diesem Semester [xxx] Kurse mit insgesamt [xxx]Leistungspunkten belegt.
           </div>
         </div>
-        <div id="coursePool" className="float-right">
-            Course Pool <br />
-            Plane dein 6. Semester <br />
-            <div id="main"></div>
-        </div>
+        <ModulePool />
         <p className="u-cf"></p>
       </div>
     )
