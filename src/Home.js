@@ -1,5 +1,6 @@
 import React from 'react';
 import ModulePlan from './ModulePlan';
+import PlanningSection from './PlanningSection';
 import moduleplan from './moduleplan.json';
 
 class Home extends React.Component {
@@ -12,7 +13,10 @@ class Home extends React.Component {
         });
       });
     return (
-      <ModulePlan semesters={semesters}/>
+      <div>
+        <ModulePlan semesters={semesters}/>
+        <PlanningSection />
+      </div>
     )
   }
 }

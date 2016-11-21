@@ -3,5 +3,9 @@
 }
 
 .hover:hover {
-  background-color: red; 
+  background-color: red;
+}
+
+div#sum{
+  display: inline-block;
 }
