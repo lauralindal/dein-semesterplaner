@@ -1,0 +1,379 @@
+{
+  "students":[
+    {
+      "id": 1,
+      "name": "Sarah",
+      "matriculation_number": 540000,
+      "matriculation_date": "1.10.2013",
+      "password": "password",
+      "tracked_modules": [
+        {
+          "module_id": 1,
+          "status": "urgent"
+        },
+        {
+          "module_id": 2,
+          "status": "completed"
+        },
+        {
+          "module_id": 3,
+          "status": "completed"
+        },
+        {
+          "module_id": 4,
+          "status": "completed"
+        },
+        {
+          "module_id": 5,
+          "status": "urgent"
+        },
+        {
+          "module_id": 6,
+          "status": "completed"
+        },
+        {
+          "module_id": 7,
+          "status": "available"
+        },
+        {
+          "module_id": 8,
+          "status": "completed"
+        },
+        {
+          "module_id": 9,
+          "status": "completed"
+        },
+        {
+          "module_id": 10,
+          "status": "completed"
+        },
+        {
+          "module_id": 11,
+          "status": "started"
+        },
+        {
+          "module_id": 12,
+          "status": "completed"
+        },
+        {
+          "module_id": 13,
+          "status": "completed"
+        },
+        {
+          "module_id": 14,
+          "status": "available"
+        },
+        {
+          "module_id": 15,
+          "status": "completed"
+        },
+        {
+          "module_id": 16,
+          "status": "completed"
+        },
+        {
+          "module_id": 17,
+          "status": "completed"
+        },
+        {
+          "module_id": 18,
+          "status": "completed"
+        },
+        {
+          "module_id": 19,
+          "status": "completed"
+        },
+        {
+          "module_id": 20,
+          "status": "completed"
+        },
+        {
+          "module_id": 21,
+          "status": "completed"
+        },
+        {
+          "module_id": 22,
+          "status": "completed"
+        },
+        {
+          "module_id": 23,
+          "status": "completed"
+        },
+        {
+          "module_id": 24,
+          "status": "completed"
+        },
+        {
+          "module_id": 25,
+          "status": "completed"
+        },
+        {
+          "module_id": 26,
+          "status": "completed"
+        },
+        {
+          "module_id": 27,
+          "status": "completed"
+        },
+        {
+          "module_id": 28,
+          "status": "available"
+        },
+        {
+          "module_id": 29,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Laura",
+      "matriculation_number": 540001,
+      "matriculation_date": "1.10.2013",
+      "password": "password",
+      "tracked_modules": [
+        {
+          "module_id": 1,
+          "status": "completed"
+        },
+        {
+          "module_id": 2,
+          "status": "completed"
+        },
+        {
+          "module_id": 3,
+          "status": "completed"
+        },
+        {
+          "module_id": 4,
+          "status": "completed"
+        },
+        {
+          "module_id": 5,
+          "status": "completed"
+        },
+        {
+          "module_id": 6,
+          "status": "urgent"
+        },
+        {
+          "module_id": 7,
+          "status": "completed"
+        },
+        {
+          "module_id": 8,
+          "status": "completed"
+        },
+        {
+          "module_id": 9,
+          "status": "available"
+        },
+        {
+          "module_id": 10,
+          "status": "available"
+        },
+        {
+          "module_id": 11,
+          "status": "started"
+        },
+        {
+          "module_id": 12,
+          "status": "completed"
+        },
+        {
+          "module_id": 13,
+          "status": "completed"
+        },
+        {
+          "module_id": 14,
+          "status": "completed"
+        },
+        {
+          "module_id": 15,
+          "status": "completed"
+        },
+        {
+          "module_id": 16,
+          "status": "completed"
+        },
+        {
+          "module_id": 17,
+          "status": "completed"
+        },
+        {
+          "module_id": 18,
+          "status": "completed"
+        },
+        {
+          "module_id": 19,
+          "status": "completed"
+        },
+        {
+          "module_id": 20,
+          "status": "completed"
+        },
+        {
+          "module_id": 21,
+          "status": "completed"
+        },
+        {
+          "module_id": 22,
+          "status": "available"
+        },
+        {
+          "module_id": 23,
+          "status": "completed"
+        },
+        {
+          "module_id": 24,
+          "status": "completed"
+        },
+        {
+          "module_id": 25,
+          "status": "completed"
+        },
+        {
+          "module_id": 26,
+          "status": "completed"
+        },
+        {
+          "module_id": 27,
+          "status": "available"
+        },
+        {
+          "module_id": 28,
+          "status": "available"
+        },
+        {
+          "module_id": 29,
+          "status": "available"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Tanja",
+      "matriculation_number": 540002,
+      "matriculation_date": "1.10.2013",
+      "password": "password",
+      "tracked_modules": [
+        {
+          "module_id": 1,
+          "status": "completed"
+        },
+        {
+          "module_id": 2,
+          "status": "available"
+        },
+        {
+          "module_id": 3,
+          "status": "available"
+        },
+        {
+          "module_id": 4,
+          "status": "urgent"
+        },
+        {
+          "module_id": 5,
+          "status": "completed"
+        },
+        {
+          "module_id": 6,
+          "status": "completed"
+        },
+        {
+          "module_id": 7,
+          "status": "completed"
+        },
+        {
+          "module_id": 8,
+          "status": "urgent"
+        },
+        {
+          "module_id": 9,
+          "status": "started"
+        },
+        {
+          "module_id": 10,
+          "status": "completed"
+        },
+        {
+          "module_id": 11,
+          "status": "completed"
+        },
+        {
+          "module_id": 12,
+          "status": "completed"
+        },
+        {
+          "module_id": 13,
+          "status": "completed"
+        },
+        {
+          "module_id": 14,
+          "status": "completed"
+        },
+        {
+          "module_id": 15,
+          "status": "completed"
+        },
+        {
+          "module_id": 16,
+          "status": "completed"
+        },
+        {
+          "module_id": 17,
+          "status": "completed"
+        },
+        {
+          "module_id": 18,
+          "status": "completed"
+        },
+        {
+          "module_id": 19,
+          "status": "completed"
+        },
+        {
+          "module_id": 20,
+          "status": "completed"
+        },
+        {
+          "module_id": 21,
+          "status": "completed"
+        },
+        {
+          "module_id": 22,
+          "status": "completed"
+        },
+        {
+          "module_id": 23,
+          "status": "completed"
+        },
+        {
+          "module_id": 24,
+          "status": "completed"
+        },
+        {
+          "module_id": 25,
+          "status": "completed"
+        },
+        {
+          "module_id": 26,
+          "status": "completed"
+        },
+        {
+          "module_id": 27,
+          "status": "available"
+        },
+        {
+          "module_id": 28,
+          "status": "available"
+        },
+        {
+          "module_id": 29,
+          "status": "available"
+        }
+      ]
+    }
+  ]
+}
