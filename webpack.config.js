@@ -13,6 +13,10 @@ module.exports = {
       {
         test: /\.js$/,
         loaders: ['babel']
+      },
+      {
+        include: /\.json$/,
+        loaders: ["json-loader"]
       }
     ]
   }

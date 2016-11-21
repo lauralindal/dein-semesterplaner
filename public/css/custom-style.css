@@ -54,6 +54,13 @@ section#coursePlan{
   padding: 10px;
   margin-bottom: 5px;
 }
+section#ModulePlan{
+  text-align: left;
+  border: 1px solid grey;
+  padding: 10px;
+  margin-bottom: 5px;
+  }
+
 section#planningSection{
   border: 1px solid grey;
   padding: 10px;
@@ -63,6 +70,7 @@ div#sum{
   width: 30%;
   height: 400px;
   border: 1px solid grey;
+  display: inline-block;
 }
 div#sum_total{
   border: 1px solid grey;
@@ -100,3 +108,4 @@ footer{
   padding: 10px;
   border: 1px solid grey;
 }
+
