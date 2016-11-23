@@ -2,6 +2,7 @@ import React from 'react';
 import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
 import moduleplan from './moduleplan.json';
+import users from './users.json';
 
 class Home extends React.Component {
   render() {
