@@ -14,6 +14,7 @@ class Home extends React.Component {
       });
     return (
       <div>
+        <Login />
         <ModulePlan semesters={semesters}/>
         <PlanningSection />
       </div>
