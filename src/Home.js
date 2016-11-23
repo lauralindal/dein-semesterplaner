@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
 import moduleplan from './moduleplan.json';
@@ -14,7 +15,7 @@ class Home extends React.Component {
       });
     return (
       <div>
-        <Login />
+        <Header />
         <ModulePlan semesters={semesters}/>
         <PlanningSection />
       </div>
