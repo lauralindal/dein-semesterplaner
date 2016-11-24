@@ -1,6 +1,7 @@
 import React from 'react';
 import ModulePool from './ModulePool';
 import CurrentCredits from './CurrentCredits';
+import TotalCredits from'./TotalCredits';
 
 class PlanningSection extends React.Component {
   render() {
@@ -8,10 +9,7 @@ class PlanningSection extends React.Component {
       <section id="planningSection">
         <div id="planningSection">
           <div id="sum" className="float-left">
-            <div id="sum_total">
-              <h5>Alle Leistungspunkte</h5>
-              Du hast bisher [xxx] Leistungspunkte gesammelt.
-            </div>
+            <TotalCredits />
             <CurrentCredits />
           </div>
           <ModulePool />
