@@ -23,6 +23,46 @@ class Home extends React.Component {
         }
       })
     });
+
+    var completedModules = userModules.filter(function(userModule) {
+        return userModule.status === "completed";
+    });
+    var completedModuleIds = completedModules.map(function(module){
+      return module.module_id;
+    });
+
+    var completedModules2 = userModules.filter(function(userModule) {
+        if(userModule.status === "completed"){
+          return userModule.module_id;
+        }   
+    });
+    console.log(completedModules2);
+    var completedModuleIds = completedModules.map(function(module){
+      return module.module_id;
+    });
+    
+    for (var i = 0; i > userModules.length; i++) {
+     if (userModule[i].status === "completed"){
+      return modules[i].cp;
+     }
+    };
+    
+    var a = modules.filter(function(module) {
+          return module.id === completedModuleIds[0];
+        });
+   
+    var b = completedModules.map(function(completedModule) {
+      var id = modules.map(function(module) {
+        return module.id;
+      });
+      if(completedModule.module_id == id){ //hier vergleichen wir eine Id mit einem Array!
+        var cp = modules.map(function(module) {
+          return module.cp;
+        });
+        return cp;
+      }
+    });
+       
     return (
       <div>
         <ModulePlan semesters={semesters}/>
