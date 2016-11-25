@@ -27,41 +27,49 @@ class Home extends React.Component {
     var completedModules = userModules.filter(function(userModule) {
         return userModule.status === "completed";
     });
+    {/* completedModules returns an array of all completed modules by one student */}
+
     var completedModuleIds = completedModules.map(function(module){
       return module.module_id;
     });
+    {/* completedModuleIds returns an array with all the ids of completed courses */}
 
     var completedModules2 = userModules.filter(function(userModule) {
         if(userModule.status === "completed"){
           return userModule.module_id;
         }   
     });
-    console.log(completedModules2);
+    {/* another attempt to filter for all ids of completed course */}
+    
     var completedModuleIds = completedModules.map(function(module){
       return module.module_id;
     });
+    {/* not sure what went on here */}
     
     for (var i = 0; i > userModules.length; i++) {
      if (userModule[i].status === "completed"){
       return modules[i].cp;
      }
     };
-    
+    {/* We went back and tried to simplify by running through all userModules, searching for completed modules and then returning the cps from modules */}
+
     var a = modules.filter(function(module) {
           return module.id === completedModuleIds[0];
         });
+    {/* another attempt*/}
    
     var b = completedModules.map(function(completedModule) {
       var id = modules.map(function(module) {
         return module.id;
       });
-      if(completedModule.module_id == id){ //hier vergleichen wir eine Id mit einem Array!
+      if(completedModule.module_id == id){ {/* comparing id to array, this cannot work */}
         var cp = modules.map(function(module) {
           return module.cp;
         });
         return cp;
       }
     });
+  {/* We tried it another way, but ended up comparing an individual id to an array of ids  */}
        
     return (
       <div>
