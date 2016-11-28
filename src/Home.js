@@ -38,7 +38,7 @@ class Home extends React.Component {
     return (
       <div>
         <ModulePlan semesters={semesters}/>
-        <PlanningSection />
+        <PlanningSection totalCreditPoints= {totalCreditPoints} />
       </div>
     )
   }
