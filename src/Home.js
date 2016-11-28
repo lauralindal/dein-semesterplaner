@@ -9,6 +9,7 @@ class Home extends React.Component {
     var userModules = users.students[0].tracked_modules;
     var modules = moduleplan.degree_course.modules;
     var maxSemester = 6;
+    var totalCreditPoints = calculateTotalCredits();
     var semesters = [1,2,3,4,5,6].map(function(semester) {
       var filteredModules = modules.filter(function(module) {
         return module.recommended_semester === semester;
@@ -33,8 +34,6 @@ class Home extends React.Component {
       }
       return totalCredits;
     };
-
-    console.log(calculateTotalCredits());
    
     return (
       <div>
