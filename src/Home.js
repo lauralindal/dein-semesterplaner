@@ -24,33 +24,17 @@ class Home extends React.Component {
       })
     });
 
-    var completedModules = userModules.filter(function(userModule) {
-        return userModule.status === "completed";
-    });
-    {/* completedModules returns an array of all completed modules by one student */}
-
-    var completedModuleIds = completedModules.map(function(module){
-      return module.module_id;
-    });
-    {/* completedModuleIds returns an array with all the ids of completed courses */}
-
-    var completedModules2 = userModules.filter(function(userModule) {
-        if(userModule.status === "completed"){
-          return userModule.module_id;
-        }   
-    });
-    
-    {/* returns array of all completed courses, but not just the ids */}
-    
-    {/*for (var i = 0; i < userModules.length; i++) {
+    function calculateTotalCredits () {
       var totalCredits= 0;
-     if (userModule[i].status === "completed"){
-      totalCredits=+ modules[i].cp;
-     }
-     return totalCredits;
+      for (var i = 0; i < userModules.length; i++) {
+      if (userModules[i].status === "completed"){
+      totalCredits= totalCredits + modules[i].cp;
+        }
+      }
+      return totalCredits;
     };
 
-    {/* We went back and tried to simplify by running through all userModules, searching for completed modules and then returning the cps from modules */}
+    console.log(calculateTotalCredits());
    
     return (
       <div>
