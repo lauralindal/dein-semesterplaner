@@ -7,8 +7,11 @@ import users from './users.json';
 
 class Home extends React.Component {
 
-  onLoginClick() {
-    console.log("Omma");
+  performLogin(email, password) {
+    hoodie.account.signIn({
+      username: email,
+      password: password
+    })
   }
 
   getSemestersForUser() {
@@ -35,7 +38,7 @@ class Home extends React.Component {
     var semesters = this.getSemestersForUser();
     return (
       <div>
-      <Header onLoginClick={this.onLoginClick.bind(this)}/>
+      <Header performLogin={this.performLogin.bind(this)}/>
       <ModulePlan semesters={semesters}/>
       <PlanningSection />
       </div>
