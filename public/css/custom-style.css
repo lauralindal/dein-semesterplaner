@@ -3,7 +3,7 @@
 }
 
 .hover:hover {
-  background-color: red; 
+  background-color: red;
 }
 
 .wrapper{
@@ -54,7 +54,7 @@ section#coursePlan{
   padding: 10px;
   margin-bottom: 5px;
 }
-section#ModulePlan{
+section#home{
   text-align: left;
   border: 1px solid grey;
   padding: 10px;
@@ -108,4 +108,3 @@ footer{
   padding: 10px;
   border: 1px solid grey;
 }
-
