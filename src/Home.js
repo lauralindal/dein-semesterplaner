@@ -6,18 +6,9 @@ import moduleplan from './moduleplan.json';
 import users from './users.json';
 
 class Home extends React.Component {
-  render() {
-    var semesters = this.getSemestersForUser();
-    return (
-      <div>
-        <Header />
-        <ModulePlan semesters={semesters}/>
-        <PlanningSection />
-      </div>
-    );
-  }
 
-   getSemestersForUser() {
+
+  getSemestersForUser() {
     var userModules = users.students[0].tracked_modules;
     var modules = moduleplan.degree_course.modules;
     var semesters = [1,2,3,4,5,6].map(function(semester) {
@@ -29,12 +20,23 @@ class Home extends React.Component {
           return userModule.module_id === module.id;
         });
         return {
-           module: module,
-           userModule: userModule
+          module: module,
+          userModule: userModule
         }
       });
     });
     return semesters;
+  }
+
+  render() {
+    var semesters = this.getSemestersForUser();
+    return (
+      <div>
+      <Header />
+      <ModulePlan semesters={semesters}/>
+      <PlanningSection />
+      </div>
+    );
   }
 }
 
