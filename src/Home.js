@@ -7,6 +7,9 @@ import users from './users.json';
 
 class Home extends React.Component {
 
+  onLoginClick() {
+    console.log("Omma");
+  }
 
   getSemestersForUser() {
     var userModules = users.students[0].tracked_modules;
@@ -32,7 +35,7 @@ class Home extends React.Component {
     var semesters = this.getSemestersForUser();
     return (
       <div>
-      <Header />
+      <Header onLoginClick={this.onLoginClick.bind(this)}/>
       <ModulePlan semesters={semesters}/>
       <PlanningSection />
       </div>

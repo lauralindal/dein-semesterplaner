@@ -2,6 +2,7 @@ import React from 'react';
 
 class Login extends React.Component {
   render() {
+    const { onLoginClick } = this.props;
     return (
       <form>
         <div className="three columns">
@@ -13,7 +14,7 @@ class Login extends React.Component {
           <input type="password" placeholder="Password" />
         </div>
         <div className="two columns">
-          <input className="button-primary" type="submit" value="Login" />
+          <input onClick={onLoginClick} className="button-primary" type="button" value="Login" />
         </div>
       </form>
     )
