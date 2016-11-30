@@ -5,15 +5,14 @@ class Login extends React.Component {
     return (
       <form>
         <div className="three columns">
-          <label htmlFor="Username">Username</label>
-          <input type="text" placeholder="Username" id="Username" />
+          <label htmlFor="Email">Email Address</label>
+          <input type="email" placeholder="Email Address" />
         </div>
         <div className="three columns">
           <label htmlFor="Username">Password</label>
-          <input type="password" placeholder="Password" id="Password" />
+          <input type="password" placeholder="Password" />
         </div>
-        <div className="two">
-          <label htmlFor="exampleEmailInput">&nbsp;</label>
+        <div className="two columns">
           <input className="button-primary" type="submit" value="Login" />
         </div>
       </form>
