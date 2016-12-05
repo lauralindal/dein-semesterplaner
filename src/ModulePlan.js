@@ -12,28 +12,28 @@ class ModulePlan extends React.Component {
   <legend>
     <div className="row">
       <div className="float-left">
-      <div className="completed">aa</div>
-      <div>Completed<br/>Module</div>
+      <div className="completed"></div>
+      <div>Abgeschlossener<br/>Kurs</div>
       </div>
 
       <div className="float-left">
-      <div className="available">aa</div>
-      <div>Available<br/>Module</div>
+      <div className="available"></div>
+      <div>Belegbarer<br/>Kurs</div>
       </div>
 
       <div className="float-left">
-      <div className="started">aa</div>
-      <div>Started<br/>module</div>
+      <div className="started"></div>
+      <div>Angefangener<br/>Kurs</div>
       </div>
 
       <div className="float-left">
-      <div className="urgent">aa</div>
-      <div>Urgent<br/>module</div>
+      <div className="urgent"></div>
+      <div>Wiederholbarkeitsfrist<br/>läuft ab</div>
       </div>
 
       <div className="float-left">
-      <div className="planned">aa</div>
-      <div>Planned<br/>module</div>
+      <div className="planned"></div>
+      <div>Für das aktuelle Semester<br/>eingeplanter Kurs</div>
       </div>
 
     </div>
