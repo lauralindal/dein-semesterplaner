@@ -47,14 +47,29 @@ class Home extends React.Component {
   };
 
 
+  calculateCurrentCredits() {
+    var userModules = users.students[0].tracked_modules;
+    var modules = moduleplan.degree_course.modules;
+    var currentCredits= 0;
+    for (var i = 0; i < userModules.length; i++) {
+      if (userModules[i].status === "selected"){
+        currentCredits= currentCredits + modules[i].cp;
+      }
+    }
+    console.log(currentCredits);
+    return currentCredits;
+  };
+    
+  
   render() {
     var totalCreditPoints = this.calculateTotalCredits();
+    var currentCreditPoints = this.calculateCurrentCredits();
     var semesters = this.getSemestersForUser();
     return (
       <div>
       <Header performLogin={this.performLogin.bind(this)}/>
       <ModulePlan semesters={semesters}/>
-      <PlanningSection totalCreditPoints={totalCreditPoints}/>
+      <PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} />
       </div>
     );
   }
