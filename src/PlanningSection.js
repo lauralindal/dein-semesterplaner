@@ -9,7 +9,7 @@ class PlanningSection extends React.Component {
       <section id="planningSection">
         <div id="planningSection">
           <div id="sum" className="float-left">
-            <TotalCredits />
+            <TotalCredits totalCreditPoints={this.props.totalCreditPoints}/>
             <CurrentCredits />
           </div>
           <ModulePool />
