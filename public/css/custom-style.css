@@ -89,6 +89,13 @@ section#symbology{
   width: 30px;
   height: 30px;
 }
+.planned_urgent{
+  border: 2px solid red;
+  border-radius: 5px; 
+  background-color: #76B900;  
+  width: 30px;
+  height: 30px;
+}
 
 
 
