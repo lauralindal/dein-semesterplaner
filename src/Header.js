@@ -3,17 +3,20 @@ import Login from './Login';
 
 class Header extends React.Component {
 
+  chooseSignInStatus(isLoggedIn) {
+    if (isLoggedIn) {
+      return <button className="button-primary" type="button" value="Logout" />;
+    }
+    return <Login performLogin={this.props.performLogin} />;
+  }
+
   render() {
-    const isLoggedIn = true;
+    var isLoggedIn = hoodie.account.isSignedIn();
     return (
       <header>
       <div className="row">
         <h1 className="four columns">Dein Semesterplaner</h1>
-        {isLoggedIn ? (
-          <button className="button-primary" type="button" value="Logout" />
-        ) : (
-          <Login performLogin={this.props.performLogin} />
-        )}
+        {this.chooseSignInStatus(isLoggedIn)}
       </div>
       </header>
     )
