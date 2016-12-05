@@ -5,13 +5,18 @@ class ModulePlan extends React.Component {
   render() {
     return (
       <div>
-        Regelstudienplan
-        {this.props.semesters.map(function(semester, index) {
-          return (
-            <Semester semester={index+1} modules={semester} />
-          )
-        })
-        }
+        <section id="symbology">
+          Legende
+        </section>
+        <div>
+          Regelstudienplan
+          {this.props.semesters.map(function(semester, index) {
+            return (
+              <Semester semester={index+1} modules={semester} />
+            )
+          })
+          }
+        </div>
       </div>
     )
   }

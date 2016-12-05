@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
 import moduleplan from './moduleplan.json';
@@ -11,10 +12,11 @@ class Home extends React.Component {
     var semesters = this.getSemestersForUser();
     return (
       <div>
-      <ModulePlan semesters={semesters}/>
-      <PlanningSection totalCreditPoints= {totalCreditPoints} />
+        <Header />
+        <ModulePlan semesters={semesters}/>
+        <PlanningSection totalCreditPoints={totalCreditPoints} />
       </div>
-    );
+      );
   }
 
   getSemestersForUser() {
@@ -31,22 +33,22 @@ class Home extends React.Component {
         return {
          module: module,
          userModule: userModule
-        }
-      });
+       }
+     });
     });
     return semesters;
   }
 
- calculateTotalCredits() {
-  var userModules = users.students[0].tracked_modules;
-  var modules = moduleplan.degree_course.modules;
-  var totalCredits= 0;
-  for (var i = 0; i < userModules.length; i++) {
-    if (userModules[i].status === "completed"){
-      totalCredits= totalCredits + modules[i].cp;
+  calculateTotalCredits() {
+    var userModules = users.students[0].tracked_modules;
+    var modules = moduleplan.degree_course.modules;
+    var totalCredits= 0;
+    for (var i = 0; i < userModules.length; i++) {
+      if (userModules[i].status === "completed"){
+        totalCredits= totalCredits + modules[i].cp;
+      }
     }
-  }
-  return totalCredits;
+    return totalCredits;
   };
 }
 
