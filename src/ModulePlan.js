@@ -33,12 +33,12 @@ class ModulePlan extends React.Component {
       </div>
 
       <div className="float-left">
-      <div className="planned"></div>
+      <div className="selected"></div>
       <div>Für das aktuelle Semester<br/>eingeplanter Kurs</div>
       </div>
 
       <div className="float-left">
-      <div className="planned_urgent"></div>
+      <div className="selected_urgent"></div>
       <div>Dringend abzuschliessender<br/> Kurs</div>
       </div>
 

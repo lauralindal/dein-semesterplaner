@@ -54,13 +54,6 @@ section#symbology{
   padding: 10px;
   margin-bottom: 5px;
 }
-.completed{
-  border: 1px solid grey;
-  border-radius: 5px; 
-  background-color: #AFAFAF; 
-  width: 30px;
-  height: 30px;
-}
 .available{
   border: 1px solid grey;
   border-radius: 5px; 
@@ -75,6 +68,13 @@ section#symbology{
   width: 30px;
   height: 30px;
 }
+.completed{
+  border: 1px solid grey;
+  border-radius: 5px; 
+  background-color: #AFAFAF; 
+  width: 30px;
+  height: 30px;
+}
 .urgent{
   border: 1px solid grey;
   border-radius: 5px; 
@@ -82,14 +82,14 @@ section#symbology{
   width: 30px;
   height: 30px;
 }
-.planned{
+.selected{
   border: 1px solid grey;
   border-radius: 5px; 
   background-color: #76B900;  
   width: 30px;
   height: 30px;
 }
-.planned_urgent{
+.selected_urgent{
   border: 2px solid red;
   border-radius: 5px; 
   background-color: #76B900;  
