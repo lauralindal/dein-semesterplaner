@@ -32,7 +32,20 @@ class Home extends React.Component {
       });
     });
     return semesters;
-  }
+  };
+
+  calculateTotalCredits() {
+    var userModules = users.students[0].tracked_modules;
+    var modules = moduleplan.degree_course.modules;
+    var totalCredits= 0;
+    for (var i = 0; i < userModules.length; i++) {
+      if (userModules[i].status === "completed"){
+        totalCredits= totalCredits + modules[i].cp;
+      }
+    }
+    return totalCredits;
+  };
+
 
   render() {
     var semesters = this.getSemestersForUser();
