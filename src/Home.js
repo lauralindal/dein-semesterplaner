@@ -48,12 +48,13 @@ class Home extends React.Component {
 
 
   render() {
+    var totalCreditPoints = this.calculateTotalCredits();
     var semesters = this.getSemestersForUser();
     return (
       <div>
       <Header performLogin={this.performLogin.bind(this)}/>
       <ModulePlan semesters={semesters}/>
-      <PlanningSection />
+      <PlanningSection totalCreditPoints={totalCreditPoints}/>
       </div>
     );
   }
