@@ -7,6 +7,39 @@ class ModulePlan extends React.Component {
       <div>
         <section id="symbology">
           Legende
+
+<div>
+  <legend>
+    <div className="row">
+      <div className="float-left">
+      <div className="completed">aa</div>
+      <div>Completed<br/>Module</div>
+      </div>
+
+      <div className="float-left">
+      <div className="available">aa</div>
+      <div>Available<br/>Module</div>
+      </div>
+
+      <div className="float-left">
+      <div className="started">aa</div>
+      <div>Started<br/>module</div>
+      </div>
+
+      <div className="float-left">
+      <div className="urgent">aa</div>
+      <div>Urgent<br/>module</div>
+      </div>
+
+      <div className="float-left">
+      <div className="planned">aa</div>
+      <div>Planned<br/>module</div>
+      </div>
+
+    </div>
+  </legend>
+</div>
+
         </section>
         <div>
           Regelstudienplan

@@ -54,6 +54,44 @@ section#symbology{
   padding: 10px;
   margin-bottom: 5px;
 }
+.completed{
+  border: 1px solid grey;
+  border-radius: 5px; 
+  background-color: #AFAFAF; 
+  width: 30px;
+  height: 30px;
+}
+.available{
+  border: 1px solid grey;
+  border-radius: 5px; 
+  background-color: #0082D1;  
+  width: 30px;
+  height: 30px;
+}
+.started{
+  border: 1px solid grey;
+  border-radius: 5px; 
+  background-color: #FFFF66;  
+  width: 30px;
+  height: 30px;
+}
+.urgent{
+  border: 1px solid grey;
+  border-radius: 5px; 
+  background-color: #FF5F00;  
+  width: 30px;
+  height: 30px;
+}
+.planned{
+  border: 1px solid grey;
+  border-radius: 5px; 
+  background-color: #76B900;  
+  width: 30px;
+  height: 30px;
+}
+
+
+
 section#coursePlan{
   text-align: left;
   border: 1px solid grey;
