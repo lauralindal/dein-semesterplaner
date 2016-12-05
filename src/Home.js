@@ -6,18 +6,20 @@ import moduleplan from './moduleplan.json';
 import users from './users.json';
 
 class Home extends React.Component {
+
   render() {
+    var totalCreditPoints = this.calculateTotalCredits();
     var semesters = this.getSemestersForUser();
     return (
       <div>
         <Header />
         <ModulePlan semesters={semesters}/>
-        <PlanningSection />
+        <PlanningSection totalCreditPoints={totalCreditPoints} />
       </div>
-    );
+      );
   }
 
-   getSemestersForUser() {
+  getSemestersForUser() {
     var userModules = users.students[0].tracked_modules;
     var modules = moduleplan.degree_course.modules;
     var semesters = [1,2,3,4,5,6].map(function(semester) {
@@ -29,13 +31,25 @@ class Home extends React.Component {
           return userModule.module_id === module.id;
         });
         return {
-           module: module,
-           userModule: userModule
-        }
-      });
+         module: module,
+         userModule: userModule
+       }
+     });
     });
     return semesters;
   }
+
+  calculateTotalCredits() {
+    var userModules = users.students[0].tracked_modules;
+    var modules = moduleplan.degree_course.modules;
+    var totalCredits= 0;
+    for (var i = 0; i < userModules.length; i++) {
+      if (userModules[i].status === "completed"){
+        totalCredits= totalCredits + modules[i].cp;
+      }
+    }
+    return totalCredits;
+  };
 }
 
 export default Home

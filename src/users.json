@@ -33,7 +33,7 @@
         },
         {
           "module_id": 7,
-          "status": "available"
+          "status": "urgent"
         },
         {
           "module_id": 8,
@@ -166,7 +166,7 @@
         },
         {
           "module_id": 9,
-          "status": "available"
+          "status": "completed"
         },
         {
           "module_id": 10,
