@@ -5,7 +5,7 @@ class CurrentCredits extends React.Component {
     return (
       <div id="sum_current">
         <h5>Aktuelle Leistungspunkte</h5>
-          Du hast in diesem Semester  Kurse mit insgesamt {this.props.currentCreditPoints} Leistungspunkten belegt.
+          Du hast in diesem Semester {this.props.selectedCoursesCounter} Kurse mit insgesamt {this.props.currentCreditPoints} Leistungspunkten belegt.
       </div>
     )
   }
