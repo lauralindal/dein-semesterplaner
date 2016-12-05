@@ -23,15 +23,9 @@ class Module extends React.Component {
 
     return (
       <div key={this.props.module.title} className="semester">
-          <p className={ModuleClasses} onClick={this.addStatusColor.bind(this)}>{this.props.module.title} {this.props.userModule.status}</p>
+          <p className={ModuleClasses}>{this.props.module.title} {this.props.userModule.status}</p>
       </div>
     )
-  }
-
-  addStatusColor() {
-    if (this.props.userModule.status === "urgent") {
-      <p className="button hover red" >{this.props.module.cp} {this.props.userModule.status}</p>
-    }
   }
 }
 
