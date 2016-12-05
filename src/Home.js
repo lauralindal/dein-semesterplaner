@@ -7,16 +7,11 @@ import users from './users.json';
 
 class Home extends React.Component {
 
-  render() {
-    var totalCreditPoints = this.calculateTotalCredits();
-    var semesters = this.getSemestersForUser();
-    return (
-      <div>
-        <Header />
-        <ModulePlan semesters={semesters}/>
-        <PlanningSection totalCreditPoints={totalCreditPoints} />
-      </div>
-      );
+  performLogin(email, password) {
+    hoodie.account.signIn({
+      username: email,
+      password: password
+    })
   }
 
   getSemestersForUser() {
@@ -31,13 +26,13 @@ class Home extends React.Component {
           return userModule.module_id === module.id;
         });
         return {
-         module: module,
-         userModule: userModule
-       }
-     });
+          module: module,
+          userModule: userModule
+        }
+      });
     });
     return semesters;
-  }
+  };
 
   calculateTotalCredits() {
     var userModules = users.students[0].tracked_modules;
@@ -50,6 +45,18 @@ class Home extends React.Component {
     }
     return totalCredits;
   };
+
+
+  render() {
+    var semesters = this.getSemestersForUser();
+    return (
+      <div>
+      <Header performLogin={this.performLogin.bind(this)}/>
+      <ModulePlan semesters={semesters}/>
+      <PlanningSection />
+      </div>
+    );
+  }
 }
 
 export default Home

@@ -1,7 +1,7 @@
 import React from 'react';
 import ModulePool from './ModulePool';
 import CurrentCredits from './CurrentCredits';
-import TotalCredits from'./TotalCredits';
+import TotalCredits from './TotalCredits';
 
 class PlanningSection extends React.Component {
   render() {
