@@ -126,14 +126,6 @@ body {
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
-.wrapper{
-  margin: 30px 30px;
-}
-footer{
-  text-align: center;
-  padding: 10px;
-  border: 1px solid grey;
-}
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -338,9 +330,9 @@ th:first-child,
 td:first-child {
   padding-left: 0; }
 th:last-child,
-td:last-child {
-  padding-right: 0; }
-
+td:last-child{
+  padding-right: 0;
+}
 
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -362,9 +354,7 @@ ul,
 ol,
 form {
   margin-bottom: 2.5rem; }
-div{
-  margin: 5px;
-}
+
 
 /* Utilities
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -387,58 +377,6 @@ hr {
   margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
-
-section#symbology{
-  border: 1px solid grey;
-  padding: 10px;
-  margin-bottom: 5px;
-}
-section#ModulePlan{
-  text-align: left;
-  border: 1px solid grey;
-  padding: 10px;
-  margin-bottom: 5px;
-}
-section#planningSection{
-  border: 1px solid grey;
-  padding: 10px;
-  margin-bottom: 5px;
-}
-div#sum{
-  width: 30%;
-  height: 400px;
-  border: 1px solid grey;
-}
-div#sum_total{
-  border: 1px solid grey;
-  text-align: center;
-  padding: 5px;
-  height: 45%;
-}
-div#sum_current{
-  border: 1px solid grey;
-  text-align: center;
-  padding: 5px;
-  height: 45%;
-}
-div#coursePool{
-  border: 1px solid grey;
-  width: 65%;
-  height: 400px;
-  text-align: center;
-}
-section#schedule{
-  border: 1px solid grey;
-  padding: 10px;
-  height: 500px;
-  margin-bottom: 5px;
-}
-.float-left{
-  float: left;
-}
-.float-right{
-  float: right;
-}
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
