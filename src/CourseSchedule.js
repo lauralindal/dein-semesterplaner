@@ -7,6 +7,7 @@ class CourseSchedule extends React.Component {
       <section id="schedule">
       <h5>Kalender/Weekly Planner</h5>
     <table>
+    <tbody>
       <tr>
         <th>Zeiten</th>
         <th>Montag</th>
@@ -61,6 +62,7 @@ class CourseSchedule extends React.Component {
         <td></td>
         <td></td>
       </tr>
+      </tbody>
     </table>
     </section>
 
