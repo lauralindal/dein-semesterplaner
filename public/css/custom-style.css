@@ -65,31 +65,37 @@ div.flex-container{
 .item1{
   flex: 2;
   flex-grow: 1;
+  text-align: center;
 }
 
 .item2{
   flex: 2;
   flex-grow: 1;
+  text-align: center;
 }
 
 .item3{
   flex: 2;
   flex-grow: 1;
+  text-align: center;
 }
 
 .item4{
   flex: 2;
   flex-grow: 1;
+  text-align: center;
 }
 
 .item5{
   flex: 2;
   flex-grow: 1;
+  text-align: center;
 }
 
 .item6{
   flex: 2;
   flex-grow: 1;
+  text-align: center;
 }
 
 
@@ -98,6 +104,7 @@ div.flex-container{
 
 legend{
   padding: 0px 0px;
+  width: 100%;
 }
 
 section#symbology{
@@ -111,6 +118,7 @@ section#symbology{
   background-color: #0082D1;  
   width: 30px;
   height: 30px;
+  margin: auto;
 }
 .started{
   border: 1px solid grey;
@@ -118,6 +126,7 @@ section#symbology{
   background-color: #FFFF66;  
   width: 30px;
   height: 30px;
+  margin: auto;
 }
 .completed{
   border: 1px solid grey;
@@ -125,6 +134,7 @@ section#symbology{
   background-color: #AFAFAF; 
   width: 30px;
   height: 30px;
+  margin: auto;
 }
 .urgent{
   border: 1px solid grey;
@@ -132,6 +142,7 @@ section#symbology{
   background-color: #FF5F00;  
   width: 30px;
   height: 30px;
+  margin: auto;
 }
 .selected{
   border: 1px solid grey;
@@ -139,6 +150,7 @@ section#symbology{
   background-color: #76B900;  
   width: 30px;
   height: 30px;
+  margin: auto;
 }
 .selected_urgent{
   border: 2px solid red;
@@ -146,6 +158,7 @@ section#symbology{
   background-color: #76B900;  
   width: 30px;
   height: 30px;
+  margin: auto;
 }
 
 
