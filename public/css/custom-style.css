@@ -47,7 +47,58 @@ div{
   margin: 5px;
 }
 
+/* ---- Flex container ----- */
+
+div.flex-container{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+
+.flex-item{
+}
+
+.item1{
+  flex: 2;
+  flex-grow: 1;
+}
+
+.item2{
+  flex: 2;
+  flex-grow: 1;
+}
+
+.item3{
+  flex: 2;
+  flex-grow: 1;
+}
+
+.item4{
+  flex: 2;
+  flex-grow: 1;
+}
+
+.item5{
+  flex: 2;
+  flex-grow: 1;
+}
+
+.item6{
+  flex: 2;
+  flex-grow: 1;
+}
+
+
+
 /* -------Misc ------------- */
+
+legend{
+  padding: 0px 0px;
+}
 
 section#symbology{
   border: 1px solid grey;
