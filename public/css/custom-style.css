@@ -54,51 +54,29 @@ div.flex-container{
   display: flex;
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  -webkit-align-items: stretch;
-  align-items: stretch;
   width: 100%;
+  margin: auto;
+  padding-bottom: 0px;
 }
 
 .flex-item{
+  vertical-align: center;
+  -webkit-align-self: center; 
+  align-self: center;
+  margin-top: 10px;
+  padding-bottom: 0px;
 }
 
-.item1{
-  flex: 2;
-  flex-grow: 1;
-  text-align: center;
-}
-
-.item2{
-  flex: 2;
-  flex-grow: 1;
-  text-align: center;
-}
-
-.item3{
-  flex: 2;
-  flex-grow: 1;
-  text-align: center;
-}
-
-.item4{
-  flex: 2;
-  flex-grow: 1;
-  text-align: center;
-}
-
-.item5{
-  flex: 2;
-  flex-grow: 1;
-  text-align: center;
-}
-
+.item1,
+.item2,
+.item3,
+.item4,
+.item5,
 .item6{
   flex: 2;
   flex-grow: 1;
   text-align: center;
 }
-
-
 
 /* -------Misc ------------- */
 
@@ -107,59 +85,48 @@ legend{
   width: 100%;
 }
 
+legend h6{
+  margin-bottom: 0px;
+}
+
 section#symbology{
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
   padding: 0px;
   margin-bottom: 5px;
 }
-.available{
+
+.available,
+.started,
+.completed,
+.urgent,
+.selected,
+.selected_urgent{
   border: 1px solid grey;
   border-radius: 5px; 
-  background-color: #0082D1;  
-  width: 30px;
+  width: 70px;
   height: 30px;
   margin: auto;
 }
+
+.available{
+  background-color: #0082D1;  
+ }
 .started{
-  border: 1px solid grey;
-  border-radius: 5px; 
   background-color: #FFFF66;  
-  width: 30px;
-  height: 30px;
-  margin: auto;
 }
 .completed{
-  border: 1px solid grey;
-  border-radius: 5px; 
   background-color: #AFAFAF; 
-  width: 30px;
-  height: 30px;
-  margin: auto;
 }
 .urgent{
-  border: 1px solid grey;
-  border-radius: 5px; 
   background-color: #FF5F00;  
-  width: 30px;
-  height: 30px;
-  margin: auto;
 }
 .selected{
-  border: 1px solid grey;
-  border-radius: 5px; 
   background-color: #76B900;  
-  width: 30px;
-  height: 30px;
-  margin: auto;
 }
 .selected_urgent{
-  border: 2px solid red;
-  border-radius: 5px; 
-  background-color: #76B900;  
-  width: 30px;
-  height: 30px;
-  margin: auto;
+  background-color: #76B900; 
+  border: 2px solid red; 
 }
 
 
