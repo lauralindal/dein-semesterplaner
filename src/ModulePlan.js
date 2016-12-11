@@ -6,8 +6,6 @@ class ModulePlan extends React.Component {
     return (
       <div>
       <section id="symbology">
-        Legende
-
         <div>
 
         <legend>
