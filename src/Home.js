@@ -4,6 +4,7 @@ import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
 import moduleplan from './moduleplan.json';
 import users from './users.json';
+import CourseSchedule from './CourseSchedule';
 
 class Home extends React.Component {
 
@@ -81,7 +82,9 @@ class Home extends React.Component {
       <Header performLogin={this.performLogin.bind(this)}/>
       <ModulePlan semesters={semesters}/>
       <PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} />
+      <CourseSchedule />
       </div>
+
     );
   }
 }
