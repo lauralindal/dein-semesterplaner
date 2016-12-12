@@ -70,7 +70,7 @@ class CourseSchedule extends React.Component {
    </table>
    <br />
    
-<Weekday />
+   {/* <Weekday /> */}
 
   
 </section>
