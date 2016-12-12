@@ -5,7 +5,7 @@ class Header extends React.Component {
 
   chooseSignInStatus(isLoggedIn) {
     if (isLoggedIn) {
-      return <button className="button-primary" type="button" value="Logout" />;
+      return <div> <h3 className="four columns" >Hello {hoodie.account.username}!</h3> <button className="button-primary two columns" type="button" value="Logout" onClick={this.props.performLogout}>Logout</button></div>;
     }
     return <Login performLogin={this.props.performLogin} />;
   }
@@ -15,7 +15,7 @@ class Header extends React.Component {
     return (
       <header>
       <div className="row">
-        <h1 className="four columns">Dein Semesterplaner</h1>
+        <h1 className="six columns">Dein Semesterplaner</h1>
         {this.chooseSignInStatus(isLoggedIn)}
       </div>
       </header>
