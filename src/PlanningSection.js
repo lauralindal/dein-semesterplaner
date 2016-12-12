@@ -1,7 +1,7 @@
 import React from 'react';
 import ModulePool from './ModulePool';
 import CurrentCredits from './CurrentCredits';
-import TotalCredits from'./TotalCredits';
+import TotalCredits from './TotalCredits';
 
 class PlanningSection extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class PlanningSection extends React.Component {
         <div id="planningSection">
           <div id="sum" className="float-left">
             <TotalCredits totalCreditPoints={this.props.totalCreditPoints}/>
-            <CurrentCredits />
+            <CurrentCredits currentCreditPoints={this.props.currentCreditPoints} selectedCoursesCounter={this.props.selectedCoursesCounter}/>
           </div>
           <ModulePool />
           <p className="u-cf"></p>

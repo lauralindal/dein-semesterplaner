@@ -7,7 +7,7 @@ class Header extends React.Component {
       <header>
         <div className="row">
           <h1 className="four columns">Dein Semesterplaner</h1>
-          <Login />
+          <Login performLogin={this.props.performLogin} />
         </div>
       </header>
     )
