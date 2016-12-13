@@ -12,7 +12,7 @@ class ModulePlan extends React.Component {
           <div className="flex-container">
             <div className="flex-item item1">
               <div className="available"></div>
-              <div><h6>Kurs belegt</h6></div>
+              <div><h6>Kurs belegbar</h6></div>
             </div>
             <div className="flex-item item2">
               <div className="started"></div>
@@ -20,7 +20,7 @@ class ModulePlan extends React.Component {
             </div>
             <div className="flex-item item3">
               <div className="completed"></div>
-              <div><h6>Kurs beendet</h6></div>
+              <div><h6>Kurs abgeschlossen</h6></div>
             </div>
             <div className="flex-item item4">
               <div className="urgent"></div>
@@ -32,7 +32,7 @@ class ModulePlan extends React.Component {
             </div>
             <div className="flex-item item6">
               <div className="selected_urgent"></div>
-              <div><h6>Dringlichkeitskurs geplant</h6></div>
+              <div><h6>Dringlicher Kurs geplant</h6></div>
             </div>
           </div>
         </legend>
