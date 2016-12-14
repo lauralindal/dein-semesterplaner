@@ -7,10 +7,17 @@ import users from './users.json';
 
 class Home extends React.Component {
 
+  constructor(){
+    super();
+    this.state = {
+      isLoggedIn: hoodie.account.isSignedIn()
+    };
+  }
+
   performLogin(email, password) {
     hoodie.account.signIn({ username: email, password: password})
-    .then(function (sessionProperties) {
-      window.location.reload();
+    .then(() => {
+      this.setState({isLoggedIn: true});
     })
     .catch(function (error) {
       hoodie.account.destroy();
@@ -21,9 +28,10 @@ class Home extends React.Component {
 
   performLogout() {
     hoodie.account.signOut()
-    .then(function (sessionProperties) {
-      window.location.reload();
-    }).catch(function (error) {
+    .then(() => {
+      this.setState({isLoggedIn: false});
+    })
+    .catch(function (error) {
       hoodie.account.destroy();
       console.log('🐞', error)
     })
@@ -73,7 +81,7 @@ class Home extends React.Component {
     }
     return currentCredits;
   };
-    
+
    countSelectedCourses() {
     var userModules = users.students[0].tracked_modules;
     var modules = moduleplan.degree_course.modules;
@@ -85,17 +93,24 @@ class Home extends React.Component {
     }
     return selectedCoursesCounter;
   };
-  
-  render() {
+
+  renderUserData(isLoggedIn) {
     var totalCreditPoints = this.calculateTotalCredits();
     var currentCreditPoints = this.calculateCurrentCredits();
     var selectedCoursesCounter = this.countSelectedCourses();
     var semesters = this.getSemestersForUser();
+    if(isLoggedIn) {
+      return (<div><ModulePlan semesters={semesters}/><PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} /></div>);
+    }
+    return (<div><p>Hallo! Bitte logge dich ein, um dein kommendes Semester zu planen</p></div>);
+  }
+
+  render() {
+    var isLoggedIn = this.state.isLoggedIn;
     return (
       <div>
       <Header performLogin={this.performLogin.bind(this)} performLogout={this.performLogout.bind(this)}/>
-      <ModulePlan semesters={semesters}/>
-      <PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} />
+      {this.renderUserData(isLoggedIn)}
       </div>
     );
   }
