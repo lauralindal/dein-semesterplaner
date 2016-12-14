@@ -15,9 +15,13 @@ class Home extends React.Component {
   }
 
   performLogin(email, password) {
+    var firstName = users.students[0].name;
     hoodie.account.signIn({ username: email, password: password})
     .then(() => {
-      this.setState({isLoggedIn: true});
+      hoodie.account.profile.update({firstName: firstName})
+      .then(() => {
+        this.setState({isLoggedIn: true});
+      });
     })
     .catch(function (error) {
       hoodie.account.destroy();
@@ -68,7 +72,6 @@ class Home extends React.Component {
     }
     return totalCredits;
   };
-
 
   calculateCurrentCredits() {
     var userModules = users.students[0].tracked_modules;
