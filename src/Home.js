@@ -8,11 +8,26 @@ import users from './users.json';
 class Home extends React.Component {
 
   performLogin(email, password) {
-    hoodie.account.signIn({
-      username: email,
-      password: password
+    hoodie.account.signIn({ username: email, password: password})
+    .then(function (sessionProperties) {
+      window.location.reload();
     })
-  }
+    .catch(function (error) {
+      hoodie.account.destroy();
+      hoodie.account.signUp({username: email, password: password});
+      console.log('🐳', error)
+    })
+  };
+
+  performLogout() {
+    hoodie.account.signOut()
+    .then(function (sessionProperties) {
+      window.location.reload();
+    }).catch(function (error) {
+      hoodie.account.destroy();
+      console.log('🐞', error)
+    })
+  };
 
   getSemestersForUser() {
     var userModules = users.students[0].tracked_modules;
@@ -78,7 +93,7 @@ class Home extends React.Component {
     var semesters = this.getSemestersForUser();
     return (
       <div>
-      <Header performLogin={this.performLogin.bind(this)}/>
+      <Header performLogin={this.performLogin.bind(this)} performLogout={this.performLogout.bind(this)}/>
       <ModulePlan semesters={semesters}/>
       <PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} />
       </div>
