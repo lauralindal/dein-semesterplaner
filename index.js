@@ -10,7 +10,7 @@ server.connection({
 server.register({
   register: hoodie,
   options: { // pass options here
-    inMemory: true,
+    inMemory: false,
     public: 'public'
   }
 }, function (error) {
