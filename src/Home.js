@@ -21,11 +21,14 @@ class Home extends React.Component {
       hoodie.account.profile.update({firstName: firstName})
       .then(() => {
         this.setState({isLoggedIn: true});
+        this.generateUserModuleData();
+        var foo = hoodie.store.findAll();
       });
     })
     .catch(function (error) {
       hoodie.account.destroy();
       hoodie.account.signUp({username: email, password: password});
+      this.generateUserModuleData();
       console.log('🐳', error)
     })
   };
@@ -40,6 +43,26 @@ class Home extends React.Component {
       console.log('🐞', error)
     })
   };
+
+  generateUserModuleData(){
+    var userModules = users.students[0].tracked_modules;
+    var totalCreditPoints = this.calculateTotalCredits();
+    console.log(totalCreditPoints);
+    console.log(userModules);
+    hoodie.store.add({foo: 'bar'}).then(function (doc) {
+      alert(doc.foo) // bar
+    }).catch(function (error) {
+      alert(error)
+    })
+  //
+    // hoodie.store.add({
+    //   "totalCreditPoints": totalCreditPoints,
+    //   "userModules": userModules
+    // })
+    // .catch(function (error) {
+    //   console.log('ohno', error)
+    // })
+  }
 
   getSemestersForUser() {
     var userModules = users.students[0].tracked_modules;
