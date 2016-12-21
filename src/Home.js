@@ -47,22 +47,17 @@ class Home extends React.Component {
   generateUserModuleData(){
     var userModules = users.students[0].tracked_modules;
     var totalCreditPoints = this.calculateTotalCredits();
-    console.log(totalCreditPoints);
-    console.log(userModules);
-    hoodie.store.add({foo: 'bar'}).then(function (doc) {
-      alert(doc.foo) // bar
-    }).catch(function (error) {
-      alert(error)
+    hoodie.store.add({
+      "totalCreditPoints": totalCreditPoints,
+      "userModules": userModules
     })
-  //
-    // hoodie.store.add({
-    //   "totalCreditPoints": totalCreditPoints,
-    //   "userModules": userModules
-    // })
-    // .catch(function (error) {
-    //   console.log('ohno', error)
-    // })
-  }
+    .then(() => {
+      console.log(id)
+    })
+    .catch(function (error) {
+      console.log('ohno', error)
+    })
+  };
 
   getSemestersForUser() {
     var userModules = users.students[0].tracked_modules;
