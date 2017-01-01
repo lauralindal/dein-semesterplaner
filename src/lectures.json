@@ -1,0 +1,167 @@
+{
+  "time-table": {
+    "semester": "SoSe 2017",
+    "lectures": [
+      {
+        "id": 1,
+        "day": "monday",
+        "time": "9:45 - 11:15",
+        "course-format": "Seminaristischer Lehrvortrag",
+        "course-interval": "weekly",
+        "lecturer": "Herr Freiheit",
+        "location": "WHC 424",
+        "track": "alle",
+      },
+      {
+        "id": 1,
+        "day": "monday",
+        "time": "15:45 - 17:15",
+        "course-format": "PC-Übung",
+        "course-interval": "weekly",
+        "lecturer": "Herr Freiheit",
+        "location": "WHC 644",
+        "track": "Zug 1",
+      },
+      {
+        "id": 1,
+        "day": "wednesday",
+        "time": "9:45 - 11:15",
+        "course-format": "PC-Übung",
+        "course-interval": "weekly",
+        "lecturer": "Herr Freiheit",
+        "location": "WHC 644",
+        "track": "Zug 1",
+      },
+      {
+        "id": 2,
+        "day": "friday",
+        "time": "9:45 - 10:15",
+        "course-format": "Seminaristischer Lehrvortrag",
+        "course-interval": "weekly",
+        "lecturer": "Frau Sowieso",
+        "location": "WHC 422",
+        "track": "alle",
+      },
+      {
+        "id": 3,
+        "day": "wednesday",
+        "time": "12:15 - 13:45",
+        "course-format": "Seminaristischer Lehrvortrag",
+        "course-interval": "weekly",
+        "lecturer": "Herr Jäger-Abrozewicz",
+        "location": "WHC 321",
+        "track": "alle",
+      },
+      {
+        "id": 3,
+        "day": "wednesday",
+        "time": "14:00 - 15:30",
+        "course-format": "Praktische Übung",
+        "course-interval": "weekly",
+        "lecturer": "Herr Jäger-Abrozewicz",
+        "location": "WHC 321",
+        "track": "Zug 1",
+      },
+      {
+        "id": 3,
+        "day": "wednesday",
+        "time": "12:15 - 13:45",
+        "course-format": "Praktische Übung",
+        "course-interval": "weekly",
+        "lecturer": "Herr Jäger-Abrozewicz",
+        "location": "WHC 321",
+        "track": "Zug 2",
+      },
+    ]
+  }
+}
+
+
+
+
+
+{
+  "time-table": {
+    "semester": "SoSe 2017",
+    "lectures": [
+      {
+        "id": 1,
+        "related_corses": [
+          {
+            "day": "monday",
+            "time": "9:45 - 11:15",
+            "course-format": "Seminaristischer Lehrvortrag",
+            "course-interval": "weekly",
+            "lecturer": "Herr Freiheit",
+            "location": "WHC 424",
+            "track": "alle",
+          },
+          {
+            "day": "monday",
+            "time": "15:45 - 17:15",
+            "course-format": "PC-Übung",
+            "course-interval": "weekly",
+            "lecturer": "Herr Freiheit",
+            "location": "WHC 644",
+            "track": "Zug 1",
+          },
+          {
+            "day": "wednesday",
+            "time": "9:45 - 11:15",
+            "course-format": "PC-Übung",
+            "course-interval": "weekly",
+            "lecturer": "Herr Freiheit",
+            "location": "WHC 644",
+            "track": "Zug 1",
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "related_corses": [
+          {
+            "day": "friday",
+            "time": "9:45 - 10:15",
+            "course-format": "Seminaristischer Lehrvortrag",
+            "course-interval": "weekly",
+            "lecturer": "Frau Sowieso",
+            "location": "WHC 422",
+            "track": "alle",
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "related_corses": [
+          {
+            "day": "wednesday",
+            "time": "12:15 - 13:45",
+            "course-format": "Seminaristischer Lehrvortrag",
+            "course-interval": "weekly",
+            "lecturer": "Herr Jäger-Abrozewicz",
+            "location": "WHC 321",
+            "track": "alle",
+          },
+          {
+            "day": "wednesday",
+            "time": "14:00 - 15:30",
+            "course-format": "Praktische Übung",
+            "course-interval": "weekly",
+            "lecturer": "Herr Jäger-Abrozewicz",
+            "location": "WHC 321",
+            "track": "Zug 1",
+          },
+          {
+            "day": "wednesday",
+            "time": "12:15 - 13:45",
+            "course-format": "Praktische Übung",
+            "course-interval": "weekly",
+            "lecturer": "Herr Jäger-Abrozewicz",
+            "location": "WHC 321",
+            "track": "Zug 2",
+          },
+        ]
+      }
+    ]
+  }
+}
