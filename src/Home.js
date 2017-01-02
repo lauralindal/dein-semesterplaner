@@ -114,7 +114,7 @@ class Home extends React.Component {
     return selectedCoursesCounter;
   };
 
-  renderUserData(isLoggedIn) {
+  displayUserSignInStatus(isLoggedIn) {
     var totalCreditPoints = this.calculateTotalCredits();
     var currentCreditPoints = this.calculateCurrentCredits();
     var selectedCoursesCounter = this.countSelectedCourses();
@@ -130,7 +130,7 @@ class Home extends React.Component {
     return (
       <div>
       <Header performLogin={this.performLogin.bind(this)} performLogout={this.performLogout.bind(this)}/>
-      {this.renderUserData(isLoggedIn)}
+      {this.displayUserSignInStatus(isLoggedIn)}
       </div>
     );
   }
