@@ -22,12 +22,11 @@ class Home extends React.Component {
       .then(() => {
         this.setState({isLoggedIn: true});
         this.generateUserModuleData();
-        var foo = hoodie.store.findAll();
       });
     })
     .catch(function (error) {
       hoodie.account.destroy();
-      hoodie.account.signUp({username: email, password: password});
+      hoodie.account.signUp({username: email, password: password})
       this.generateUserModuleData();
       console.log('🐳', error)
     })
@@ -52,7 +51,7 @@ class Home extends React.Component {
       "userModules": userModules
     })
     .then(() => {
-      console.log(id)
+      console.log('your data has been saved')
     })
     .catch(function (error) {
       console.log('ohno', error)
