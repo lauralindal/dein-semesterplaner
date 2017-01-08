@@ -125,7 +125,7 @@ class Home extends React.Component {
       return (
         <div><ModulePlan semesters={semesters}/>
         <PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} />
-        <CourseSchedule/>
+        <CourseSchedule selectedCourseInfo={selectedCourseInfo} />
         </div>
         );
     }

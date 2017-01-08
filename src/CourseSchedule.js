@@ -19,17 +19,16 @@ class CourseSchedule extends React.Component {
         );
     });
   }
-  
+ 
 
   render() {
-   
   var weekdays= this.getWeekdays();
     return (
     <div>
     <section id="schedule">
       <h5>Kalender/Weekly Planner</h5>
       <table>
-        <Weekday name={weekdays}/>
+        <Weekday name={weekdays}  courseinfo= {this.props.selectedCoursInfo}/>
       </table>
     </section>
     </div>
