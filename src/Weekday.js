@@ -18,6 +18,7 @@ getTimeSlots() {
     });
   }
 
+
   render() {
 
   	var timeslots= this.getTimeSlots();

@@ -5,7 +5,7 @@ import PlanningSection from './PlanningSection';
 import CourseSchedule from './CourseSchedule';
 import moduleplan from './moduleplan.json';
 import users from './users.json';
-import lectures from './courseData.json';
+import courseData from './courseData.json';
 
 class Home extends React.Component {
 
@@ -96,11 +96,31 @@ class Home extends React.Component {
     return selectedCoursesCounter;
   };
 
+  retrieveSelectedCourseInfo() {
+    var userModules = users.students[0].tracked_modules;
+    var courseInfo = courseData.timetable.lectures;
+    var selectedModuleIds= [];
+    var selectedCourseData= [];
+    for (var i = 0; i < userModules.length; i++) {
+      if (userModules[i].status === "selected"){
+        selectedModuleIds.push(userModules[i].module_id);
+      }  
+    }
+    for (var i = 0; i < selectedModuleIds.length; i++) {
+        for (var j=0; j < courseInfo.length; j++){
+          if (selectedModuleIds[i]===courseInfo[j].related_module_id)
+          selectedCourseData.push(courseInfo[j]);
+        }
+      }
+    return selectedCourseData;
+  };
+ 
   renderUserData(isLoggedIn) {
     var totalCreditPoints = this.calculateTotalCredits();
     var currentCreditPoints = this.calculateCurrentCredits();
     var selectedCoursesCounter = this.countSelectedCourses();
     var semesters = this.getSemestersForUser();
+    var selectedCourseInfo = this.retrieveSelectedCourseInfo();
     if(isLoggedIn) {
       return (
         <div><ModulePlan semesters={semesters}/>

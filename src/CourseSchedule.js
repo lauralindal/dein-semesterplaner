@@ -1,6 +1,7 @@
 import React from 'react';
 import Weekday from './Weekday';
 
+
 class CourseSchedule extends React.Component {
 
   getWeekdays() {
