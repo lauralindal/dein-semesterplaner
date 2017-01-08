@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
+import CourseSchedule from './CourseSchedule';
 import moduleplan from './moduleplan.json';
 import users from './users.json';
 import lectures from './courseData.json';
@@ -101,7 +102,12 @@ class Home extends React.Component {
     var selectedCoursesCounter = this.countSelectedCourses();
     var semesters = this.getSemestersForUser();
     if(isLoggedIn) {
-      return (<div><ModulePlan semesters={semesters}/><PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} /></div>);
+      return (
+        <div><ModulePlan semesters={semesters}/>
+        <PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} />
+        <CourseSchedule/>
+        </div>
+        );
     }
     return (<div><p>Hallo! Bitte logge dich ein, um dein kommendes Semester zu planen</p></div>);
   }
