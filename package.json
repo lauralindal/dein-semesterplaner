@@ -4,8 +4,8 @@
   "description": "Projekt von Studentinnen der HTW Berlin, Wintersemester 2016/17.",
   "main": "index.js",
   "scripts": {
-    "prestart": "webpack --progress --colors",
-    "start": "nodemon index.js",
+    "start": "webpack --progress --colors --watch",
+    "server": "nodemon ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
