@@ -57,16 +57,18 @@ class Home extends React.Component {
   };
 
   getUserModuleData(){
-    hoodie.store.findAll().then(function(data){
+    return hoodie.store.findAll().then(function(data){
         var userModules = data[0].userModules;
-        console.log(userModules);
-        // this is where I want to return the userModules, but it's always undefined
+        return Promise.resolve(userModules);
       }
     );
   };
 
   getSemestersForUser() {
-    // this is where we still get the user data from our json file, but i want to get it from the database now, with this.getUserModuleData()
+    this.getUserModuleData()
+    .then(function(userModules) {
+      console.log(userModules);
+    });
     var userModules = users.students[0].tracked_modules;
     var modules = moduleplan.degree_course.modules;
     var semesters = [1,2,3,4,5,6].map(function(semester) {
