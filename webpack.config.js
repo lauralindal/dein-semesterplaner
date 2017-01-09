@@ -12,10 +12,12 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         loaders: ['babel']
       },
       {
         include: /\.json$/,
+        exclude: /node_modules/,
         loaders: ["json-loader"]
       }
     ]
