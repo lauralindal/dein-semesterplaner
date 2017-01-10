@@ -12,6 +12,7 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
+      userDataSet: null,
       semesters: []
     };
   }
@@ -51,8 +52,8 @@ class Home extends React.Component {
 
   getUserModuleData(){
     var self = this;
-    return hoodie.store.findAll().then(function(data){
-      self.setState({userData: data[0]});
+    return hoodie.store.findAll().then(function(userDataSets){
+      self.setState({userDataSet: userDataSets[0]});
       return Promise.resolve();
     });
   }
