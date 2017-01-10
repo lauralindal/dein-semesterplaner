@@ -4,6 +4,7 @@ import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
 import moduleplan from './moduleplan.json';
 import users from './users.json';
+import {seedUserData} from './users';
 
 class Home extends React.Component {
 
@@ -26,13 +27,13 @@ class Home extends React.Component {
       hoodie.account.profile.update({firstName: firstName})
       .then(() => {
         this.setState({isLoggedIn: true});
-        this.generateUserModuleData();
+        seedUserData();
       });
     })
     .catch(function (error) {
       hoodie.account.destroy();
       hoodie.account.signUp({username: email, password: password})
-      this.generateUserModuleData();
+      seedUserData();
       console.log('🐳', error)
     })
   };
@@ -45,19 +46,6 @@ class Home extends React.Component {
     .catch(function (error) {
       hoodie.account.destroy();
       console.log('🐞', error)
-    })
-  };
-
-  generateUserModuleData(){
-    var userModules = users.students[0].tracked_modules;
-    hoodie.store.add({
-      "userModules": userModules
-    })
-    .then(() => {
-      console.log('your data has been saved')
-    })
-    .catch(function (error) {
-      console.log('ohno', error)
     })
   };
 
