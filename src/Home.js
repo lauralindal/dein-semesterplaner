@@ -10,8 +10,13 @@ class Home extends React.Component {
   constructor(){
     super();
     this.state = {
-      isLoggedIn: hoodie.account.isSignedIn()
+      isLoggedIn: hoodie.account.isSignedIn(),
+      semesters: []
     };
+  }
+
+  componentDidMount() {
+    this.getSemestersForUser();
   }
 
   performLogin(email, password) {
@@ -57,35 +62,35 @@ class Home extends React.Component {
   };
 
   getUserModuleData(){
+    var self = this;
     return hoodie.store.findAll().then(function(data){
-        var userModules = data[0].userModules;
-        return Promise.resolve(userModules);
-      }
-    );
-  };
+      self.setState({userData: data[0]});
+      return Promise.resolve();
+    });
+  }
 
   getSemestersForUser() {
+    var self = this;
     this.getUserModuleData()
-    .then(function(userModules) {
-      console.log(userModules);
-    });
-    var userModules = users.students[0].tracked_modules;
-    var modules = moduleplan.degree_course.modules;
-    var semesters = [1,2,3,4,5,6].map(function(semester) {
-      var filteredModules = modules.filter(function(module) {
-        return module.recommended_semester === semester;
-      });
-      return filteredModules.map(function(module) {
-        var userModule = userModules.find(function(userModule) {
-          return userModule.module_id === module.id;
+    .then(function() {
+      var userModules = users.students[0].tracked_modules;
+      var modules = moduleplan.degree_course.modules;
+      var semesters = [1,2,3,4,5,6].map(function(semester) {
+        var filteredModules = modules.filter(function(module) {
+          return module.recommended_semester === semester;
         });
-        return {
-          module: module,
-          userModule: userModule
-        }
+        return filteredModules.map(function(module) {
+          var userModule = userModules.find(function(userModule) {
+            return userModule.module_id === module.id;
+          });
+          return {
+            module: module,
+            userModule: userModule
+          }
+        });
       });
+      self.setState({semesters: semesters});
     });
-    return semesters;
   };
 
   calculateTotalCredits() {
@@ -112,7 +117,7 @@ class Home extends React.Component {
     return currentCredits;
   };
 
-   countSelectedCourses() {
+  countSelectedCourses() {
     var userModules = users.students[0].tracked_modules;
     var modules = moduleplan.degree_course.modules;
     var selectedCoursesCounter= 0;
@@ -128,7 +133,7 @@ class Home extends React.Component {
     var totalCreditPoints = this.calculateTotalCredits();
     var currentCreditPoints = this.calculateCurrentCredits();
     var selectedCoursesCounter = this.countSelectedCourses();
-    var semesters = this.getSemestersForUser();
+    var semesters = this.state.semesters;
     if(isLoggedIn) {
       return (<div><ModulePlan semesters={semesters}/><PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} /></div>);
     }
