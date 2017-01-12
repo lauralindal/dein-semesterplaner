@@ -12,9 +12,12 @@ class Home extends React.Component {
   constructor(){
     super();
     this.state = {
-      isLoggedIn: hoodie.account.isSignedIn()
+      isLoggedIn: hoodie.account.isSignedIn(),
+      userModules: users.students[0].tracked_modules
     };
   }
+
+
 
   performLogin(email, password) {
     hoodie.account.signIn({ username: email, password: password})
@@ -40,7 +43,7 @@ class Home extends React.Component {
   };
 
   getSemestersForUser() {
-    var userModules = users.students[0].tracked_modules;
+    var userModules = this.state.userModules;
     var modules = moduleplan.degree_course.modules;
     var semesters = [1,2,3,4,5,6].map(function(semester) {
       var filteredModules = modules.filter(function(module) {
@@ -60,7 +63,7 @@ class Home extends React.Component {
   };
 
   calculateTotalCredits() {
-    var userModules = users.students[0].tracked_modules;
+    var userModules = this.state.userModules;
     var modules = moduleplan.degree_course.modules;
     var totalCredits= 0;
     for (var i = 0; i < userModules.length; i++) {
@@ -73,11 +76,11 @@ class Home extends React.Component {
 
 
   calculateCurrentCredits() {
-    var userModules = users.students[0].tracked_modules;
+    var userModules = this.state.userModules;
     var modules = moduleplan.degree_course.modules;
     var currentCredits= 0;
     for (var i = 0; i < userModules.length; i++) {
-      if (userModules[i].status === "selected"){
+      if (userModules[i].selected){
         currentCredits= currentCredits + modules[i].cp;
       }
     }
@@ -85,11 +88,11 @@ class Home extends React.Component {
   };
 
    countSelectedCourses() {
-    var userModules = users.students[0].tracked_modules;
+    var userModules = this.state.userModules;
     var modules = moduleplan.degree_course.modules;
     var selectedCoursesCounter= 0;
     for (var i = 0; i < userModules.length; i++) {
-      if (userModules[i].status === "selected"){
+      if (userModules[i].selected){
         selectedCoursesCounter ++;
       }
     }
@@ -97,12 +100,12 @@ class Home extends React.Component {
   };
 
   retrieveSelectedCourseInfo() {
-    var userModules = users.students[0].tracked_modules;
+    var userModules = this.state.userModules;
     var courseInfo = courseData.timetable.lectures;
     var selectedModuleIds= [];
     var selectedCourseData= [];
     for (var i = 0; i < userModules.length; i++) {
-      if (userModules[i].status === "selected"){
+      if (userModules[i].selected){
         selectedModuleIds.push(userModules[i].module_id);
       }  
     }
@@ -115,6 +118,21 @@ class Home extends React.Component {
     return selectedCourseData;
   };
  
+  toggleModule(moduleId, e){
+    e.preventDefault();
+    var userModules=this.state.userModules;
+    var data=null;
+    for (var i = 0; i < userModules.length; i++) {
+      if (userModules[i].module_id===moduleId){
+       if(userModules[i].status==="completed"){
+        return;
+       }
+       userModules[i].selected= !userModules[i].selected;
+      }  
+    }
+    this.setState({userModules:userModules});
+  };
+
   renderUserData(isLoggedIn) {
     var totalCreditPoints = this.calculateTotalCredits();
     var currentCreditPoints = this.calculateCurrentCredits();
@@ -123,8 +141,11 @@ class Home extends React.Component {
     var selectedCourseInfo = this.retrieveSelectedCourseInfo();
     if(isLoggedIn) {
       return (
-        <div><ModulePlan semesters={semesters}/>
-        <PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} />
+        <div><ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
+        <PlanningSection totalCreditPoints={totalCreditPoints} 
+        selectedCourseInfo={selectedCourseInfo}
+        currentCreditPoints={currentCreditPoints} 
+        selectedCoursesCounter={selectedCoursesCounter} />
         <CourseSchedule selectedCourseInfo={selectedCourseInfo} />
         </div>
         );

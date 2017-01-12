@@ -1,6 +1,10 @@
 import React from 'react';
 
 class Module extends React.Component {
+  toggleModule(e){
+    this.props.toggleModule(this.props.userModule.module_id,e);
+  };
+
   render() {
     var ModuleClasses = "button hover";
 
@@ -23,7 +27,7 @@ class Module extends React.Component {
 
     return (
       <div key={this.props.module.title} className="semester">
-          <p className={ModuleClasses}>{this.props.module.title} {this.props.userModule.status}</p>
+          <p className={ModuleClasses} onClick={this.toggleModule.bind(this)}>{this.props.module.title} {this.props.userModule.status}</p>
       </div>
     )
   }
