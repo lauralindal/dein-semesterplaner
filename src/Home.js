@@ -134,7 +134,6 @@ class Home extends React.Component {
           selectedCourseTitels.push(modules[j].title);
         }
       }
-      console.log(selectedCourseTitels);
       return selectedCourseTitels;
   };
  
