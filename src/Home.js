@@ -118,11 +118,11 @@ class Home extends React.Component {
     return selectedCourseData;
   };
 
-  retrieveSelectedCourseTitel(){
+  retrieveSelectedModuleTitel(){
      var userModules = this.state.userModules;
      var modules = moduleplan.degree_course.modules;
      var selectedModuleIds= [];
-     var selectedCourseTitels= [];
+     var selectedModuleTitels= [];
      for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].selected){
         selectedModuleIds.push(userModules[i].module_id);
@@ -131,11 +131,16 @@ class Home extends React.Component {
     for (var i = 0; i < selectedModuleIds.length; i++) {
         for (var j=0; j < modules.length; j++){
           if (selectedModuleIds[i]===modules[j].id)
-          selectedCourseTitels.push(modules[j].title);
+          selectedModuleTitels.push(modules[j].title);
         }
       }
-      return selectedCourseTitels;
+      return selectedModuleTitels;
   };
+
+  combineSelectedTitelsAndData(){
+    var courseTitels= this.retrieveSelectedCourseTitel;
+    var course
+  }
  
   toggleModule(moduleId, e){
     e.preventDefault();
@@ -158,13 +163,13 @@ class Home extends React.Component {
     var selectedCoursesCounter = this.countSelectedCourses();
     var semesters = this.getSemestersForUser();
     var selectedCourseInfo = this.retrieveSelectedCourseInfo();
-    var selectedCourseTitels= this.retrieveSelectedCourseTitel();
+    var selectedModuleTitels= this.retrieveSelectedModuleTitel();
     if(isLoggedIn) {
       return (
         <div><ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
         <PlanningSection totalCreditPoints={totalCreditPoints} 
         selectedCourseInfo={selectedCourseInfo}
-        selectedCourseTitels={selectedCourseTitels}
+        selectedModuleTitels={selectedModuleTitels}
         currentCreditPoints={currentCreditPoints} 
         selectedCoursesCounter={selectedCoursesCounter} />
         <CourseSchedule selectedCourseInfo={selectedCourseInfo} />
