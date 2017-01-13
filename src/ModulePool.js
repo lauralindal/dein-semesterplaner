@@ -12,9 +12,9 @@ class ModulePool extends React.Component {
   render() {
     return (
       <div id="coursePool" className="float-right">
-          Course Pool <br />
-          Plane dein 6. Semester <br />
-          <div id="main">{this.renderModules()}</div>
+        <div className="bordertype">
+          <div id="main">Plane dein 6. Semester <p></p> {this.renderModules()} </div>
+         </div> 
       </div>
     )
   }
