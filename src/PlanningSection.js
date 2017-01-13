@@ -12,7 +12,7 @@ class PlanningSection extends React.Component {
             <TotalCredits totalCreditPoints={this.props.totalCreditPoints}/>
             <CurrentCredits currentCreditPoints={this.props.currentCreditPoints} selectedCoursesCounter={this.props.selectedCoursesCounter}/>
           </div>
-          <ModulePool selectedCourseInfo={this.props.selectedCourseInfo}/>
+          <ModulePool selectedCourseInfo={this.props.selectedCourseInfo} selectedCourseTitels={this.props.selectedCourseTitels}/>
           <p className="u-cf"></p>
         </div>
       </section>

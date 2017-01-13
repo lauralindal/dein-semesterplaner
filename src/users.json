@@ -105,13 +105,11 @@
         },
         {
           "module_id": 25,
-          "status": "available",
-          "selected": true
+          "status": "available"
         },
         {
           "module_id": 26,
-          "status": "available",
-          "selected": true
+          "status": "available"
         },
         {
           "module_id": 27,
