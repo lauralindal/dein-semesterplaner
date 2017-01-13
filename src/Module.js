@@ -7,6 +7,7 @@ class Module extends React.Component {
 
   render() {
     var ModuleClasses = "button hover";
+    var ModuleClasses_fix = "fix";
 
     switch (this.props.userModule.status) {
       case "urgent":

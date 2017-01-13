@@ -5,6 +5,9 @@
 .hover:hover {
   background-color: #76B900;
 }
+.fix{
+  background-color: #76B900;
+}
 
 .wrapper{
   margin: 30px 30px;
