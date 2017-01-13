@@ -146,7 +146,6 @@ class Home extends React.Component {
         courseInformation[j].title=modules[i].title;
       }
     }
-    console.log(courseInformation);
     return courseInformation;
   }
  
