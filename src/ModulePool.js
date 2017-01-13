@@ -4,7 +4,10 @@ class ModulePool extends React.Component {
   renderModules(){ 
   	return this.props.selectedModuleTitels.map((module) => {
       return(
-        <div key={module}>{module}</div>
+        <div>
+        <div className="button fix" key={module}>{module}</div>
+        <br />
+        </div>
         );
     });
 
@@ -12,12 +15,14 @@ class ModulePool extends React.Component {
   render() {
     return (
       <div id="coursePool" className="float-right">
-          Course Pool <br />
-          Plane dein 6. Semester <br />
-          <div id="main">{this.renderModules()}</div>
+        <div className="bordertype">
+          <div id="main"> {this.renderModules()}</div>
+
+         </div> 
       </div>
     )
   }
 }
 
 export default ModulePool
+

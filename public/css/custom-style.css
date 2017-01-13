@@ -5,6 +5,9 @@
 .hover:hover {
   background-color: #76B900;
 }
+.fix{
+  background-color: #76B900;
+}
 
 .wrapper{
   margin: 30px 30px;
@@ -78,6 +81,15 @@ div.flex-container{
   text-align: center;
 }
 
+/* -------Box-sizing ------------- */
+
+*{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box; 
+-ms-box-sizing: border-box; 
+box-sizing: border-box;
+}
+
 /* -------Misc ------------- */
 
 legend{
@@ -129,8 +141,6 @@ section#symbology{
   border: 2px solid red; 
 }
 
-
-
 section#coursePlan{
   text-align: left;
   border: 1px solid grey;
@@ -151,7 +161,7 @@ section#planningSection{
 }
 div#sum{
   width: 30%;
-  height: 400px;
+  min-height: 400px;
   border: 1px solid grey;
   display: inline-block;
 }
@@ -159,19 +169,27 @@ div#sum_total{
   border: 1px solid grey;
   text-align: center;
   padding: 5px;
-  height: 45%;
+  min-height: 200px;
 }
 div#sum_current{
   border: 1px solid grey;
   text-align: center;
   padding: 5px;
-  height: 45%;
+  min-height: 200px;
 }
 div#coursePool{
   border: 1px solid grey;
-  width: 65%;
-  height: 400px;
+  min-width: 67%;
+  min-height: 417px;
   text-align: center;
+}
+.bordertype{
+    border: 3px dashed grey;
+    border-radius: 70px;
+    margin: 40px 40px 40px 40px;
+    height: 335px;
+    background-color: white;
+    text-align: center;
 }
 section#schedule{
   border: 1px solid grey;
