@@ -138,8 +138,16 @@ class Home extends React.Component {
   };
 
   combineSelectedTitelsAndData(){
-    var courseTitels= this.retrieveSelectedCourseTitel;
-    var course
+    var courseInformation= this.retrieveSelectedCourseInfo();
+    var modules = moduleplan.degree_course.modules;
+     for (var i = 0; i < modules.length; i++) {
+        for (var j=0; j < courseInformation.length; j++)
+          if (modules[i].id == courseInformation[j].related_module_id){
+        courseInformation[j].title=modules[i].title;
+      }
+    }
+    console.log(courseInformation);
+    return courseInformation;
   }
  
   toggleModule(moduleId, e){
@@ -164,6 +172,7 @@ class Home extends React.Component {
     var semesters = this.getSemestersForUser();
     var selectedCourseInfo = this.retrieveSelectedCourseInfo();
     var selectedModuleTitels= this.retrieveSelectedModuleTitel();
+    var combinedTitelAndData= this.combineSelectedTitelsAndData();
     if(isLoggedIn) {
       return (
         <div><ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
@@ -172,7 +181,7 @@ class Home extends React.Component {
         selectedModuleTitels={selectedModuleTitels}
         currentCreditPoints={currentCreditPoints} 
         selectedCoursesCounter={selectedCoursesCounter} />
-        <CourseSchedule selectedCourseInfo={selectedCourseInfo} />
+        <CourseSchedule selectedCourseInfo={selectedCourseInfo} combinedTitelAndData={combinedTitelAndData}/>
         </div>
         );
     }

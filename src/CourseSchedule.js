@@ -16,7 +16,7 @@ class CourseSchedule extends React.Component {
     ];
     return sessions.map((slot) => {
       return(
-        <TimeSlots  time={slot.starttime} name={slot.name} key={slot.id} />
+        <TimeSlots time={slot.starttime} name={slot.name} key={slot.id} />
         );
     });
   }
