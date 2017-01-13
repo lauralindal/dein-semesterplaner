@@ -4,7 +4,7 @@ class ModulePool extends React.Component {
   renderModules(){ 
   	return this.props.selectedCourseTitels.map((module) => {
       return(
-        <div key={module.id}>{module}</div>
+        <div key={module}>{module}</div>
         );
     });
 
