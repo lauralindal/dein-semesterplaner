@@ -4,15 +4,39 @@ import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
 import moduleplan from './moduleplan.json';
 import users from './users.json';
+import lectures from './courseData.json';
 
 class Home extends React.Component {
 
-  performLogin(email, password) {
-    hoodie.account.signIn({
-      username: email,
-      password: password
-    })
+  constructor(){
+    super();
+    this.state = {
+      isLoggedIn: hoodie.account.isSignedIn()
+    };
   }
+
+  performLogin(email, password) {
+    hoodie.account.signIn({ username: email, password: password})
+    .then(() => {
+      this.setState({isLoggedIn: true});
+    })
+    .catch(function (error) {
+      hoodie.account.destroy();
+      hoodie.account.signUp({username: email, password: password});
+      console.log('🐳', error)
+    })
+  };
+
+  performLogout() {
+    hoodie.account.signOut()
+    .then(() => {
+      this.setState({isLoggedIn: false});
+    })
+    .catch(function (error) {
+      hoodie.account.destroy();
+      console.log('🐞', error)
+    })
+  };
 
   getSemestersForUser() {
     var userModules = users.students[0].tracked_modules;
@@ -47,14 +71,47 @@ class Home extends React.Component {
   };
 
 
-  render() {
+  calculateCurrentCredits() {
+    var userModules = users.students[0].tracked_modules;
+    var modules = moduleplan.degree_course.modules;
+    var currentCredits= 0;
+    for (var i = 0; i < userModules.length; i++) {
+      if (userModules[i].status === "selected"){
+        currentCredits= currentCredits + modules[i].cp;
+      }
+    }
+    return currentCredits;
+  };
+
+   countSelectedCourses() {
+    var userModules = users.students[0].tracked_modules;
+    var modules = moduleplan.degree_course.modules;
+    var selectedCoursesCounter= 0;
+    for (var i = 0; i < userModules.length; i++) {
+      if (userModules[i].status === "selected"){
+        selectedCoursesCounter ++;
+      }
+    }
+    return selectedCoursesCounter;
+  };
+
+  renderUserData(isLoggedIn) {
     var totalCreditPoints = this.calculateTotalCredits();
+    var currentCreditPoints = this.calculateCurrentCredits();
+    var selectedCoursesCounter = this.countSelectedCourses();
     var semesters = this.getSemestersForUser();
+    if(isLoggedIn) {
+      return (<div><ModulePlan semesters={semesters}/><PlanningSection totalCreditPoints={totalCreditPoints} currentCreditPoints={currentCreditPoints} selectedCoursesCounter={selectedCoursesCounter} /></div>);
+    }
+    return (<div><p>Hallo! Bitte logge dich ein, um dein kommendes Semester zu planen</p></div>);
+  }
+
+  render() {
+    var isLoggedIn = this.state.isLoggedIn;
     return (
       <div>
-      <Header performLogin={this.performLogin.bind(this)}/>
-      <ModulePlan semesters={semesters}/>
-      <PlanningSection totalCreditPoints={totalCreditPoints}/>
+      <Header performLogin={this.performLogin.bind(this)} performLogout={this.performLogout.bind(this)}/>
+      {this.renderUserData(isLoggedIn)}
       </div>
     );
   }

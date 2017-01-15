@@ -1,0 +1,556 @@
+{
+  "time-table": {
+    "semester": "SoSe 2017",
+    "lectures": [{
+      "id": 1,
+      "related_module_id": 1,
+      "day": "Montag",
+      "time": "9:45 - 11:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Freiheit",
+      "location": "WHC 424",
+      "track": "alle"
+    }, {
+      "id": 2,
+      "related_module_id": 1,
+      "day": "Montag",
+      "time": "15:45 - 17:15",
+      "course-format": "PÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Freiheit",
+      "location": "WHC 644",
+      "track": "Zug 1"
+    }, {
+      "id": 3,
+      "related_module_id": 1,
+      "day": "Mittwoch",
+      "time": "9:45 - 11:15",
+      "course-format": "PÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Freiheit",
+      "location": "WHC 644",
+      "track": "Zug 2"
+    }, {
+      "id": 4,
+      "related_module_id": 2,
+      "day": "Freitag",
+      "time": "9:45 - 10:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris",
+      "location": "WHC 422",
+      "track": "alle"
+    }, {
+      "id": 5,
+      "related_module_id": 3,
+      "day": "Mittwoch",
+      "time": "12:15 - 13:45",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Jäger-Ambrozewicz",
+      "location": "WHC 321",
+      "track": "alle"
+    }, {
+      "id": 6,
+      "related_module_id": 3,
+      "day": "Donnerstag",
+      "time": "12:15 - 13:45",
+      "course-format": "PÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Jäger-Ambrozewicz",
+      "location": "WHC 321",
+      "track": "Zug 1"
+    }, {
+      "id": 7,
+      "related_module_id": 3,
+      "day": "Mittwoch",
+      "time": "14:00 - 15:30",
+      "course-format": "PÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Jäger-Ambrozewicz",
+      "location": "WHC 321",
+      "track": "Zug 2"
+    }, {
+      "id": 8,
+      "related_module_id": 4,
+      "day": "Donnerstag",
+      "time": "12:15 - 13:45",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Krefting",
+      "location": "WHC 424",
+      "track": "alle"
+    }, {
+      "id": 9,
+      "related_module_id": 4,
+      "day": "Donnerstag",
+      "time": "14:00 - 15:30",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Krefting",
+      "location": "WHC 644",
+      "track": "Zug 1"
+    }, {
+      "id": 10,
+      "related_module_id": 4,
+      "day": "Freitag",
+      "time": "8:00 - 9:30",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Krefting",
+      "location": "WHC 644",
+      "track": "Zug 2"
+    }, {
+      "id": 11,
+      "related_module_id": 5,
+      "day": "Montag",
+      "time": "12:15 - 13:45",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Rachfall",
+      "location": "WHC 444",
+      "track": "alle"
+    }, {
+      "id": 12,
+      "related_module_id": 5,
+      "day": "Montag",
+      "time": "14:00 - 15:30",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Rachfall",
+      "location": "WHC 444",
+      "track": "alle"
+    }, {
+      "id": 13,
+      "related_module_id": 6,
+      "day": "Dienstag",
+      "time": "9:45 - 11:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Wehner",
+      "location": "TGS 201",
+      "track": "alle"
+    }, {
+      "id": 14,
+      "related_module_id": 7,
+      "day": "Montag",
+      "time": "12:15 - 13:45",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Freiheit",
+      "location": "WHC 533",
+      "track": "alle"
+    }, {
+      "id": 15,
+      "related_module_id": 7,
+      "day": "Montag",
+      "time": "8:00 - 9:45",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Freiheit",
+      "location": "WHC 644",
+      "track": "Zug 1"
+    }, {
+      "id": 16,
+      "related_module_id": 7,
+      "day": "Mittwoch",
+      "time": "14:00 - 15:30",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Freiheit",
+      "location": "WHC 644",
+      "track": "Zug 2"
+    }, {
+      "id": 17,
+      "related_module_id": 8,
+      "day": "Freitag",
+      "time": "12:15 - 13:45",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris",
+      "location": "WHC 444",
+      "track": "alle"
+    }, {
+      "id": 18,
+      "related_module_id": 8,
+      "day": "Freitag",
+      "time": "14:00 - 15:30",
+      "course-format": "PÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris",
+      "location": "WHC 444",
+      "track": "alle"
+    }, {
+      "id": 19,
+      "related_module_id": 9,
+      "day": "Donnerstag",
+      "time": "9:45 - 11.15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Hubl",
+      "location": "WHC 311",
+      "track": "alle"
+    }, {
+      "id": 20,
+      "related_module_id": 9,
+      "day": "Donnerstag",
+      "time": "12:15 - 13:45",
+      "course-format": "PÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Hubl",
+      "location": "WHC 311",
+      "track": "alle"
+    }, {
+      "id": 21,
+      "related_module_id": 10,
+      "day": "Montag",
+      "time": "9:45 - 11:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Krefting",
+      "location": "WHC 445",
+      "track": "alle"
+    }, {
+      "id": 22,
+      "related_module_id": 10,
+      "day": "Montag",
+      "time": "12:15 - 13:45",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Krefting",
+      "location": "WHC 664",
+      "track": "Zug 1"
+    }, {
+      "id": 23,
+      "related_module_id": 10,
+      "day": "Montag",
+      "time": "14:00 - 15:30",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Krefting",
+      "location": "WHC 664",
+      "track": "Zug 2"
+    }, {
+      "id": 24,
+      "related_module_id": 11,
+      "day": "Dienstag",
+      "time": "8:00 - 9:30",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Rachfall",
+      "location": "WHC 444",
+      "track": "alle"
+    }, {
+      "id": 25,
+      "related_module_id": 11,
+      "day": "Dienstag",
+      "time": "9:45 - 11:15",
+      "course-format": "BÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Rachfall",
+      "location": "WHC 444",
+      "track": "alle"
+    }, {
+      "id": 26,
+      "related_module_id": 12,
+      "day": "Dienstag",
+      "time": "12:15 - 13:45",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Wehner",
+      "location": "TGS 211",
+      "track": "alle"
+    }, {
+      "id": 27,
+      "related_module_id": 13,
+      "day": "Freitag",
+      "time": "9:45 - 11:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Beyer",
+      "location": "WHC 201",
+      "track": "alle"
+    }, {
+      "id": 28,
+      "related_module_id": 13,
+      "day": "Freitag",
+      "time": "12:15 - 13:45",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Beyer",
+      "location": "WHC 644",
+      "track": "Zug 1"
+    }, {
+      "id": 29,
+      "related_module_id": 13,
+      "day": "Freitag",
+      "time": "14:00 - 15:30",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Beyer",
+      "location": "WHC 644",
+      "track": "Zug 2"
+    }, {
+      "id": 30,
+      "related_module_id": 14,
+      "day": "Mittwoch",
+      "time": "9:45 - 11:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris",
+      "location": "WHC 454",
+      "track": "alle"
+    }, {
+      "id": 31,
+      "related_module_id": 14,
+      "day": "Donnerstag",
+      "time": "9:45 - 11:15",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris",
+      "location": "WHC 624",
+      "track": "Zug 1"
+    }, {
+      "id": 32,
+      "related_module_id": 14,
+      "day": "Donnerstag",
+      "time": "12:15 - 13:45",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris",
+      "location": "WHC 624",
+      "track": "Zug 2"
+    }, {
+      "id": 33,
+      "related_module_id": 16,
+      "day": "Dienstag",
+      "time": "12:15 - 13:45",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Krefting",
+      "location": "WHC 424",
+      "track": "alle"
+    }, {
+      "id": 34,
+      "related_module_id": 16,
+      "day": "Montag",
+      "time": "15:30 - 17:15",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Krefting",
+      "location": "WHC 646",
+      "track": "Zug 1"
+    }, {
+      "id": 35,
+      "related_module_id": 16,
+      "day": "Dienstag",
+      "time": "14:00 - 15:30",
+      "course-format": "PCÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Krefting",
+      "location": "WHC 646",
+      "track": "Zug 2"
+    }, {
+      "id": 36,
+      "related_module_id": 17,
+      "day": "Montag",
+      "time": "9:45 - 11.15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris, Freiheit, Yavuz, Sahlmann",
+      "location": "WHC 356",
+      "track": "alle"
+    }, {
+      "id": 37,
+      "related_module_id": 19,
+      "day": "undefined",
+      "time": "9:30 - 15:30",
+      "course-format": "SL",
+      "course-interval": "workshop",
+      "lecturer": "Rehabi",
+      "location": "PBH 243",
+      "track": "alle"
+    }, {
+      "id": 38,
+      "related_module_id": 20,
+      "day": "Donnerstag",
+      "time": "9:30 - 11:15",
+      "course-format": "PÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris",
+      "location": "WHC 634",
+      "track": "Zug 1"
+    }, {
+      "id": 39,
+      "related_module_id": 20,
+      "day": "Donnerstag",
+      "time": "14:00 - 15:30",
+      "course-format": "PÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris",
+      "location": "WHC 634",
+      "track": "Zug 2"
+    }, {
+      "id": 40,
+      "related_module_id": 20,
+      "day": "Donnerstag",
+      "time": "12:15 - 13:45",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris",
+      "location": "WHC 424",
+      "track": "alle"
+    }, {
+      "id": 41,
+      "related_module_id": 21,
+      "day": "Montag",
+      "time": "9:45 - 11:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris, Freiheit, Sahlmann, Yavuz",
+      "location": "WHC 356",
+      "track": "alle"
+    }, {
+      "id": 42,
+      "related_module_id": 22,
+      "day": "Freitag",
+      "time": "9:45 - 11:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Yavuz",
+      "location": "WHC 424",
+      "track": "alle"
+    }, {
+      "id": 43,
+      "related_module_id": 22,
+      "day": "Freitag",
+      "time": "12:15 - 13:45",
+      "course-format": "PÜ",
+      "course-interval": "wöchentlich",
+      "lecturer": "Yavuz",
+      "location": "WHC 635",
+      "track": "alle"
+    }, {
+      "id": 44,
+      "related_module_id": 23,
+      "day": "Mittwoch",
+      "time": "9:45 - 11:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Lochmann",
+      "location": "WHC 356",
+      "track": "alle"
+    }, {
+      "id": 45,
+      "related_module_id": 23,
+      "day": "Mittwoch",
+      "time": "12:15 - 15:30",
+      "course-format": "PÜ",
+      "course-interval": "gerade Woche",
+      "lecturer": "Lochamnn",
+      "location": "WHC 635",
+      "track": "Zug 1"
+    }, {
+      "id": 46,
+      "related_module_id": 23,
+      "day": "Mittwoch",
+      "time": "12:15 - 15:30",
+      "course-format": "PÜ",
+      "course-interval": "ungerade Woche",
+      "lecturer": "Lochamnn",
+      "location": "WHC 635",
+      "track": "Zug 2"
+    }, {
+      "id": 47,
+      "related_module_id": 24,
+      "day": "Dienstag",
+      "time": "9:45 - 15:30",
+      "course-format": "SL",
+      "course-interval": "workshop",
+      "lecturer": "Triebe",
+      "location": "WHC 356",
+      "track": "alle"
+    }, {
+      "id": 48,
+      "related_module_id": 25,
+      "day": "Dienstag",
+      "time": "9:45 - 15:30",
+      "course-format": "Je nach Auswahl",
+      "course-interval": "workshop",
+      "lecturer": "nach Auswahl",
+      "location": "n.A.",
+      "track": "alle"
+    }, {
+      "id": 49,
+      "related_module_id": 25,
+      "day": "Dienstag",
+      "time": "9:45 - 15:30",
+      "course-format": "Je nach Auswahl",
+      "course-interval": "workshop",
+      "lecturer": "nach Auswahl",
+      "location": "n.A.",
+      "track": "alle"
+    }, {
+      "id": 50,
+      "related_module_id": 26,
+      "day": "Dienstag",
+      "time": "12:15 - 13:45",
+      "course-format": "SL",
+      "course-interval": "ungerade Woche",
+      "lecturer": "Siegeris",
+      "location": "WHC 424",
+      "track": "alle"
+    }, {
+      "id": 51,
+      "related_module_id": 26,
+      "day": "Dienstag",
+      "time": "14:00 - 15:30",
+      "course-format": "PÜ",
+      "course-interval": "ungerade Woche",
+      "lecturer": "Siegeris",
+      "location": "WHC 424",
+      "track": "alle"
+    }, {
+      "id": 52,
+      "related_module_id": 27,
+      "day": "Mittwoch",
+      "time": "9:30 - 11:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris",
+      "location": "WHC 424",
+      "track": "alle"
+    }, {
+      "id": 53,
+      "related_module_id": 27,
+      "day": "Mittwoch",
+      "time": "12:15 - 13:45",
+      "course-format": "PÜ",
+      "course-interval": "gerade Woche",
+      "lecturer": "Siegeris",
+      "location": "WHC 424",
+      "track": "Zug 1"
+    }, {
+      "id": 54,
+      "related_module_id": 27,
+      "day": "Mittwoch",
+      "time": "12:15 - 13:45",
+      "course-format": "PÜ",
+      "course-interval": "ungerade Woche",
+      "lecturer": "Siegeris",
+      "location": "WHC 424",
+      "track": "Zug 2"
+    }, {
+      "id": 55,
+      "related_module_id": 29,
+      "day": "Dienstag",
+      "time": "9:45 - 11:15",
+      "course-format": "SL",
+      "course-interval": "wöchentlich",
+      "lecturer": "Siegeris, Freiheit, Krefting",
+      "location": "WHC 624",
+      "track": "alle"
+    }]
+  }
+}
