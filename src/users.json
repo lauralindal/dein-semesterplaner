@@ -9,7 +9,7 @@
       "tracked_modules": [
         {
           "module_id": 1,
-          "status": "urgent"
+          "status": "completed"
         },
         {
           "module_id": 2,
@@ -105,11 +105,11 @@
         },
         {
           "module_id": 25,
-          "status": "selected"
+          "status": "available"
         },
         {
           "module_id": 26,
-          "status": "selected"
+          "status": "available"
         },
         {
           "module_id": 27,
