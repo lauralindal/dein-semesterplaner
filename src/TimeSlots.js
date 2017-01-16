@@ -1,6 +1,8 @@
 import React from 'react';
 
 class TimeSlots extends React.Component {
+
+
   render() {
     return (
      <tbody>

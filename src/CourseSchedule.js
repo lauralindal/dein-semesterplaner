@@ -5,24 +5,40 @@ import TimeSlots from './TimeSlots';
 class CourseSchedule extends React.Component {
 
   
+createTimeSlots(){
+  const starttimes= ['8.00','9.45','12.15','14.00','15.45'];
+  const days= ["Montag","Dienstag", "Mittwoch","Donnerstag","Freitag","Samstag" ];
+  var counter= 0;
+  var slots= [];
+    for (var i = 0; i < starttimes.length; i++) {
+      for (var j = 0; j < days.length; j++) {
+        slots.push({id:counter, day: days[j], time:starttimes[i]})
+        counter++;
+      }
+    }
+  return slots;
+}
  
- getTimeSlots() {
-    const sessions= [
-    { id:1, starttime:'8.00', name:'slot 1'},
-    { id:2, starttime:'9.45', name:'slot 2'},
-    { id:3, starttime:'12.15', name:'slot 3'},
-    { id:4, starttime:'14.00', name:'slot 4'},
-    { id:5, starttime:'15.45', name:'slot 5'}
-    ];
-    return sessions.map((slot) => {
-      return(
-        <TimeSlots time={slot.starttime} name={slot.name} key={slot.id} />
-        );
-    });
-  }
+/*getTimeSlots() {
+  const sessions= [
+  { id:1, starttime:'8.00', day:'Monday', name:'slot 1'},
+  { id:2, starttime:'9.45', name:'slot 2'},
+  { id:3, starttime:'12.15', name:'slot 3'},
+  { id:4, starttime:'14.00', name:'slot 4'},
+  { id:5, starttime:'15.45', name:'slot 5'}
+  ];
+  return sessions.map((slot) => {
+    return(
+      <td> time={slot.starttime} name={slot.name} key={slot.id} </td>
+      );
+  });
+}*/
 
-  render() {
+
+render() {
   var timeslots= this.getTimeSlots();
+  var insertedslots= this.createTimeSlots();
+
     return (
     <section id="schedule">
       <h5>Kalender/Weekly Planner</h5>
