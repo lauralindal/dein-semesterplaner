@@ -12,6 +12,8 @@ You can find a Mockup at http://12q5wx.axshare.com/main_page_simple.html
 `npm install`
 3. Start the App
 `npm start`
+4. Check Data Base Auth
+At `http://localhost:5984/_utils/`, make sure you have a database user "test" with password "test" / (log in in the lower right corner).
 
 ## Glossary
 
@@ -47,4 +49,3 @@ You can find a Mockup at http://12q5wx.axshare.com/main_page_simple.html
 | module plan     | Graphic representation of all module requirements in the degree program sorted by semester.                                    |              |
 | module pool     | Graphic representation of selected modules for the current semester. Course are dragged from the module plan and dropped here. |              |
 | total credits   | Graphic display of total credits (Explantation see above)                                                                      |              |
-
