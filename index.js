@@ -10,7 +10,9 @@ server.connection({
 server.register({
   register: hoodie,
   options: { // pass options here
-    inMemory: false,
+    db: {
++      url: 'http://test:test@localhost:5984/'
++    },
     public: 'public'
   }
 }, function (error) {
