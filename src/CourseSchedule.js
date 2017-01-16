@@ -6,18 +6,32 @@ class CourseSchedule extends React.Component {
 
   
 createTimeSlots(){
-  const starttimes= ['8.00','9.45','12.15','14.00','15.45'];
+  const starttimes= ["8:00","9:45","12:15","14:00","15:45"];
   const days= ["Montag","Dienstag", "Mittwoch","Donnerstag","Freitag","Samstag" ];
   var counter= 0;
   var slots= [];
     for (var i = 0; i < starttimes.length; i++) {
       for (var j = 0; j < days.length; j++) {
-        slots.push({id:counter, day: days[j], time:starttimes[i]})
+        slots.push({id:counter, day: days[j], time:starttimes[i] , info:null})
         counter++;
       }
     }
   return slots;
-}
+};
+
+fillTimeSlots(){
+  var courseInfo= this.props.combinedTitelAndData;
+  var timeslots= this.createTimeSlots();
+  for (var i = 0; i < timeslots.length; i++) {
+      for (var j = 0; j < courseInfo.length; j++) {
+       if (timeslots[i].day === courseInfo[j].day && timeslots[i].time === courseInfo[j].startTime)
+       {
+        timeslots[i].info=courseInfo[j];
+       }
+      }
+    }
+  return timeslots;
+};
  
 /*getTimeSlots() {
   const sessions= [
@@ -36,8 +50,8 @@ createTimeSlots(){
 
 
 render() {
-  var timeslots= this.getTimeSlots();
-  var insertedslots= this.createTimeSlots();
+    var timeslots= this.createTimeSlots();
+    var filledTimeSlots=this.fillTimeSlots();
 
     return (
     <section id="schedule">
