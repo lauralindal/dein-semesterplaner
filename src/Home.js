@@ -161,17 +161,11 @@ class Home extends React.Component {
         return;
        }
        userModules[i].selected= !userModules[i].selected;
-       console.log(clicked);
-       if (clicked == false) {
+       if (userModules[i].selected) {
          userModules[i].status = "selected";
-         var clicked = true;
-         console.log(clicked);
        } else {
-         userModules[i].status = "HALLO";
-         clicked = false;
-         console.log(clicked);
+         userModules[i].status = "USELECT";
        }
-
       }
     }
     this.setState({userModules:userModules});
