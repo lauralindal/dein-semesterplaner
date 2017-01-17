@@ -14,19 +14,13 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
+      originalUserModules: [],
       userModules: users.students[3].tracked_modules
     };
   }
 
-  componentDidMount(){
-    seedUserData()
-    .then((userModules) => {
-      console.log('your initial data has been saved in state');
-      this.setState({userModules: userModules});
-    });
-  }
-
   performLogin(email, password) {
+    var self = this;
     hoodie.account.signIn({ username: email, password: password})
     .then(() => {
       this.setState({isLoggedIn: true});
@@ -34,8 +28,17 @@ class Home extends React.Component {
     .catch(function (error) {
       hoodie.account.destroy();
       hoodie.account.signUp({username: email, password: password});
+      seedUserData()
+      .then(function (userModules) {
+        console.log('your initial data has been saved in state');
+        self.setState({
+          originalUserModules: userModules,
+          userModules: userModules
+        });
+      });
       console.log('🐳', error)
     })
+
   };
 
   performLogout() {
