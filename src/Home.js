@@ -19,12 +19,23 @@ class Home extends React.Component {
     };
   }
 
+  getCurrentUserData(){
+    var self = this;
+    // TODO userDataSets umbenenen & Funktion durchdenken
+    return hoodie.store.findAll().then(function(userDataSets){
+      self.setState({userDataSet: userDataSets[0]});
+      return Promise.resolve();
+    });
+  }
+
   performLogin(email, password) {
     var self = this;
     hoodie.account.signIn({ username: email, password: password})
     .then(() => {
       this.setState({isLoggedIn: true});
+      this.getCurrentUserData();
     })
+    //TODO use arrow functionm & avoid self/this
     .catch(function (error) {
       hoodie.account.destroy();
       hoodie.account.signUp({username: email, password: password});
