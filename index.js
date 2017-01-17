@@ -11,8 +11,8 @@ server.register({
   register: hoodie,
   options: { // pass options here
     db: {
-+      url: 'http://test:test@localhost:5984/'
-+    },
+      url: 'http://test:test@localhost:5984/'
+    },
     public: 'public'
   }
 }, function (error) {

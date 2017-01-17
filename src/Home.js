@@ -1,4 +1,5 @@
 import React from 'react';
+import {seedUserData} from './user.js';
 import Header from './Header';
 import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
@@ -13,11 +14,16 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
-      userModules: users.students[0].tracked_modules
+      userModules: users.students[3].tracked_modules,
     };
   }
 
-
+  componentDidMount(){
+    seedUserData()
+    .then((userModules) => {
+      this.setState({userModules: userModules});
+    });
+  }
 
   performLogin(email, password) {
     hoodie.account.signIn({ username: email, password: password})
@@ -87,7 +93,7 @@ class Home extends React.Component {
     return currentCredits;
   };
 
-   countSelectedCourses() {
+  countSelectedCourses() {
     var userModules = this.state.userModules;
     var modules = moduleplan.degree_course.modules;
     var selectedCoursesCounter= 0;
@@ -107,59 +113,59 @@ class Home extends React.Component {
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].selected){
         selectedModuleIds.push(userModules[i].module_id);
-      }  
+      }
     }
     for (var i = 0; i < selectedModuleIds.length; i++) {
-        for (var j=0; j < courseInfo.length; j++){
-          if (selectedModuleIds[i]===courseInfo[j].related_module_id)
-          selectedCourseData.push(courseInfo[j]);
-        }
+      for (var j=0; j < courseInfo.length; j++){
+        if (selectedModuleIds[i]===courseInfo[j].related_module_id)
+        selectedCourseData.push(courseInfo[j]);
       }
+    }
     return selectedCourseData;
   };
 
   retrieveSelectedModuleTitel(){
-     var userModules = this.state.userModules;
-     var modules = moduleplan.degree_course.modules;
-     var selectedModuleIds= [];
-     var selectedModuleTitels= [];
-     for (var i = 0; i < userModules.length; i++) {
+    var userModules = this.state.userModules;
+    var modules = moduleplan.degree_course.modules;
+    var selectedModuleIds= [];
+    var selectedModuleTitels= [];
+    for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].selected){
         selectedModuleIds.push(userModules[i].module_id);
-      }  
+      }
     }
     for (var i = 0; i < selectedModuleIds.length; i++) {
-        for (var j=0; j < modules.length; j++){
-          if (selectedModuleIds[i]===modules[j].id)
-          selectedModuleTitels.push(modules[j].title);
-        }
+      for (var j=0; j < modules.length; j++){
+        if (selectedModuleIds[i]===modules[j].id)
+        selectedModuleTitels.push(modules[j].title);
       }
-      return selectedModuleTitels;
+    }
+    return selectedModuleTitels;
   };
 
   combineSelectedTitelsAndData(){
     var courseInformation= this.retrieveSelectedCourseInfo();
     var modules = moduleplan.degree_course.modules;
-     for (var i = 0; i < modules.length; i++) {
-        for (var j=0; j < courseInformation.length; j++)
-          if (modules[i].id == courseInformation[j].related_module_id){
+    for (var i = 0; i < modules.length; i++) {
+      for (var j=0; j < courseInformation.length; j++)
+      if (modules[i].id == courseInformation[j].related_module_id){
         courseInformation[j].title=modules[i].title;
       }
     }
     return courseInformation;
   }
- 
+
   toggleModule(moduleId, e){
     e.preventDefault();
     var userModules=this.state.userModules;
     var data=null;
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].module_id===moduleId){
-       if(userModules[i].status==="completed"){
-        return;
-       }
-       userModules[i].selected= !userModules[i].selected;
-      }  
+        if(userModules[i].status==="completed"){
+          return;
+        }
+        userModules[i].selected= !userModules[i].selected;
+      }
     }
     this.setState({userModules:userModules});
   };
@@ -172,17 +178,18 @@ class Home extends React.Component {
     var selectedCourseInfo = this.retrieveSelectedCourseInfo();
     var selectedModuleTitels= this.retrieveSelectedModuleTitel();
     var combinedTitelAndData= this.combineSelectedTitelsAndData();
+    //TODO give each react element a unique key
     if(isLoggedIn) {
       return (
         <div><ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
-        <PlanningSection totalCreditPoints={totalCreditPoints} 
+        <PlanningSection totalCreditPoints={totalCreditPoints}
         selectedCourseInfo={selectedCourseInfo}
         selectedModuleTitels={selectedModuleTitels}
-        currentCreditPoints={currentCreditPoints} 
+        currentCreditPoints={currentCreditPoints}
         selectedCoursesCounter={selectedCoursesCounter} />
         <CourseSchedule selectedCourseInfo={selectedCourseInfo} combinedTitelAndData={combinedTitelAndData}/>
         </div>
-        );
+      );
     }
     return (<div><p>Hallo! Bitte logge dich ein, um dein kommendes Semester zu planen</p></div>);
   }
