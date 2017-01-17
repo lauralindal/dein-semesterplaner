@@ -13,7 +13,10 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
-      userModules: users.students[0].tracked_modules
+      userModules: users.students[0].tracked_modules,
+      originalStatus: users.students[0].tracked_modules.map((module) => {
+        return module.status;
+      })
     };
   }
 
@@ -153,8 +156,6 @@ class Home extends React.Component {
     e.preventDefault();
     var userModules=this.state.userModules;
     var data=null;
-    var clicked = false;
-    var originalStatus=this.state.userModules.status;
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].module_id===moduleId){
        if(userModules[i].status==="completed"){
@@ -164,7 +165,7 @@ class Home extends React.Component {
        if (userModules[i].selected) {
          userModules[i].status = "selected";
        } else {
-         userModules[i].status = "USELECT";
+         userModules[i].status = this.state.originalStatus[i];
        }
       }
     }
