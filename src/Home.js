@@ -21,6 +21,7 @@ class Home extends React.Component {
   componentDidMount(){
     seedUserData()
     .then((userModules) => {
+      console.log('your initial data has been saved in state');
       this.setState({userModules: userModules});
     });
   }

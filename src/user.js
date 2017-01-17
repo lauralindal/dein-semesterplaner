@@ -6,7 +6,7 @@ export function seedUserData(){
     "userModules": userModules
   })
   .then(() => {
-    console.log('your initial data has been added');
+    console.log('your initial data has been given to hoodie');
     return userModules;
   })
   .catch(function (error) {
