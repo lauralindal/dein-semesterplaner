@@ -14,7 +14,7 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
-      userModules: users.students[3].tracked_modules,
+      userModules: users.students[3].tracked_modules
     };
   }
 
