@@ -13,7 +13,10 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
-      userModules: users.students[0].tracked_modules
+      userModules: users.students[0].tracked_modules,
+      originalStatus: users.students[0].tracked_modules.map((module) => {
+        return module.status;
+      })
     };
   }
 
@@ -107,7 +110,7 @@ class Home extends React.Component {
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].selected){
         selectedModuleIds.push(userModules[i].module_id);
-      }  
+      }
     }
     for (var i = 0; i < selectedModuleIds.length; i++) {
         for (var j=0; j < courseInfo.length; j++){
@@ -126,7 +129,7 @@ class Home extends React.Component {
      for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].selected){
         selectedModuleIds.push(userModules[i].module_id);
-      }  
+      }
     }
     for (var i = 0; i < selectedModuleIds.length; i++) {
         for (var j=0; j < modules.length; j++){
@@ -148,7 +151,7 @@ class Home extends React.Component {
     }
     return courseInformation;
   }
- 
+
   toggleModule(moduleId, e){
     e.preventDefault();
     var userModules=this.state.userModules;
@@ -159,7 +162,12 @@ class Home extends React.Component {
         return;
        }
        userModules[i].selected= !userModules[i].selected;
-      }  
+       if (userModules[i].selected) {
+         userModules[i].status = "selected";
+       } else {
+         userModules[i].status = this.state.originalStatus[i];
+       }
+      }
     }
     this.setState({userModules:userModules});
   };
@@ -175,10 +183,10 @@ class Home extends React.Component {
     if(isLoggedIn) {
       return (
         <div><ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
-        <PlanningSection totalCreditPoints={totalCreditPoints} 
+        <PlanningSection totalCreditPoints={totalCreditPoints}
         selectedCourseInfo={selectedCourseInfo}
         selectedModuleTitels={selectedModuleTitels}
-        currentCreditPoints={currentCreditPoints} 
+        currentCreditPoints={currentCreditPoints}
         selectedCoursesCounter={selectedCoursesCounter} />
         <CourseSchedule selectedCourseInfo={selectedCourseInfo} combinedTitelAndData={combinedTitelAndData}/>
         </div>
