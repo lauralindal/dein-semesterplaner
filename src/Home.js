@@ -19,6 +19,13 @@ class Home extends React.Component {
     };
   }
 
+  componentDidMount() {
+    var isLoggedIn = this.state.isLoggedIn;
+    if(isLoggedIn){
+      this.getCurrentUserData();
+    }
+  }
+
   getCurrentUserData(){
     var self = this;
     // when we ask hoodie for all it has in store, we get an array of objects,
