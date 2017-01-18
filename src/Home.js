@@ -14,8 +14,10 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
-      originalUserModules: [],
-      userModules: users.students[3].tracked_modules
+      userModules: users.students[3].tracked_modules,
+      originalStatus: users.students[0].tracked_modules.map((module) => {
+        return module.status;
+      })
     };
   }
 
@@ -52,7 +54,6 @@ class Home extends React.Component {
       .then(function (userModules) {
         console.log('your initial data has been saved in state');
         self.setState({
-          originalUserModules: userModules,
           userModules: userModules
         });
       });
@@ -189,9 +190,20 @@ class Home extends React.Component {
           return;
         }
         userModules[i].selected= !userModules[i].selected;
+        if (userModules[i].selected) {
+          userModules[i].status = "selected";
+        } else {
+          userModules[i].status = this.state.originalStatus[i];
+        }
       }
     }
     this.setState({userModules: userModules});
+    hoodie.store.add({
+      "userModules": userModules
+    })
+    .then(() => {
+      console.log('hoodie now has your new data');
+    })
   };
 
   renderUserData(isLoggedIn) {
