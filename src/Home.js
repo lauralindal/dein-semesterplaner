@@ -21,9 +21,11 @@ class Home extends React.Component {
 
   getCurrentUserData(){
     var self = this;
-    // TODO userDataSets umbenenen & Funktion durchdenken
+    // when we ask hoodie for all it has in store, we get an array of objects,
+    // so we want to pick the newest document/object which will contain the
+    // most current set of module information for our user
     return hoodie.store.findAll().then(function(userDataSets){
-      self.setState({userDataSet: userDataSets[0]});
+      self.setState({userModules: userDataSets[0].userModules});
       return Promise.resolve();
     });
   }
@@ -182,7 +184,7 @@ class Home extends React.Component {
         userModules[i].selected= !userModules[i].selected;
       }
     }
-    this.setState({userModules:userModules});
+    this.setState({userModules: userModules});
   };
 
   renderUserData(isLoggedIn) {
