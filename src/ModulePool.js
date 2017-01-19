@@ -2,7 +2,7 @@ import React from 'react';
 
 class ModulePool extends React.Component {
   renderModules(){ 
-  	return this.props.selectedModuleTitels.map((module) => {
+  	return this.props.selectedModuleTitles.map((module) => {
       return(
         <div>
         <div className="button fix" key={module}>{module}</div>

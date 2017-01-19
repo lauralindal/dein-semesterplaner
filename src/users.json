@@ -374,6 +374,131 @@
           "status": "available"
         }
       ]
+    },
+    {
+      "id": 4,
+      "name": "student",
+      "matriculation_number": 500000,
+      "matriculation_date": "1.10.2013",
+      "password": "password",
+      "tracked_modules": [
+        {
+          "module_id": 1,
+          "status": "available"
+        },
+        {
+          "module_id": 2,
+          "status": "available"
+        },
+        {
+          "module_id": 3,
+          "status": "available"
+        },
+        {
+          "module_id": 4,
+          "status": "available"
+        },
+        {
+          "module_id": 5,
+          "status": "available"
+        },
+        {
+          "module_id": 6,
+          "status": "available"
+        },
+        {
+          "module_id": 7,
+          "status": "available"
+        },
+        {
+          "module_id": 8,
+          "status": "available"
+        },
+        {
+          "module_id": 9,
+          "status": "available"
+        },
+        {
+          "module_id": 10,
+          "status": "available"
+        },
+        {
+          "module_id": 11,
+          "status": "available"
+        },
+        {
+          "module_id": 12,
+          "status": "available"
+        },
+        {
+          "module_id": 13,
+          "status": "available"
+        },
+        {
+          "module_id": 14,
+          "status": "available"
+        },
+        {
+          "module_id": 15,
+          "status": "available"
+        },
+        {
+          "module_id": 16,
+          "status": "available"
+        },
+        {
+          "module_id": 17,
+          "status": "available"
+        },
+        {
+          "module_id": 18,
+          "status": "available"
+        },
+        {
+          "module_id": 19,
+          "status": "available"
+        },
+        {
+          "module_id": 20,
+          "status": "available"
+        },
+        {
+          "module_id": 21,
+          "status": "available"
+        },
+        {
+          "module_id": 22,
+          "status": "available"
+        },
+        {
+          "module_id": 23,
+          "status": "available"
+        },
+        {
+          "module_id": 24,
+          "status": "available"
+        },
+        {
+          "module_id": 25,
+          "status": "available"
+        },
+        {
+          "module_id": 26,
+          "status": "available"
+        },
+        {
+          "module_id": 27,
+          "status": "available"
+        },
+        {
+          "module_id": 28,
+          "status": "available"
+        },
+        {
+          "module_id": 29,
+          "status": "available"
+        }
+      ]
     }
   ]
 }
