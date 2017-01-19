@@ -10,6 +10,6 @@ export function seedUserData(){
     return userModules;
   })
   .catch(function (error) {
-    console.log('ohno', error)
+    console.log('ohno', error);
   })
 }

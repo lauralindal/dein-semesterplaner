@@ -57,9 +57,8 @@ class Home extends React.Component {
           userModules: userModules
         });
       });
-      console.log('🐳', error)
+      console.log('🐳', error);
     })
-
   };
 
   performLogout() {
@@ -69,7 +68,7 @@ class Home extends React.Component {
     })
     .catch(function (error) {
       hoodie.account.destroy();
-      console.log('🐞', error)
+      console.log('🐞', error);
     })
   };
 
@@ -121,7 +120,7 @@ class Home extends React.Component {
   countSelectedCourses() {
     var userModules = this.state.userModules;
     var modules = moduleplan.degree_course.modules;
-    var selectedCoursesCounter= 0;
+    var selectedCoursesCounter = 0;
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].selected){
         selectedCoursesCounter ++;
@@ -142,18 +141,19 @@ class Home extends React.Component {
     }
     for (var i = 0; i < selectedModuleIds.length; i++) {
       for (var j=0; j < courseInfo.length; j++){
-        if (selectedModuleIds[i]===courseInfo[j].related_module_id)
-        selectedCourseData.push(courseInfo[j]);
+        if (selectedModuleIds[i] === courseInfo[j].related_module_id) {
+          selectedCourseData.push(courseInfo[j]);
+        }
       }
     }
     return selectedCourseData;
   };
 
-  retrieveSelectedModuleTitel(){
+  retrieveSelectedModuleTitle(){
     var userModules = this.state.userModules;
     var modules = moduleplan.degree_course.modules;
-    var selectedModuleIds= [];
-    var selectedModuleTitels= [];
+    var selectedModuleIds = [];
+    var selectedModuleTitles = [];
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].selected){
         selectedModuleIds.push(userModules[i].module_id);
@@ -161,35 +161,36 @@ class Home extends React.Component {
     }
     for (var i = 0; i < selectedModuleIds.length; i++) {
       for (var j=0; j < modules.length; j++){
-        if (selectedModuleIds[i]===modules[j].id)
-        selectedModuleTitels.push(modules[j].title);
+        if (selectedModuleIds[i] === modules[j].id) {
+          selectedModuleTitles.push(modules[j].title);
+        }
       }
     }
-    return selectedModuleTitels;
+    return selectedModuleTitles;
   };
 
-  combineSelectedTitelsAndData(){
-    var courseInformation= this.retrieveSelectedCourseInfo();
+  combineSelectedTitlesAndData(){
+    var courseInformation = this.retrieveSelectedCourseInfo();
     var modules = moduleplan.degree_course.modules;
     for (var i = 0; i < modules.length; i++) {
       for (var j=0; j < courseInformation.length; j++)
-      if (modules[i].id == courseInformation[j].related_module_id){
-        courseInformation[j].title=modules[i].title;
+      if (modules[i].id === courseInformation[j].related_module_id){
+        courseInformation[j].title = modules[i].title;
       }
     }
     return courseInformation;
-  }
+  };
 
   toggleModule(moduleId, e){
     e.preventDefault();
     var userModules=this.state.userModules;
     var data=null;
     for (var i = 0; i < userModules.length; i++) {
-      if (userModules[i].module_id===moduleId){
-        if(userModules[i].status==="completed"){
+      if (userModules[i].module_id === moduleId){
+        if(userModules[i].status === "completed"){
           return;
         }
-        userModules[i].selected= !userModules[i].selected;
+        userModules[i].selected = !userModules[i].selected;
         if (userModules[i].selected) {
           userModules[i].status = "selected";
         } else {
@@ -212,23 +213,23 @@ class Home extends React.Component {
     var selectedCoursesCounter = this.countSelectedCourses();
     var semesters = this.getSemestersForUser();
     var selectedCourseInfo = this.retrieveSelectedCourseInfo();
-    var selectedModuleTitels= this.retrieveSelectedModuleTitel();
-    var combinedTitelAndData= this.combineSelectedTitelsAndData();
+    var selectedModuleTitles = this.retrieveSelectedModuleTitle();
+    var combinedTitleAndData = this.combineSelectedTitlesAndData();
     //TODO give each react element a unique key
     if(isLoggedIn) {
       return (
         <div><ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
         <PlanningSection totalCreditPoints={totalCreditPoints}
         selectedCourseInfo={selectedCourseInfo}
-        selectedModuleTitels={selectedModuleTitels}
+        selectedModuleTitles={selectedModuleTitles}
         currentCreditPoints={currentCreditPoints}
         selectedCoursesCounter={selectedCoursesCounter} />
-        <CourseSchedule selectedCourseInfo={selectedCourseInfo} combinedTitelAndData={combinedTitelAndData}/>
+        <CourseSchedule selectedCourseInfo={selectedCourseInfo} combinedTitleAndData={combinedTitleAndData}/>
         </div>
       );
     }
     return (<div><p>Hallo! Bitte logge dich ein, um dein kommendes Semester zu planen</p></div>);
-  }
+  };
 
   render() {
     var isLoggedIn = this.state.isLoggedIn;
