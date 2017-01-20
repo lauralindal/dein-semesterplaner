@@ -19,19 +19,22 @@ createTimeSlots(){
   return slots;
 };
 
-/*fillTimeSlots(){
+fillTimeSlots(){
   var courseInfo= this.props.combinedTitelAndData;
   var timeslots= this.createTimeSlots();
-  for (var i = 0; i < timeslots.length; i++) {
+  if (typeof courseInfo != 'undefined'){
+    for (var i = 0; i < timeslots.length; i++) {
       for (var j = 0; j < courseInfo.length; j++) {
-       if (timeslots[i].day === courseInfo[j].day && timeslots[i].time === courseInfo[j].startTime)
-       {
-        timeslots[i].info=courseInfo[j];
-       }
+        if (timeslots[i].day === courseInfo[j].day && timeslots[i].time === courseInfo[j].startTime)
+        {
+          timeslots[i].info=courseInfo[j];
+        }
       }
     }
+  }
   return timeslots;
 };
+
  
 /*getTimeSlots() {
   const sessions= [
@@ -46,12 +49,22 @@ createTimeSlots(){
       <td> time={slot.starttime} name={slot.name} key={slot.id} </td>
       );
   });
-}*/
+}
+
+get TimeSlots() {
+  return timeslots.map(sloy)=> {
+    return(
+      <td> time={slot.starttime} name={slot.info.} key={slot.id} </td>
+      );
+  });
+};
+*/
 
 
 render() {
     var timeslots= this.createTimeSlots();
-    
+    var filledTimeSlots= this.fillTimeSlots();
+
     return (
     <section id="schedule">
       <h5>Kalender/Weekly Planner</h5>
