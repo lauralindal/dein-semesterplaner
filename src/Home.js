@@ -1,4 +1,5 @@
 import React from 'react';
+import {seedUserData} from './user.js';
 import Header from './Header';
 import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
@@ -13,21 +14,50 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
-      userModules: users.students[0].tracked_modules
+      userModules: users.students[3].tracked_modules,
+      originalStatus: users.students[0].tracked_modules.map((module) => {
+        return module.status;
+      })
     };
   }
 
+  componentDidMount() {
+    var isLoggedIn = this.state.isLoggedIn;
+    if(isLoggedIn){
+      this.getCurrentUserData();
+    }
+  }
 
+  getCurrentUserData(){
+    var self = this;
+    // when we ask hoodie for all it has in store, we get an array of objects,
+    // so we want to pick the newest document/object which will contain the
+    // most current set of module information for our user
+    return hoodie.store.findAll().then(function(userDataSets){
+      self.setState({userModules: userDataSets[0].userModules});
+      return Promise.resolve();
+    });
+  }
 
   performLogin(email, password) {
+    var self = this;
     hoodie.account.signIn({ username: email, password: password})
     .then(() => {
       this.setState({isLoggedIn: true});
+      this.getCurrentUserData();
     })
+    //TODO use arrow functionm & avoid self/this
     .catch(function (error) {
       hoodie.account.destroy();
       hoodie.account.signUp({username: email, password: password});
-      console.log('🐳', error)
+      seedUserData()
+      .then(function (userModules) {
+        console.log('your initial data has been saved in state');
+        self.setState({
+          userModules: userModules
+        });
+      });
+      console.log('🐳', error);
     })
   };
 
@@ -38,7 +68,7 @@ class Home extends React.Component {
     })
     .catch(function (error) {
       hoodie.account.destroy();
-      console.log('🐞', error)
+      console.log('🐞', error);
     })
   };
 
@@ -87,10 +117,10 @@ class Home extends React.Component {
     return currentCredits;
   };
 
-   countSelectedCourses() {
+  countSelectedCourses() {
     var userModules = this.state.userModules;
     var modules = moduleplan.degree_course.modules;
-    var selectedCoursesCounter= 0;
+    var selectedCoursesCounter = 0;
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].selected){
         selectedCoursesCounter ++;
@@ -107,61 +137,74 @@ class Home extends React.Component {
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].selected){
         selectedModuleIds.push(userModules[i].module_id);
-      }  
+      }
     }
     for (var i = 0; i < selectedModuleIds.length; i++) {
-        for (var j=0; j < courseInfo.length; j++){
-          if (selectedModuleIds[i]===courseInfo[j].related_module_id)
+      for (var j=0; j < courseInfo.length; j++){
+        if (selectedModuleIds[i] === courseInfo[j].related_module_id) {
           selectedCourseData.push(courseInfo[j]);
         }
       }
+    }
     return selectedCourseData;
   };
 
-  retrieveSelectedModuleTitel(){
-     var userModules = this.state.userModules;
-     var modules = moduleplan.degree_course.modules;
-     var selectedModuleIds= [];
-     var selectedModuleTitels= [];
-     for (var i = 0; i < userModules.length; i++) {
+  retrieveSelectedModuleTitle(){
+    var userModules = this.state.userModules;
+    var modules = moduleplan.degree_course.modules;
+    var selectedModuleIds = [];
+    var selectedModuleTitles = [];
+    for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].selected){
         selectedModuleIds.push(userModules[i].module_id);
-      }  
+      }
     }
     for (var i = 0; i < selectedModuleIds.length; i++) {
-        for (var j=0; j < modules.length; j++){
-          if (selectedModuleIds[i]===modules[j].id)
-          selectedModuleTitels.push(modules[j].title);
+      for (var j=0; j < modules.length; j++){
+        if (selectedModuleIds[i] === modules[j].id) {
+          selectedModuleTitles.push(modules[j].title);
         }
       }
-      return selectedModuleTitels;
+    }
+    return selectedModuleTitles;
   };
 
-  combineSelectedTitelsAndData(){
-    var courseInformation= this.retrieveSelectedCourseInfo();
+  combineSelectedTitlesAndData(){
+    var courseInformation = this.retrieveSelectedCourseInfo();
     var modules = moduleplan.degree_course.modules;
-     for (var i = 0; i < modules.length; i++) {
-        for (var j=0; j < courseInformation.length; j++)
-          if (modules[i].id == courseInformation[j].related_module_id){
-        courseInformation[j].title=modules[i].title;
+    for (var i = 0; i < modules.length; i++) {
+      for (var j=0; j < courseInformation.length; j++)
+      if (modules[i].id === courseInformation[j].related_module_id){
+        courseInformation[j].title = modules[i].title;
       }
     }
     return courseInformation;
-  }
- 
+  };
+
   toggleModule(moduleId, e){
     e.preventDefault();
     var userModules=this.state.userModules;
     var data=null;
     for (var i = 0; i < userModules.length; i++) {
-      if (userModules[i].module_id===moduleId){
-       if(userModules[i].status==="completed"){
-        return;
-       }
-       userModules[i].selected= !userModules[i].selected;
-      }  
+      if (userModules[i].module_id === moduleId){
+        if(userModules[i].status === "completed"){
+          return;
+        }
+        userModules[i].selected = !userModules[i].selected;
+        if (userModules[i].selected) {
+          userModules[i].status = "selected";
+        } else {
+          userModules[i].status = this.state.originalStatus[i];
+        }
+      }
     }
-    this.setState({userModules:userModules});
+    this.setState({userModules: userModules});
+    hoodie.store.add({
+      "userModules": userModules
+    })
+    .then(() => {
+      console.log('hoodie now has your new data');
+    })
   };
 
   renderUserData(isLoggedIn) {
@@ -170,22 +213,23 @@ class Home extends React.Component {
     var selectedCoursesCounter = this.countSelectedCourses();
     var semesters = this.getSemestersForUser();
     var selectedCourseInfo = this.retrieveSelectedCourseInfo();
-    var selectedModuleTitels= this.retrieveSelectedModuleTitel();
-    var combinedTitelAndData= this.combineSelectedTitelsAndData();
+    var selectedModuleTitles = this.retrieveSelectedModuleTitle();
+    var combinedTitleAndData = this.combineSelectedTitlesAndData();
+    //TODO give each react element a unique key
     if(isLoggedIn) {
       return (
         <div><ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
-        <PlanningSection totalCreditPoints={totalCreditPoints} 
+        <PlanningSection totalCreditPoints={totalCreditPoints}
         selectedCourseInfo={selectedCourseInfo}
-        selectedModuleTitels={selectedModuleTitels}
-        currentCreditPoints={currentCreditPoints} 
+        selectedModuleTitles={selectedModuleTitles}
+        currentCreditPoints={currentCreditPoints}
         selectedCoursesCounter={selectedCoursesCounter} />
-        <CourseSchedule selectedCourseInfo={selectedCourseInfo} combinedTitelAndData={combinedTitelAndData}/>
+        <CourseSchedule selectedCourseInfo={selectedCourseInfo} combinedTitleAndData={combinedTitleAndData}/>
         </div>
-        );
+      );
     }
     return (<div><p>Hallo! Bitte logge dich ein, um dein kommendes Semester zu planen</p></div>);
-  }
+  };
 
   render() {
     var isLoggedIn = this.state.isLoggedIn;
