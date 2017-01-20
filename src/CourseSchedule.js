@@ -19,7 +19,7 @@ createTimeSlots(){
   return slots;
 };
 
-fillTimeSlots(){
+/*fillTimeSlots(){
   var courseInfo= this.props.combinedTitelAndData;
   var timeslots= this.createTimeSlots();
   for (var i = 0; i < timeslots.length; i++) {
@@ -51,8 +51,7 @@ fillTimeSlots(){
 
 render() {
     var timeslots= this.createTimeSlots();
-    var filledTimeSlots=this.fillTimeSlots();
-
+    
     return (
     <section id="schedule">
       <h5>Kalender/Weekly Planner</h5>
