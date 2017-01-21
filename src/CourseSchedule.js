@@ -21,6 +21,7 @@ createTimeSlots(){
 
 fillTimeSlots(){
   var courseInfo= this.props.combinedTitelAndData;
+  console.log(courseInfo);
   var timeslots= this.createTimeSlots();
   if (typeof courseInfo != 'undefined'){
     for (var i = 0; i < timeslots.length; i++) {
@@ -51,10 +52,10 @@ fillTimeSlots(){
   });
 }
 
-get TimeSlots() {
-  return timeslots.map(sloy)=> {
+renderTimeSlots() {
+  return timeslots.map(slot)=> {
     return(
-      <td> time={slot.starttime} name={slot.info.} key={slot.id} </td>
+      <td> title={slot.info.title} session={slot.info.course-format} instructor={slot.info.course-format} key={slot.id} </td>
       );
   });
 };
