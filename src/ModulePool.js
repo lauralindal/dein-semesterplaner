@@ -2,7 +2,6 @@ import React from 'react';
 
 class ModulePool extends React.Component {
   toggleModule(module, e){
-    console.log(module);
     this.props.toggleModule(module.module_id,e);
   };
 
