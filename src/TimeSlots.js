@@ -24,15 +24,24 @@ class TimeSlots extends React.Component {
     }
     else{
       var courseInfo= this.props.combinedTitleAndData;
+      var selectedCourses= [];
       for (var j = 0; j < courseInfo.length; j++) {
         if (day === courseInfo[j].day && time === courseInfo[j].startTime)
         {
-           return (<div> {courseInfo[j].title} {courseInfo[j]["course-format"]} {courseInfo[j].lecturer} </div>);
+           selectedCourses.push(courseInfo[j]);
         }
       }
+      return this.renderMultipleCourses(selectedCourses);
     }
   };
 
+
+  renderMultipleCourses(selectedCourses){
+    var _this= this;
+    return selectedCourses.map(function(course){
+      return (<div key={course.title+course.startTime}> {course.title} {course["course-format"]} {course.lecturer} </div>);
+    });
+  };
 
   render() {
 
