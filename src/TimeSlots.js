@@ -39,7 +39,7 @@ class TimeSlots extends React.Component {
   renderMultipleCourses(selectedCourses){
     var _this= this;
     return selectedCourses.map(function(course){
-      return (<div key={course.title+course.startTime}> {course.title} {course["course-format"]} {course.lecturer} </div>);
+      return (<div key={course.title+course.startTime+course.day}> {course.title} {course["course-format"]} {course.lecturer} </div>);
     });
   };
 
