@@ -20,8 +20,7 @@ createTimeSlots(){
 };
 
 fillTimeSlots(){
-  var courseInfo= this.props.combinedTitelAndData;
-  console.log(courseInfo);
+  var courseInfo= this.props.combinedTitleAndData;
   var timeslots= this.createTimeSlots();
   if (typeof courseInfo != 'undefined'){
     for (var i = 0; i < timeslots.length; i++) {
@@ -63,7 +62,6 @@ renderTimeSlots() {
 
 
 render() {
-    var timeslots= this.createTimeSlots();
     var filledTimeSlots= this.fillTimeSlots();
 
     return (
