@@ -41,7 +41,7 @@ tr:last-child {
 }
 table{
   width: 100%;
-  height: 85%;
+  height: auto;
 }
 td:nth-child(even){
   background: #f2f0f0;
@@ -197,7 +197,7 @@ div#coursePool{
 section#schedule{
   border: 1px solid grey;
   padding: 10px;
-  height: 500px;
+  height: auto;
   margin-bottom: 5px;
 }
 .float-left{
