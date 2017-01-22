@@ -23,13 +23,16 @@
 
 td {
   padding: 12px 15px;
-  text-align: center;
+  text-align: left;
+  width: 15%;
   border-bottom: 1px solid #E1E1E1;
   border-right: 1px solid #E1E1E1; }
 
 th:first-child,
 td:first-child {
   padding-left: 0;
+  text-align: center;
+  width: 15%;
   border-right: 1px solid #E1E1E1;
 }
 
