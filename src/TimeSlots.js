@@ -3,10 +3,10 @@ import React from 'react';
 class TimeSlots extends React.Component {
 
   renderTimes(){
-    const starttimes=["8:00","9:45","12:15","14:00","15:45"];
+    const starttimes=["8:00 - 9:30","9:45 - 11:15","12:15 - 13:45","14:00 - 15:30","15:45 - 17:15"];
     var _this= this;
     return starttimes.map(function(time){
-      return (<tr key={time}> {_this.renderSlots(time)} </tr>);
+      return (<tr key={time}>{_this.renderSlots(time)}</tr>);
     });
   };
 
@@ -14,7 +14,7 @@ class TimeSlots extends React.Component {
     const days = [null,"Montag","Dienstag", "Mittwoch","Donnerstag","Freitag","Samstag"];
     var _this= this;
     return days.map(function(day){
-      return (<td key={time+day}> {_this.renderCell(time, day)} </td>);
+      return (<td key={time+day}>{_this.renderCell(time, day)}</td>);
     });
   };
 
@@ -40,7 +40,7 @@ class TimeSlots extends React.Component {
     var _this= this;
     return selectedCourses.map(function(course){
       return (<div key={course.title+course.startTime+course.day}> 
-          <b>{course.title}</b> <br/> {(course["course-format"])} <br/>{course.lecturer} </div>);
+          <b>{course.title}</b><br/> {(course["course-format"])}<br/>{course.lecturer}</div>);
     });
   };
 
