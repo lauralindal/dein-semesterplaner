@@ -7,6 +7,7 @@
 }
 .fix{
   background-color: #76B900;
+  padding-top: auto;
 }
 
 .wrapper{
@@ -17,7 +18,24 @@
 .red { background-color: #FF5F00; }
 .yellow { background-color: #FFFF66; }
 .grey { background-color: #AFAFAF; }
-.blue { background-color: #0082D1; }
+.blue { 
+  background-color: #0082D1; 
+  color: #FFFFF0; 
+}
+
+.button{
+  height: auto;
+  line-height: 13px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 12px;
+  padding-top: 4px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+}
+
+.italic{ font-style: italic; }
 
 /* ------- Tables -------  */
 
