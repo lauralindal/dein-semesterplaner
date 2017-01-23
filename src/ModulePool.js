@@ -5,7 +5,7 @@ class ModulePool extends React.Component {
     this.props.toggleModule(module.module_id,e);
   };
 
-  renderModules(){ 
+  renderModules(){
     var _this=this;
   	return this.props.retrieveSelectedModules.map((module) => {
       return(
@@ -22,7 +22,6 @@ class ModulePool extends React.Component {
       <div id="coursePool" className="float-right">
         <div className="bordertype">
           <div id="main"> {this.renderModules()}</div>
-
          </div> 
       </div>
     )
@@ -30,4 +29,3 @@ class ModulePool extends React.Component {
 }
 
 export default ModulePool
-
