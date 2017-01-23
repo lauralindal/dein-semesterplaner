@@ -7,6 +7,7 @@
 }
 .fix{
   background-color: #76B900;
+  padding-top: auto;
 }
 
 .wrapper{
@@ -17,19 +18,39 @@
 .red { background-color: #FF5F00; }
 .yellow { background-color: #FFFF66; }
 .grey { background-color: #AFAFAF; }
-.blue { background-color: #0082D1; }
+.blue { 
+  background-color: #0082D1; 
+  color: #FFFFF0; 
+}
+
+.button{
+  height: auto;
+  line-height: 13px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 12px;
+  padding-top: 4px;
+  padding-right: 20px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+}
+
+.italic{ font-style: italic; }
 
 /* ------- Tables -------  */
 
 td {
   padding: 12px 15px;
-  text-align: center;
+  text-align: left;
+  width: 15%;
   border-bottom: 1px solid #E1E1E1;
   border-right: 1px solid #E1E1E1; }
 
 th:first-child,
 td:first-child {
   padding-left: 0;
+  text-align: center;
+  width: 15%;
   border-right: 1px solid #E1E1E1;
 }
 
@@ -38,7 +59,7 @@ tr:last-child {
 }
 table{
   width: 100%;
-  height: 85%;
+  height: auto;
 }
 td:nth-child(even){
   background: #f2f0f0;
@@ -194,7 +215,7 @@ div#coursePool{
 section#schedule{
   border: 1px solid grey;
   padding: 10px;
-  height: 500px;
+  height: auto;
   margin-bottom: 5px;
 }
 .float-left{

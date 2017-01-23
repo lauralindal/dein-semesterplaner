@@ -28,7 +28,8 @@ class Module extends React.Component {
 
     return (
       <div key={this.props.module.title} className="semester">
-          <p className={ModuleClasses} onClick={this.toggleModule.bind(this)}>{this.props.module.title} {this.props.userModule.status}</p>
+          <div className={ModuleClasses} onClick={this.toggleModule.bind(this)}>{this.props.module.title} <br/>
+          {this.props.userModule.status}</div>
       </div>
     )
   }

@@ -19,14 +19,14 @@ class Home extends React.Component {
         return module.status;
       })
     };
-  }
+  };
 
   componentDidMount() {
     var isLoggedIn = this.state.isLoggedIn;
     if(isLoggedIn){
       this.getCurrentUserData();
     }
-  }
+  };
 
   getCurrentUserData(){
     var self = this;
@@ -37,7 +37,7 @@ class Home extends React.Component {
       self.setState({userModules: userDataSets[0].userModules});
       return Promise.resolve();
     });
-  }
+  };
 
   performLogin(email, password) {
     var self = this;
@@ -104,7 +104,6 @@ class Home extends React.Component {
     return totalCredits;
   };
 
-
   calculateCurrentCredits() {
     var userModules = this.state.userModules;
     var modules = moduleplan.degree_course.modules;
@@ -169,6 +168,27 @@ class Home extends React.Component {
     return selectedModuleTitles;
   };
 
+  retrieveSelectedModules(){
+    var userModules = this.state.userModules;
+    var modules = moduleplan.degree_course.modules;
+    var selectedModuleIds = [];
+    var selectedModuleTitles = [];
+    for (var i = 0; i < userModules.length; i++) {
+      if (userModules[i].selected){
+        selectedModuleIds.push(userModules[i].module_id);
+      }
+    }
+    for (var i = 0; i < selectedModuleIds.length; i++) {
+      for (var j=0; j < modules.length; j++){
+        if (selectedModuleIds[i] === modules[j].id) {
+          modules[j].module_id = selectedModuleIds[i];
+          selectedModuleTitles.push(modules[j]);
+        }
+      }
+    }
+    return selectedModuleTitles;
+  };
+
   combineSelectedTitlesAndData(){
     var courseInformation = this.retrieveSelectedCourseInfo();
     var modules = moduleplan.degree_course.modules;
@@ -223,7 +243,10 @@ class Home extends React.Component {
         selectedCourseInfo={selectedCourseInfo}
         selectedModuleTitles={selectedModuleTitles}
         currentCreditPoints={currentCreditPoints}
-        selectedCoursesCounter={selectedCoursesCounter} />
+        selectedCoursesCounter={selectedCoursesCounter} 
+        toggleModule={this.toggleModule.bind(this)}
+        retrieveSelectedModules={this.retrieveSelectedModules()}
+        />
         <CourseSchedule selectedCourseInfo={selectedCourseInfo} combinedTitleAndData={combinedTitleAndData}/>
         </div>
       );
