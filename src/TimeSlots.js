@@ -45,7 +45,6 @@ class TimeSlots extends React.Component {
   };
 
   render() {
-
     return (
      <tbody>
      {this.renderTimes()}

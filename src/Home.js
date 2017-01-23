@@ -19,14 +19,14 @@ class Home extends React.Component {
         return module.status;
       })
     };
-  }
+  };
 
   componentDidMount() {
     var isLoggedIn = this.state.isLoggedIn;
     if(isLoggedIn){
       this.getCurrentUserData();
     }
-  }
+  };
 
   getCurrentUserData(){
     var self = this;
@@ -37,7 +37,7 @@ class Home extends React.Component {
       self.setState({userModules: userDataSets[0].userModules});
       return Promise.resolve();
     });
-  }
+  };
 
   performLogin(email, password) {
     var self = this;
@@ -103,7 +103,6 @@ class Home extends React.Component {
     }
     return totalCredits;
   };
-
 
   calculateCurrentCredits() {
     var userModules = this.state.userModules;
