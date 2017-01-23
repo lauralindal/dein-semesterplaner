@@ -1,12 +1,28 @@
 import React from 'react';
 
 class ModulePool extends React.Component {
+  toggleModule(module, e){
+    this.props.toggleModule(module.module_id,e);
+  };
+
+  renderModules(){
+    var _this=this;
+  	return this.props.retrieveSelectedModules.map((module) => {
+      return(
+        <div>
+        <a href="#" onClick={_this.toggleModule.bind(_this, module)} className="button fix" key={module.title}>{module.title}</a>
+        <br />
+        </div>
+        );
+    });
+
+  }
   render() {
     return (
       <div id="coursePool" className="float-right">
-          Course Pool <br />
-          Plane dein 6. Semester <br />
-          <div id="main"></div>
+        <div className="bordertype">
+          <div id="main"> {this.renderModules()}</div>
+         </div> 
       </div>
     )
   }

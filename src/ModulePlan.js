@@ -3,6 +3,7 @@ import Semester from './Semester';
 
 class ModulePlan extends React.Component {
   render() {
+    var _this=this;
     return (
       <div>
       <section id="symbology">
@@ -45,7 +46,7 @@ class ModulePlan extends React.Component {
       Regelstudienplan
       {this.props.semesters.map(function(semester, index) {
         return (
-          <Semester semester={index+1} modules={semester} />
+          <Semester semester={index+1} modules={semester} toggleModule={_this.props.toggleModule} />
           )
       })
     }
