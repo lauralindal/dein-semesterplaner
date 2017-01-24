@@ -28,11 +28,8 @@
   line-height: 13px;
   letter-spacing: 0;
   text-transform: none;
-  font-size: 12px;
-  padding-top: 4px;
-  padding-right: 20px;
-  padding-bottom: 0px;
-  padding-left: 20px;
+  font-size: 14px;
+  padding: 10px 20px;
 }
 
 .italic{ font-style: italic; }
