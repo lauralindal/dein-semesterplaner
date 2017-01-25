@@ -43,7 +43,7 @@ class ModulePlan extends React.Component {
     </section>
       
     <div>
-      Regelstudienplan
+      <h5>Regelstudienplan</h5>
       {this.props.semesters.map(function(semester, index) {
         return (
           <Semester semester={index+1} modules={semester} toggleModule={_this.props.toggleModule} />
