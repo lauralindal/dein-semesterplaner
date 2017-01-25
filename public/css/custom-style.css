@@ -2,9 +2,18 @@
   display: inline;
 }
 
-.hover:hover {
-  background-color: #76B900;
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+button:hover,
+.button:hover {
+  color: #555;
+  border-color: #bbb;
+  outline: 0;
 }
+
+.default-cursor { cursor: default; }
+
 .fix{
   background-color: #76B900;
   padding-top: auto;
@@ -20,6 +29,10 @@
 .grey { background-color: #AFAFAF; }
 .blue {
   background-color: #0082D1;
+  color: #FFFFF0;
+}
+
+.blue:hover {
   color: #FFFFF0;
 }
 
