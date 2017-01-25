@@ -32,7 +32,11 @@
   padding: 10px 20px;
 }
 
-.italic{ font-style: italic; }
+.moduleStatus{ 
+  font-style: italic; 
+  font-weight: 400;
+}
+
 
 /* ------- Tables -------  */
 

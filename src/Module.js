@@ -29,7 +29,7 @@ class Module extends React.Component {
     return (
       <div key={this.props.module.title} className="semester">
           <div className={ModuleClasses} onClick={this.toggleModule.bind(this)}>{this.props.module.title} <br/>
-          <span style={{fontStyle: 'italic', fontWeight: '400'}}>{this.props.userModule.status}</span></div>
+          <span className="moduleStatus">{this.props.userModule.status}</span></div>
       </div>
     )
   }
