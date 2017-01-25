@@ -6,24 +6,24 @@ class Module extends React.Component {
   };
 
   render() {
-    var ModuleClasses = "button hover";
+    var ModuleClasses = "button";
     var ModuleClasses_fix = "fix";
 
     switch (this.props.userModule.status) {
       case "urgent":
-        ModuleClasses += " red";
+        ModuleClasses += " red grow";
         break;
       case "started":
-        ModuleClasses += " yellow";
+        ModuleClasses += " yellow grow";
         break;
       case "selected":
-        ModuleClasses += " green";
+        ModuleClasses += " green grow";
         break;
       case "completed":
-        ModuleClasses += " grey";
+        ModuleClasses += " grey default-cursor";
         break;
       default:
-        ModuleClasses += " blue";
+        ModuleClasses += " blue grow";
     }
 
     return (

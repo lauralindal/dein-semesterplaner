@@ -10,7 +10,7 @@ class ModulePool extends React.Component {
   	return this.props.retrieveSelectedModules.map((module) => {
       return(
         <div>
-        <a href="#" onClick={_this.toggleModule.bind(_this, module)} className="button fix" key={module.title}>{module.title}</a>
+        <div onClick={_this.toggleModule.bind(_this, module)} className="button fix" key={module.title}>{module.title}</div>
         <br />
         </div>
         );
@@ -22,7 +22,7 @@ class ModulePool extends React.Component {
       <div id="coursePool" className="float-right">
         <div className="bordertype">
           <div id="main"> {this.renderModules()}</div>
-         </div> 
+         </div>
       </div>
     )
   }
