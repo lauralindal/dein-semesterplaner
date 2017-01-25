@@ -18,9 +18,9 @@
 .red { background-color: #FF5F00; }
 .yellow { background-color: #FFFF66; }
 .grey { background-color: #AFAFAF; }
-.blue { 
-  background-color: #0082D1; 
-  color: #FFFFF0; 
+.blue {
+  background-color: #0082D1;
+  color: #FFFFF0;
 }
 
 .button{
@@ -85,7 +85,7 @@ div.flex-container{
 
 .flex-item{
   vertical-align: center;
-  -webkit-align-self: center; 
+  -webkit-align-self: center;
   align-self: center;
   margin-top: 10px;
   padding-bottom: 0px;
@@ -106,8 +106,8 @@ div.flex-container{
 
 *{
 -webkit-box-sizing: border-box;
--moz-box-sizing: border-box; 
--ms-box-sizing: border-box; 
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
 box-sizing: border-box;
 }
 
@@ -136,30 +136,30 @@ section#symbology{
 .selected,
 .selected_urgent{
   border: 1px solid grey;
-  border-radius: 5px; 
+  border-radius: 5px;
   width: 70px;
   height: 30px;
   margin: auto;
 }
 
 .available{
-  background-color: #0082D1;  
+  background-color: #0082D1;
  }
 .started{
-  background-color: #FFFF66;  
+  background-color: #FFFF66;
 }
 .completed{
-  background-color: #AFAFAF; 
+  background-color: #AFAFAF;
 }
 .urgent{
-  background-color: #FF5F00;  
+  background-color: #FF5F00;
 }
 .selected{
-  background-color: #76B900;  
+  background-color: #76B900;
 }
 .selected_urgent{
-  background-color: #76B900; 
-  border: 2px solid red; 
+  background-color: #76B900;
+  border: 2px solid red;
 }
 
 section#coursePlan{
@@ -190,13 +190,13 @@ div#sum_total{
   border: 1px solid grey;
   text-align: center;
   padding: 5px;
-  min-height: 200px;
+  min-height: 30%;
 }
 div#sum_current{
   border: 1px solid grey;
   text-align: center;
   padding: 5px;
-  min-height: 200px;
+  min-height: 70%;
 }
 div#coursePool{
   border: 1px solid grey;
