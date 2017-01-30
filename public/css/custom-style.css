@@ -191,20 +191,20 @@ section#planningSection{
 }
 div#sum{
   width: 30%;
-  border: 1px solid grey;
   display: inline-block;
+  min-height: 460px;
 }
 div#sum_total{
   border: 1px solid grey;
   text-align: center;
-  padding: 5px;
-  min-height: 30%;
+  padding: 20px;
+  height: 150px;
 }
 div#sum_current{
   border: 1px solid grey;
   text-align: center;
-  padding: 5px;
-  min-height: 70%;
+  padding: 20px;
+  height: 300px;
 }
 div#coursePool{
   border: 1px solid grey;
