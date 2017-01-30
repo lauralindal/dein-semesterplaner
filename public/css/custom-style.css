@@ -2,9 +2,18 @@
   display: inline;
 }
 
-.hover:hover {
-  background-color: #76B900;
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+button:hover,
+.button:hover {
+  color: #555;
+  border-color: #bbb;
+  outline: 0;
 }
+
+.default-cursor { cursor: default; }
+
 .fix{
   background-color: #76B900;
   padding-top: auto;
@@ -18,9 +27,12 @@
 .red { background-color: #FF5F00; }
 .yellow { background-color: #FFFF66; }
 .grey { background-color: #AFAFAF; }
-.blue { 
-  background-color: #0082D1; 
-  color: #FFFFF0; 
+.blue {
+  background-color: #0082D1;
+  color: #FFFFF0;
+}
+.blue:hover {
+  color: #FFFFF0;
 }
 
 .button{
@@ -86,7 +98,7 @@ div.flex-container{
 
 .flex-item{
   vertical-align: center;
-  -webkit-align-self: center; 
+  -webkit-align-self: center;
   align-self: center;
   margin-top: 10px;
   padding-bottom: 0px;
@@ -107,8 +119,8 @@ div.flex-container{
 
 *{
 -webkit-box-sizing: border-box;
--moz-box-sizing: border-box; 
--ms-box-sizing: border-box; 
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
 box-sizing: border-box;
 }
 
@@ -144,19 +156,19 @@ section#symbology{
 }
 
 .available{
-  background-color: #0082D1;  
+  background-color: #0082D1;
  }
 .started{
-  background-color: #FFFF66;  
+  background-color: #FFFF66;
 }
 .completed{
-  background-color: #AFAFAF; 
+  background-color: #AFAFAF;
 }
 .urgent{
-  background-color: #FF5F00;  
+  background-color: #FF5F00;
 }
 .selected{
-  background-color: #76B900;  
+  background-color: #76B900;
 }
 
 section#coursePlan{
@@ -187,13 +199,13 @@ div#sum_total{
   border: 1px solid grey;
   text-align: center;
   padding: 5px;
-  min-height: 200px;
+  min-height: 30%;
 }
 div#sum_current{
   border: 1px solid grey;
   text-align: center;
   padding: 5px;
-  min-height: 200px;
+  min-height: 70%;
 }
 div#coursePool{
   border: 1px solid grey;
@@ -234,4 +246,17 @@ footer{
   text-align: center;
   padding: 10px;
   border: 1px solid grey;
+}
+
+/* ------- Popup ------------- */
+
+.popup {
+  background-color: white;
+  border: 3px solid #FF5F00;
+  left: 25%;
+  margin: auto;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  width: 50%;
 }

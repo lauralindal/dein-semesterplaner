@@ -29,7 +29,7 @@ class ModulePlan extends React.Component {
             </div>
             <div className="flex-item item5">
               <div className="selected"></div>
-              <div><h6>Kurs geplant</h6></div>
+              <div><h6>Kurs ausgewählt</h6></div>
             </div>
           </div>
         </legend>
