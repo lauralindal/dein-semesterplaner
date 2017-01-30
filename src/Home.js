@@ -120,7 +120,7 @@ class Home extends React.Component {
     var totalCredits = this.calculateTotalCredits();
     var currentCredits = this.calculateCurrentCredits();
     var bachelorCredits = 180;
-    return Math.ceil((bachelorCredits - (totalCredits + currentCredits))/30)
+    return Math.ceil((bachelorCredits - (totalCredits + currentCredits))/30 + 1)
   };
 
   countSelectedCourses() {
