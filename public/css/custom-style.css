@@ -210,6 +210,13 @@ div#coursePool{
     text-align: center;
     overflow-y: scroll;
 }
+
+.wording{
+  margin: auto;
+  font-weight: bolder;
+  font-style: italic;
+}
+
 section#schedule{
   border: 1px solid grey;
   padding: 10px;
