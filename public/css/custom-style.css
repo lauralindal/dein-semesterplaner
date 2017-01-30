@@ -138,7 +138,7 @@ section#symbology{
 .selected_urgent{
   border: 1px solid grey;
   border-radius: 5px; 
-  width: 70px;
+  width: 30px;
   height: 30px;
   margin: auto;
 }
@@ -157,10 +157,6 @@ section#symbology{
 }
 .selected{
   background-color: #76B900;  
-}
-.selected_urgent{
-  background-color: #76B900; 
-  border: 2px solid red; 
 }
 
 section#coursePlan{
