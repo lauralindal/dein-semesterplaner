@@ -31,7 +31,6 @@ button:hover,
   background-color: #0082D1;
   color: #FFFFF0;
 }
-
 .blue:hover {
   color: #FFFFF0;
 }
@@ -243,4 +242,17 @@ footer{
   text-align: center;
   padding: 10px;
   border: 1px solid grey;
+}
+
+/* ------- Popup ------------- */
+
+.popup {
+  background-color: white;
+  border: 3px solid #FF5F00;
+  left: 25%;
+  margin: auto;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  width: 50%;
 }
