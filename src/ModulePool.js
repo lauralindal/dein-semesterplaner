@@ -10,7 +10,8 @@ class ModulePool extends React.Component {
   	return this.props.retrieveSelectedModules.map((module) => {
       return(
         <div>
-        <a href="#" onClick={_this.toggleModule.bind(_this, module)} className="button fix" key={module.title}>{module.title}</a>
+        <a href="#" onClick={_this.toggleModule.bind(_this, module)} 
+        className="button fix" key={module.title}>{module.title}</a>
         <br />
         </div>
         );

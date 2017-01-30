@@ -10,7 +10,8 @@ class PlanningSection extends React.Component {
         <div id="planningSection">
           <div id="sum" className="float-left">
             <TotalCredits totalCreditPoints={this.props.totalCreditPoints}/>
-            <CurrentCredits currentCreditPoints={this.props.currentCreditPoints} selectedCoursesCounter={this.props.selectedCoursesCounter}/>
+            <CurrentCredits currentCreditPoints={this.props.currentCreditPoints} 
+            selectedCoursesCounter={this.props.selectedCoursesCounter}/>
           </div>
           <ModulePool 
             selectedCourseInfo={this.props.selectedCourseInfo} 
