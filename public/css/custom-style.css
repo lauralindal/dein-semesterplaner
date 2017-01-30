@@ -44,8 +44,8 @@ button:hover,
   padding: 10px 20px;
 }
 
-.moduleStatus{ 
-  font-style: italic; 
+.moduleStatus{
+  font-style: italic;
   font-weight: 400;
 }
 
@@ -149,7 +149,7 @@ section#symbology{
 .selected,
 .selected_urgent{
   border: 1px solid grey;
-  border-radius: 5px; 
+  border-radius: 5px;
   width: 30px;
   height: 30px;
   margin: auto;
@@ -257,6 +257,7 @@ footer{
   margin: auto;
   padding: 10px;
   position: fixed;
+  text-align: center;
   top: 50%;
   width: 50%;
 }
