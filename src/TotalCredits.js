@@ -1,6 +1,7 @@
 import React from 'react';
 
 class TotalCredits extends React.Component {
+ 	
   render() {
     return (
       <div id="sum_total">
