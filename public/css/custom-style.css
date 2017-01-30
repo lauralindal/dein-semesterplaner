@@ -149,8 +149,8 @@ section#symbology{
 .selected,
 .selected_urgent{
   border: 1px solid grey;
-  border-radius: 5px;
-  width: 70px;
+  border-radius: 5px; 
+  width: 30px;
   height: 30px;
   margin: auto;
 }
@@ -169,10 +169,6 @@ section#symbology{
 }
 .selected{
   background-color: #76B900;
-}
-.selected_urgent{
-  background-color: #76B900;
-  border: 2px solid red;
 }
 
 section#coursePlan{
@@ -224,7 +220,15 @@ div#coursePool{
     height: 335px;
     background-color: white;
     text-align: center;
+    overflow-y: scroll;
 }
+
+.wording{
+  margin: auto;
+  font-weight: bolder;
+  font-style: italic;
+}
+
 section#schedule{
   border: 1px solid grey;
   padding: 10px;
