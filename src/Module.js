@@ -6,7 +6,7 @@ class Module extends React.Component {
   };
 
   translateModuleStatus(){
-    var status=this.props.userModule.status;
+    var status = this.props.userModule.status;
     
     switch (status) {
       case "urgent":
