@@ -287,6 +287,7 @@ class Home extends React.Component {
             selectedCourseInfo={selectedCourseInfo}
             selectedModuleTitles={selectedModuleTitles}
             currentCreditPoints={currentCreditPoints}
+            remainingSemesters={remainingSemesters}
             selectedCoursesCounter={selectedCoursesCounter}
             toggleModule={this.toggleModule.bind(this)}
             retrieveSelectedModules={this.retrieveSelectedModules()}
