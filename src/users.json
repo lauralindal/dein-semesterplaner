@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Sarah",
       "matriculation_number": 540000,
-      "matriculation_date": "1.10.2013",
+      "matriculation_date": "1.4.2015",
       "password": "password",
       "tracked_modules": [
         {
@@ -33,7 +33,7 @@
         },
         {
           "module_id": 7,
-          "status": "urgent"
+          "status": "started"
         },
         {
           "module_id": 8,
@@ -49,15 +49,15 @@
         },
         {
           "module_id": 11,
-          "status": "started"
+          "status": "available"
         },
         {
           "module_id": 12,
-          "status": "completed"
+          "status": "available"
         },
         {
           "module_id": 13,
-          "status": "completed"
+          "status": "started"
         },
         {
           "module_id": 14,
@@ -85,23 +85,23 @@
         },
         {
           "module_id": 20,
-          "status": "completed"
+          "status": "available"
         },
         {
           "module_id": 21,
-          "status": "completed"
+          "status": "available"
         },
         {
           "module_id": 22,
-          "status": "completed"
+          "status": "available"
         },
         {
           "module_id": 23,
-          "status": "completed"
+          "status": "available"
         },
         {
           "module_id": 24,
-          "status": "completed"
+          "status": "available"
         },
         {
           "module_id": 25,

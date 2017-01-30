@@ -119,6 +119,13 @@ class Home extends React.Component {
     return currentCredits;
   };
 
+  calculateRemainingSemesters(){
+    var totalCredits = this.calculateTotalCredits();
+    var currentCredits = this.calculateCurrentCredits();
+    var bachelorCredits = 180;
+    return Math.ceil((bachelorCredits - (totalCredits + currentCredits))/30 + 1)
+  };
+
   countSelectedCourses() {
     var userModules = this.state.userModules;
     var modules = moduleplan.degree_course.modules;
@@ -259,6 +266,7 @@ class Home extends React.Component {
   renderUserData(isLoggedIn) {
     var totalCreditPoints = this.calculateTotalCredits();
     var currentCreditPoints = this.calculateCurrentCredits();
+    var remainingSemesters = this.calculateRemainingSemesters();
     var selectedCoursesCounter = this.countSelectedCourses();
     var semesters = this.getSemestersForUser();
     var selectedCourseInfo = this.retrieveSelectedCourseInfo();
