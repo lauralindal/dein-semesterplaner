@@ -5,6 +5,27 @@ class Module extends React.Component {
     this.props.toggleModule(this.props.userModule.module_id,e);
   };
 
+  translateModuleStatus(){
+    var status = this.props.userModule.status;
+    
+    switch (status) {
+      case "urgent":
+        return "dringend";
+        break;
+      case "started":
+        return "begonnen";
+        break;
+      case "selected":
+        return "ausgewählt";
+        break;
+      case "completed":
+        return "abgeschlossen";
+        break;
+      default:
+        return "belegbar";
+    }
+  }
+
   render() {
     var ModuleClasses = "button";
     var ModuleClasses_fix = "fix";
@@ -29,7 +50,7 @@ class Module extends React.Component {
     return (
       <div key={this.props.module.title} className="semester">
           <div className={ModuleClasses} onClick={this.toggleModule.bind(this)}>{this.props.module.title} <br/>
-          <span className="moduleStatus">{this.props.userModule.status}</span></div>
+          <span className="moduleStatus">{this.translateModuleStatus()}</span></div>
       </div>
     )
   }
