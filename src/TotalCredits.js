@@ -6,7 +6,7 @@ class TotalCredits extends React.Component {
     return (
       <div id="sum_total">
       <h5>Alle Leistungspunkte</h5>
-      <p>Du hast bisher {this.props.totalCreditPoints} von 180 Leistungspunkten gesammelt.</p>
+      <p>Du hast bisher <br /><b>{this.props.totalCreditPoints}</b> von <b>180</b> <br />Leistungspunkten gesammelt.</p>
       </div>
     )
   }

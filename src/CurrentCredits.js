@@ -15,8 +15,8 @@ createText(){
     return (
       <div id="sum_current">
         <h5>Aktuelle Leistungspunkte</h5>
-         <p>Du hast in diesem Semester {this.props.selectedCoursesCounter} {this.createText()} mit insgesamt {this.props.currentCreditPoints} Leistungspunkten belegt.</p>
-         <p>Dein Studium wird schätzungsweise noch {this.props.remainingSemesters} Semester andauern.</p>
+         <p>Du hast in diesem Semester <b>{this.props.selectedCoursesCounter}</b> {this.createText()} <br /> mit insgesamt <b>{this.props.currentCreditPoints}</b>  Leistungspunkten <br />belegt.</p>
+         <p>Dein Studium wird schätzungsweise noch <br /><b>{this.props.remainingSemesters}</b> Semester andauern.</p>
       </div>
     )
   }
