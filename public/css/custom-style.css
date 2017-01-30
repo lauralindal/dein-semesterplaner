@@ -204,13 +204,13 @@ div#sum_total{
   border: 1px solid grey;
   text-align: center;
   padding: 5px;
-  min-height: 200px;
+  min-height: 30%;
 }
 div#sum_current{
   border: 1px solid grey;
   text-align: center;
   padding: 5px;
-  min-height: 200px;
+  min-height: 70%;
 }
 div#coursePool{
   border: 1px solid grey;
