@@ -7,16 +7,22 @@ class ModulePool extends React.Component {
 
   renderModules(){
     var _this=this;
-  	return this.props.retrieveSelectedModules.map((module) => {
-      return(
-        <div>
-        <div onClick={_this.toggleModule.bind(_this, module)} 
-        className="button fix" key={module.title}>{module.title}</div>
-        <br />
-        </div>
-        );
-    });
-
+    if (this.props.retrieveSelectedModules.length===0){
+       return(
+          <div>
+          <span className="wording">Wähle Kurse für dein 4.Semester</span>
+          </div>
+          );
+    }else{
+      return this.props.retrieveSelectedModules.map((module) => {
+        return(
+          <div>
+          <div onClick={_this.toggleModule.bind(_this, module)} className="button fix" key={module.title}>{module.title}</div>
+          <br />
+          </div>
+          );
+      });
+    }
   }
   render() {
     return (
@@ -30,4 +36,3 @@ class ModulePool extends React.Component {
 }
 
 export default ModulePool
-
