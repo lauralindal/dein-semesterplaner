@@ -10,7 +10,7 @@ class ModulePool extends React.Component {
     if (this.props.retrieveSelectedModules.length===0){
        return(
           <div>
-          <span className="wording">Wähle Kurse für dein 4.Semester</span>
+          <h4>Plane hier dein kommendes Semester</h4>
           </div>
           );
     }else{
@@ -28,7 +28,7 @@ class ModulePool extends React.Component {
     return (
       <div id="coursePool" className="float-right">
         <div className="bordertype">
-          <div id="main"> {this.renderModules()}</div>
+          <div id="main" className="infotext"> {this.renderModules()}</div>
          </div>
       </div>
     )

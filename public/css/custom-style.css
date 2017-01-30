@@ -191,7 +191,6 @@ section#planningSection{
 }
 div#sum{
   width: 30%;
-  min-height: 400px;
   border: 1px solid grey;
   display: inline-block;
 }
@@ -210,23 +209,25 @@ div#sum_current{
 div#coursePool{
   border: 1px solid grey;
   min-width: 67%;
-  min-height: 417px;
+  min-height: 380px;
   text-align: center;
 }
 .bordertype{
     border: 3px dashed grey;
     border-radius: 70px;
     margin: 40px 40px 40px 40px;
-    height: 335px;
+    width: 90%;
+    height: 380px;
     background-color: white;
     text-align: center;
+    vertical-align: middle;
     overflow-y: scroll;
 }
 
-.wording{
-  margin: auto;
-  font-weight: bolder;
-  font-style: italic;
+.infotext{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 section#schedule{
