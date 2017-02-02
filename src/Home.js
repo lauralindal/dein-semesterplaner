@@ -15,7 +15,7 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
-      userModules: users.students[3].tracked_modules,
+      userModules: users.students[0].tracked_modules,
       popupDismissed: false,
       clicked: false,
       originalStatus: users.students[0].tracked_modules.map((module) => {
@@ -36,8 +36,8 @@ class Home extends React.Component {
     // when we ask hoodie for all it has in store, we get an array of objects,
     // so we want to pick the newest document/object which will contain the
     // most current set of module information for our user
-    return hoodie.store.findAll().then(function(userDataSets){
-      self.setState({userModules: userDataSets[0].userModules});
+    return hoodie.store.find("userModules").then(function(userDataSet){
+      self.setState({userModules: userDataSet.userModules});
       return Promise.resolve();
     });
   };
@@ -213,8 +213,8 @@ class Home extends React.Component {
 
   toggleModule(moduleId, e){
     e.preventDefault();
-    var userModules=this.state.userModules;
-    var data=null;
+    var userModules = this.state.userModules;
+    var data = null;
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].module_id === moduleId){
         if(userModules[i].status === "completed"){
@@ -237,7 +237,7 @@ class Home extends React.Component {
       clicked: urgentModules.length > 0
     });
 
-    hoodie.store.add({
+    hoodie.store.update("userModules", {
       "userModules": userModules
     })
     .then(() => {
@@ -264,16 +264,15 @@ class Home extends React.Component {
   }
 
   renderUserData(isLoggedIn) {
-    var totalCreditPoints = this.calculateTotalCredits();
-    var currentCreditPoints = this.calculateCurrentCredits();
-    var remainingSemesters = this.calculateRemainingSemesters();
-    var selectedCoursesCounter = this.countSelectedCourses();
-    var semesters = this.getSemestersForUser();
-    var selectedCourseInfo = this.retrieveSelectedCourseInfo();
-    var selectedModuleTitles = this.retrieveSelectedModuleTitle();
-    var combinedTitleAndData = this.combineSelectedTitlesAndData();
-    //TODO give each react element a unique key
     if(isLoggedIn) {
+      var totalCreditPoints = this.calculateTotalCredits();
+      var currentCreditPoints = this.calculateCurrentCredits();
+      var remainingSemesters = this.calculateRemainingSemesters();
+      var selectedCoursesCounter = this.countSelectedCourses();
+      var semesters = this.getSemestersForUser();
+      var selectedCourseInfo = this.retrieveSelectedCourseInfo();
+      var selectedModuleTitles = this.retrieveSelectedModuleTitle();
+      var combinedTitleAndData = this.combineSelectedTitlesAndData();
       return (
         <div>
           <ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />

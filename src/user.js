@@ -3,6 +3,7 @@ import users from './users.json';
 export function seedUserData(){
   var userModules = users.students[0].tracked_modules;
   return hoodie.store.add({
+    "id": "userModules",
     "userModules": userModules
   })
   .then(() => {
