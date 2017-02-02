@@ -264,7 +264,6 @@ class Home extends React.Component {
   }
 
   renderUserData(isLoggedIn) {
-    //TODO give each react element a unique key
     if(isLoggedIn) {
       var totalCreditPoints = this.calculateTotalCredits();
       var currentCreditPoints = this.calculateCurrentCredits();
@@ -304,7 +303,6 @@ class Home extends React.Component {
 
   render() {
     var isLoggedIn = this.state.isLoggedIn;
-    console.log("Ich bin render");
     return (
       <div>
       <Header performLogin={this.performLogin.bind(this)} performLogout={this.performLogout.bind(this)}/>
