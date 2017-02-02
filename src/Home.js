@@ -36,7 +36,9 @@ class Home extends React.Component {
     // when we ask hoodie for all it has in store, we get an array of objects,
     // so we want to pick the newest document/object which will contain the
     // most current set of module information for our user
+    console.log("lizuvouf");
     return hoodie.store.find("userModules").then(function(userDataSet){
+      console.log("lizuvouf");
       self.setState({userModules: userDataSet.userModules});
       return Promise.resolve();
     });
@@ -264,16 +266,16 @@ class Home extends React.Component {
   }
 
   renderUserData(isLoggedIn) {
-    var totalCreditPoints = this.calculateTotalCredits();
-    var currentCreditPoints = this.calculateCurrentCredits();
-    var remainingSemesters = this.calculateRemainingSemesters();
-    var selectedCoursesCounter = this.countSelectedCourses();
-    var semesters = this.getSemestersForUser();
-    var selectedCourseInfo = this.retrieveSelectedCourseInfo();
-    var selectedModuleTitles = this.retrieveSelectedModuleTitle();
-    var combinedTitleAndData = this.combineSelectedTitlesAndData();
     //TODO give each react element a unique key
     if(isLoggedIn) {
+      var totalCreditPoints = this.calculateTotalCredits();
+      var currentCreditPoints = this.calculateCurrentCredits();
+      var remainingSemesters = this.calculateRemainingSemesters();
+      var selectedCoursesCounter = this.countSelectedCourses();
+      var semesters = this.getSemestersForUser();
+      var selectedCourseInfo = this.retrieveSelectedCourseInfo();
+      var selectedModuleTitles = this.retrieveSelectedModuleTitle();
+      var combinedTitleAndData = this.combineSelectedTitlesAndData();
       return (
         <div>
           <ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
@@ -304,6 +306,7 @@ class Home extends React.Component {
 
   render() {
     var isLoggedIn = this.state.isLoggedIn;
+    console.log("Ich bin render");
     return (
       <div>
       <Header performLogin={this.performLogin.bind(this)} performLogout={this.performLogout.bind(this)}/>
