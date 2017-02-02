@@ -36,9 +36,7 @@ class Home extends React.Component {
     // when we ask hoodie for all it has in store, we get an array of objects,
     // so we want to pick the newest document/object which will contain the
     // most current set of module information for our user
-    console.log("lizuvouf");
     return hoodie.store.find("userModules").then(function(userDataSet){
-      console.log("lizuvouf");
       self.setState({userModules: userDataSet.userModules});
       return Promise.resolve();
     });
