@@ -7,9 +7,9 @@ class ModulePool extends React.Component {
   };
 
   renderModules() {
-    var _this=this;
+    var _this = this;
     if (this.props.retrieveSelectedModules.length === 0){
-      return(
+      return (
         <div>
         <h4>Plane hier dein kommendes Semester</h4>
         </div>
@@ -17,14 +17,16 @@ class ModulePool extends React.Component {
     }
     else {
       return this.props.retrieveSelectedModules.map((module) => {
-        return(
-          <div>
-            <div
-              onClick={_this.toggleModule.bind(_this, module)}
-              className="button fix" key={module.title}>{module.title}
-            </div>
-          <br />
-          </div>
+        return (
+        <div key={"pool_" + module.title}>
+        <div
+          onClick={_this.toggleModule.bind(_this, module)}
+          className="button fix"
+        >
+          {module.title}
+        </div>
+        <br />
+        </div>
         );
       });
     }
