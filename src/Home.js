@@ -4,6 +4,7 @@ import Header from './Header';
 import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
 import CourseSchedule from './CourseSchedule';
+import Popup from './PopupAlert.js';
 import moduleplan from './moduleplan.json';
 import users from './users.json';
 import courseData from './courseData.json';
@@ -14,7 +15,9 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
-      userModules: users.students[3].tracked_modules,
+      userModules: users.students[0].tracked_modules,
+      popupDismissed: false,
+      clicked: false,
       originalStatus: users.students[0].tracked_modules.map((module) => {
         return module.status;
       })
@@ -33,8 +36,8 @@ class Home extends React.Component {
     // when we ask hoodie for all it has in store, we get an array of objects,
     // so we want to pick the newest document/object which will contain the
     // most current set of module information for our user
-    return hoodie.store.findAll().then(function(userDataSets){
-      self.setState({userModules: userDataSets[0].userModules});
+    return hoodie.store.find("userModules").then(function(userDataSet){
+      self.setState({userModules: userDataSet.userModules});
       return Promise.resolve();
     });
   };
@@ -114,6 +117,13 @@ class Home extends React.Component {
       }
     }
     return currentCredits;
+  };
+
+  calculateRemainingSemesters(){
+    var totalCredits = this.calculateTotalCredits();
+    var currentCredits = this.calculateCurrentCredits();
+    var bachelorCredits = 180;
+    return Math.ceil((bachelorCredits - (totalCredits + currentCredits))/30 + 1)
   };
 
   countSelectedCourses() {
@@ -203,8 +213,8 @@ class Home extends React.Component {
 
   toggleModule(moduleId, e){
     e.preventDefault();
-    var userModules=this.state.userModules;
-    var data=null;
+    var userModules = this.state.userModules;
+    var data = null;
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].module_id === moduleId){
         if(userModules[i].status === "completed"){
@@ -218,8 +228,16 @@ class Home extends React.Component {
         }
       }
     }
-    this.setState({userModules: userModules});
-    hoodie.store.add({
+    var urgentModules = userModules.filter((userModule)=> {
+      return userModule.status === "urgent";
+    })
+
+    this.setState({
+      userModules: userModules,
+      clicked: urgentModules.length > 0
+    });
+
+    hoodie.store.update("userModules", {
       "userModules": userModules
     })
     .then(() => {
@@ -227,27 +245,56 @@ class Home extends React.Component {
     })
   };
 
+  dismissPopup() {
+    this.setState({popupDismissed: true});
+  }
+
+  selectUrgentModules() {
+    var newUserModules = this.state.userModules.map((userModule)=> {
+      if (userModule.status === "urgent") {
+        userModule.status = "selected";
+        userModule.selected = true;
+      }
+      return  userModule;
+    });
+    this.setState({
+      userModules: newUserModules,
+      popupDismissed: true
+    });
+  }
+
   renderUserData(isLoggedIn) {
-    var totalCreditPoints = this.calculateTotalCredits();
-    var currentCreditPoints = this.calculateCurrentCredits();
-    var selectedCoursesCounter = this.countSelectedCourses();
-    var semesters = this.getSemestersForUser();
-    var selectedCourseInfo = this.retrieveSelectedCourseInfo();
-    var selectedModuleTitles = this.retrieveSelectedModuleTitle();
-    var combinedTitleAndData = this.combineSelectedTitlesAndData();
-    //TODO give each react element a unique key
     if(isLoggedIn) {
+      var totalCreditPoints = this.calculateTotalCredits();
+      var currentCreditPoints = this.calculateCurrentCredits();
+      var remainingSemesters = this.calculateRemainingSemesters();
+      var selectedCoursesCounter = this.countSelectedCourses();
+      var semesters = this.getSemestersForUser();
+      var selectedCourseInfo = this.retrieveSelectedCourseInfo();
+      var selectedModuleTitles = this.retrieveSelectedModuleTitle();
+      var combinedTitleAndData = this.combineSelectedTitlesAndData();
       return (
-        <div><ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
-        <PlanningSection totalCreditPoints={totalCreditPoints}
-        selectedCourseInfo={selectedCourseInfo}
-        selectedModuleTitles={selectedModuleTitles}
-        currentCreditPoints={currentCreditPoints}
-        selectedCoursesCounter={selectedCoursesCounter} 
-        toggleModule={this.toggleModule.bind(this)}
-        retrieveSelectedModules={this.retrieveSelectedModules()}
-        />
-        <CourseSchedule selectedCourseInfo={selectedCourseInfo} combinedTitleAndData={combinedTitleAndData}/>
+        <div>
+          <ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
+          {this.state.clicked && !this.state.popupDismissed ?
+            <Popup
+              dismissPopup={this.dismissPopup.bind(this)}
+              selectUrgentModules={this.selectUrgentModules.bind(this)}
+            /> : null}
+          <PlanningSection
+            totalCreditPoints={totalCreditPoints}
+            selectedCourseInfo={selectedCourseInfo}
+            selectedModuleTitles={selectedModuleTitles}
+            currentCreditPoints={currentCreditPoints}
+            remainingSemesters={remainingSemesters}
+            selectedCoursesCounter={selectedCoursesCounter}
+            toggleModule={this.toggleModule.bind(this)}
+            retrieveSelectedModules={this.retrieveSelectedModules()}
+          />
+          <CourseSchedule
+            selectedCourseInfo={selectedCourseInfo}
+            combinedTitleAndData={combinedTitleAndData}
+          />
         </div>
       );
     }

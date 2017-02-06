@@ -521,8 +521,8 @@
     }, {
       "id": 48,
       "related_module_id": 25,
-      "day": "Dienstag",
-      "startTime": "9:45",
+      "day": "Freitag",
+      "startTime": "12:15",
       "end-time": "15:30",
       "course-format": "Je nach Auswahl",
       "course-interval": "workshop",

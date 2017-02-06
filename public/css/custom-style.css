@@ -2,9 +2,18 @@
   display: inline;
 }
 
-.hover:hover {
-  background-color: #76B900;
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.1); }
+
+button:hover,
+.button:hover {
+  color: #555;
+  border-color: #bbb;
+  outline: 0;
 }
+
+.default-cursor { cursor: default; }
+
 .fix{
   background-color: #76B900;
   padding-top: auto;
@@ -18,9 +27,12 @@
 .red { background-color: #FF5F00; }
 .yellow { background-color: #FFFF66; }
 .grey { background-color: #AFAFAF; }
-.blue { 
-  background-color: #0082D1; 
-  color: #FFFFF0; 
+.blue {
+  background-color: #0082D1;
+  color: #FFFFF0;
+}
+.blue:hover {
+  color: #FFFFF0;
 }
 
 .button{
@@ -28,14 +40,15 @@
   line-height: 13px;
   letter-spacing: 0;
   text-transform: none;
-  font-size: 12px;
-  padding-top: 4px;
-  padding-right: 20px;
-  padding-bottom: 0px;
-  padding-left: 20px;
+  font-size: 14px;
+  padding: 10px 20px;
 }
 
-.italic{ font-style: italic; }
+.moduleStatus{ 
+  font-style: italic; 
+  font-weight: 400;
+}
+
 
 /* ------- Tables -------  */
 
@@ -85,7 +98,7 @@ div.flex-container{
 
 .flex-item{
   vertical-align: center;
-  -webkit-align-self: center; 
+  -webkit-align-self: center;
   align-self: center;
   margin-top: 10px;
   padding-bottom: 0px;
@@ -106,8 +119,8 @@ div.flex-container{
 
 *{
 -webkit-box-sizing: border-box;
--moz-box-sizing: border-box; 
--ms-box-sizing: border-box; 
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
 box-sizing: border-box;
 }
 
@@ -137,29 +150,25 @@ section#symbology{
 .selected_urgent{
   border: 1px solid grey;
   border-radius: 5px; 
-  width: 70px;
+  width: 30px;
   height: 30px;
   margin: auto;
 }
 
 .available{
-  background-color: #0082D1;  
+  background-color: #0082D1;
  }
 .started{
-  background-color: #FFFF66;  
+  background-color: #FFFF66;
 }
 .completed{
-  background-color: #AFAFAF; 
+  background-color: #AFAFAF;
 }
 .urgent{
-  background-color: #FF5F00;  
+  background-color: #FF5F00;
 }
 .selected{
-  background-color: #76B900;  
-}
-.selected_urgent{
-  background-color: #76B900; 
-  border: 2px solid red; 
+  background-color: #76B900;
 }
 
 section#coursePlan{
@@ -182,36 +191,49 @@ section#planningSection{
 }
 div#sum{
   width: 30%;
-  min-height: 400px;
-  border: 1px solid grey;
   display: inline-block;
+  min-height: 460px;
 }
 div#sum_total{
   border: 1px solid grey;
   text-align: center;
-  padding: 5px;
-  min-height: 200px;
+  padding: 20px;
+  height: 180px;
 }
 div#sum_current{
   border: 1px solid grey;
   text-align: center;
-  padding: 5px;
-  min-height: 200px;
+  padding: 20px;
+  height: 270px;
 }
 div#coursePool{
   border: 1px solid grey;
   min-width: 67%;
-  min-height: 417px;
+  min-height: 380px;
   text-align: center;
 }
 .bordertype{
     border: 3px dashed grey;
     border-radius: 70px;
     margin: 40px 40px 40px 40px;
-    height: 335px;
+    width: 90%;
+    height: 380px;
     background-color: white;
     text-align: center;
+    vertical-align: middle;
+    overflow-y: scroll;
 }
+
+.infotext{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-weight: 600;
+  font-style: italic;
+}
+
 section#schedule{
   border: 1px solid grey;
   padding: 10px;
@@ -229,4 +251,17 @@ footer{
   text-align: center;
   padding: 10px;
   border: 1px solid grey;
+}
+
+/* ------- Popup ------------- */
+
+.popup {
+  background-color: white;
+  border: 3px solid #FF5F00;
+  left: 25%;
+  margin: auto;
+  padding: 10px;
+  position: fixed;
+  top: 50%;
+  width: 50%;
 }

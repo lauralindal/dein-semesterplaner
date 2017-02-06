@@ -29,24 +29,20 @@ class ModulePlan extends React.Component {
             </div>
             <div className="flex-item item5">
               <div className="selected"></div>
-              <div><h6>Kurs geplant</h6></div>
-            </div>
-            <div className="flex-item item6">
-              <div className="selected_urgent"></div>
-              <div><h6>Dringlicher Kurs geplant</h6></div>
+              <div><h6>Kurs ausgewählt</h6></div>
             </div>
           </div>
         </legend>
-      
+
       </div>
 
     </section>
-      
+
     <div>
-      Regelstudienplan
+      <h5>Regelstudienplan</h5>
       {this.props.semesters.map(function(semester, index) {
         return (
-          <Semester semester={index+1} modules={semester} toggleModule={_this.props.toggleModule} />
+          <Semester key={"plan_" + index} semester={index+1} modules={semester} toggleModule={_this.props.toggleModule} />
           )
       })
     }
