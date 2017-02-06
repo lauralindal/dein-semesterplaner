@@ -4,6 +4,7 @@ class Popup extends React.Component {
   render() {
     return (
       <div>
+      <div className="cover">
         <div className="popup">
           <p>
             <strong>ACHTUNG!</strong> <br />
@@ -14,7 +15,6 @@ class Popup extends React.Component {
           <button className="redHover marginButton" onClick={this.props.dismissPopup}> Ignorieren </button>
           <button className="greenHover marginButton" onClick={this.props.selectUrgentModules}> Alle auswählen </button>
         </div>
-        <div className="cover">
         </div>
       </div>
     )

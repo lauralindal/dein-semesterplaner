@@ -275,6 +275,7 @@ footer{
   padding: 10px;
   position: absolute;
   text-align: center;
+  top: 40%;
   width:50%;
   z-index: 999;
 }
