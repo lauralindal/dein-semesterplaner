@@ -255,14 +255,37 @@ footer{
 
 /* ------- Popup ------------- */
 
+.cover {
+  background:rgba(0,0,0,0.2);
+  height:100%;
+  left:0;
+  margin: auto;
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:5;
+}
+
 .popup {
   background-color: white;
   border: 3px solid #FF5F00;
+  border-radius:10px;
   left: 25%;
-  margin: auto;
+  margin:0 auto;
   padding: 10px;
-  position: fixed;
+  position: absolute;
   text-align: center;
-  top: 50%;
-  width: 50%;
+  width:50%;
+  z-index: 999;
 }
+
+.popup:target,
+.popup:target + .cover{
+  display:block; opacity:10;
+}
+
+.redHover:hover { background-color: #FF5F00; }
+
+.greenHover:hover { background-color: #76B900; }
+
+.marginButton { margin: 0 5px; }

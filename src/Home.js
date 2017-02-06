@@ -273,10 +273,11 @@ class Home extends React.Component {
       for(var e = 0; e < urgentModules.length; e++){
         if(modules[i].id === urgentModules[e].module_id){
           var urgentModuleTitles = [];
-          urgentModuleTitles.push(modules[i].title)
+          urgentModuleTitles.push(modules[i].title);
         }
       }
-    } return urgentModuleTitles;
+    }
+    return urgentModuleTitles;
   };
 
   renderUserData(isLoggedIn) {
