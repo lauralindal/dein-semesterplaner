@@ -33,16 +33,16 @@ class ModulePlan extends React.Component {
             </div>
           </div>
         </legend>
-      
+
       </div>
 
     </section>
-      
+
     <div>
       <h5>Regelstudienplan</h5>
       {this.props.semesters.map(function(semester, index) {
         return (
-          <Semester key={index+1} semester={index+1} modules={semester} toggleModule={_this.props.toggleModule} />
+          <Semester key={"plan_" + index} semester={index+1} modules={semester} toggleModule={_this.props.toggleModule} />
           )
       })
     }

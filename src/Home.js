@@ -15,7 +15,7 @@ class Home extends React.Component {
     super();
     this.state = {
       isLoggedIn: hoodie.account.isSignedIn(),
-      userModules: users.students[3].tracked_modules,
+      userModules: users.students[0].tracked_modules,
       popupDismissed: false,
       clicked: false,
       originalStatus: users.students[0].tracked_modules.map((module) => {
@@ -36,8 +36,8 @@ class Home extends React.Component {
  // most current set of module information for our user
   getCurrentUserData(){
     var self = this;
-    return hoodie.store.findAll().then(function(userDataSets){
-      self.setState({userModules: userDataSets[0].userModules});
+    return hoodie.store.find("userModules").then(function(userDataSet){
+      self.setState({userModules: userDataSet.userModules});
       return Promise.resolve();
     });
   };
@@ -213,8 +213,8 @@ class Home extends React.Component {
 
   toggleModule(moduleId, e){
     e.preventDefault();
-    var userModules=this.state.userModules;
-    var data=null;
+    var userModules = this.state.userModules;
+    var data = null;
     for (var i = 0; i < userModules.length; i++) {
       if (userModules[i].module_id === moduleId){
         if(userModules[i].status === "completed"){
@@ -237,7 +237,7 @@ class Home extends React.Component {
       clicked: urgentModules.length > 0
     });
 
-    hoodie.store.add({
+    hoodie.store.update("userModules", {
       "userModules": userModules
     })
     .then(() => {
@@ -247,7 +247,7 @@ class Home extends React.Component {
 
   dismissPopup() {
     this.setState({popupDismissed: true});
-  }
+  };
 
   selectUrgentModules() {
     var newUserModules = this.state.userModules.map((userModule)=> {
@@ -261,19 +261,35 @@ class Home extends React.Component {
       userModules: newUserModules,
       popupDismissed: true
     });
-  }
+  };
+
+  returnUrgentModuleTitles() {
+    var modules = moduleplan.degree_course.modules;
+    var userModules = this.state.userModules;
+    var urgentModules = userModules.filter((userModule)=> {
+      return userModule.status === "urgent";
+    });
+    for(var i = 0; i<modules.length; i++){
+      for(var e = 0; e < urgentModules.length; e++){
+        if(modules[i].id === urgentModules[e].module_id){
+          var urgentModuleTitles = [];
+          urgentModuleTitles.push(modules[i].title)
+        }
+      }
+    } return urgentModuleTitles;
+  };
 
   renderUserData(isLoggedIn) {
-    var totalCreditPoints = this.calculateTotalCredits();
-    var currentCreditPoints = this.calculateCurrentCredits();
-    var remainingSemesters = this.calculateRemainingSemesters();
-    var selectedCoursesCounter = this.countSelectedCourses();
-    var semesters = this.getSemestersForUser();
-    var selectedCourseInfo = this.retrieveSelectedCourseInfo();
-    var selectedModuleTitles = this.retrieveSelectedModuleTitle();
-    var combinedTitleAndData = this.combineSelectedTitlesAndData();
-    //TODO give each react element a unique key
     if(isLoggedIn) {
+      var totalCreditPoints = this.calculateTotalCredits();
+      var currentCreditPoints = this.calculateCurrentCredits();
+      var remainingSemesters = this.calculateRemainingSemesters();
+      var selectedCoursesCounter = this.countSelectedCourses();
+      var semesters = this.getSemestersForUser();
+      var selectedCourseInfo = this.retrieveSelectedCourseInfo();
+      var selectedModuleTitles = this.retrieveSelectedModuleTitle();
+      var combinedTitleAndData = this.combineSelectedTitlesAndData();
+      var urgentModuleTitles = this.returnUrgentModuleTitles();
       return (
         <div>
           <ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
@@ -281,6 +297,7 @@ class Home extends React.Component {
             <Popup
               dismissPopup={this.dismissPopup.bind(this)}
               selectUrgentModules={this.selectUrgentModules.bind(this)}
+              returnUrgentModuleTitles={urgentModuleTitles}
             /> : null}
           <PlanningSection
             totalCreditPoints={totalCreditPoints}

@@ -191,41 +191,46 @@ section#planningSection{
 }
 div#sum{
   width: 30%;
-  min-height: 400px;
-  border: 1px solid grey;
   display: inline-block;
+  min-height: 460px;
 }
 div#sum_total{
   border: 1px solid grey;
   text-align: center;
-  padding: 5px;
-  min-height: 30%;
+  padding: 20px;
+  height: 180px;
 }
 div#sum_current{
   border: 1px solid grey;
   text-align: center;
-  padding: 5px;
-  min-height: 70%;
+  padding: 20px;
+  height: 270px;
 }
 div#coursePool{
   border: 1px solid grey;
   min-width: 67%;
-  min-height: 417px;
+  min-height: 380px;
   text-align: center;
 }
 .bordertype{
     border: 3px dashed grey;
     border-radius: 70px;
     margin: 40px 40px 40px 40px;
-    height: 335px;
+    width: 90%;
+    height: 380px;
     background-color: white;
     text-align: center;
+    vertical-align: middle;
     overflow-y: scroll;
 }
 
-.wording{
-  margin: auto;
-  font-weight: bolder;
+.infotext{
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-weight: 600;
   font-style: italic;
 }
 
