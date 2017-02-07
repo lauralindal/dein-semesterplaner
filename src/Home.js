@@ -31,11 +31,11 @@ class Home extends React.Component {
     }
   };
 
+ // when we ask hoodie for all it has in store, we get an array of objects,
+ // so we want to pick the newest document/object which will contain the
+ // most current set of module information for our user
   getCurrentUserData(){
     var self = this;
-    // when we ask hoodie for all it has in store, we get an array of objects,
-    // so we want to pick the newest document/object which will contain the
-    // most current set of module information for our user
     return hoodie.store.find("userModules").then(function(userDataSet){
       self.setState({userModules: userDataSet.userModules});
       return Promise.resolve();
@@ -247,7 +247,7 @@ class Home extends React.Component {
 
   dismissPopup() {
     this.setState({popupDismissed: true});
-  }
+  };
 
   selectUrgentModules() {
     var newUserModules = this.state.userModules.map((userModule)=> {
@@ -261,7 +261,24 @@ class Home extends React.Component {
       userModules: newUserModules,
       popupDismissed: true
     });
-  }
+  };
+
+  returnUrgentModuleTitles() {
+    var modules = moduleplan.degree_course.modules;
+    var userModules = this.state.userModules;
+    var urgentModules = userModules.filter((userModule)=> {
+      return userModule.status === "urgent";
+    });
+    for(var i = 0; i<modules.length; i++){
+      for(var e = 0; e < urgentModules.length; e++){
+        if(modules[i].id === urgentModules[e].module_id){
+          var urgentModuleTitles = [];
+          urgentModuleTitles.push(modules[i].title);
+        }
+      }
+    }
+    return urgentModuleTitles;
+  };
 
   renderUserData(isLoggedIn) {
     if(isLoggedIn) {
@@ -273,6 +290,7 @@ class Home extends React.Component {
       var selectedCourseInfo = this.retrieveSelectedCourseInfo();
       var selectedModuleTitles = this.retrieveSelectedModuleTitle();
       var combinedTitleAndData = this.combineSelectedTitlesAndData();
+      var urgentModuleTitles = this.returnUrgentModuleTitles();
       return (
         <div>
           <ModulePlan semesters={semesters} toggleModule={this.toggleModule.bind(this)} />
@@ -280,6 +298,7 @@ class Home extends React.Component {
             <Popup
               dismissPopup={this.dismissPopup.bind(this)}
               selectUrgentModules={this.selectUrgentModules.bind(this)}
+              returnUrgentModuleTitles={urgentModuleTitles}
             /> : null}
           <PlanningSection
             totalCreditPoints={totalCreditPoints}
