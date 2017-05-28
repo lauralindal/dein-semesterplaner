@@ -5,6 +5,7 @@ import ModulePlan from './ModulePlan';
 import PlanningSection from './PlanningSection';
 import CourseSchedule from './CourseSchedule';
 import Popup from './PopupAlert.js';
+import HoodieRepository from './HoodieRepository.js';
 import moduleplan from './moduleplan.json';
 import users from './users.json';
 import courseData from './courseData.json';
@@ -13,8 +14,9 @@ class Home extends React.Component {
 
   constructor(){
     super();
+    this.repository = new HoodieRepository();
     this.state = {
-      isLoggedIn: hoodie.account.isSignedIn(),
+      isLoggedIn: this.repository.isSignedIn(),
       userModules: users.students[0].tracked_modules,
       popupDismissed: false,
       clicked: false,
@@ -36,7 +38,7 @@ class Home extends React.Component {
  // most current set of module information for our user
   getCurrentUserData(){
     var self = this;
-    return hoodie.store.find("userModules").then(function(userDataSet){
+    return this.repository.getCurrentUserData().then(function(userDataSet){
       self.setState({userModules: userDataSet.userModules});
       return Promise.resolve();
     });
@@ -44,15 +46,15 @@ class Home extends React.Component {
 
   performLogin(email, password) {
     var self = this;
-    hoodie.account.signIn({ username: email, password: password})
+    this.repository.signIn(email, password)
     .then(() => {
       this.setState({isLoggedIn: true});
       this.getCurrentUserData();
     })
     //TODO use arrow functionm & avoid self/this
     .catch(function (error) {
-      hoodie.account.destroy();
-      hoodie.account.signUp({username: email, password: password});
+      this.repository.deleteAccount();
+      this.repository.signUp(email, password);
       seedUserData()
       .then(function (userModules) {
         console.log('your initial data has been saved in state');
@@ -65,12 +67,12 @@ class Home extends React.Component {
   };
 
   performLogout() {
-    hoodie.account.signOut()
+    this.repository.signOut()
     .then(() => {
       this.setState({isLoggedIn: false});
     })
-    .catch(function (error) {
-      hoodie.account.destroy();
+    .catch((error) => {
+      this.repository.deleteAccount();
       console.log('🐞', error);
     })
   };
@@ -237,9 +239,7 @@ class Home extends React.Component {
       clicked: urgentModules.length > 0
     });
 
-    hoodie.store.update("userModules", {
-      "userModules": userModules
-    })
+    this.repository.updateUserModules(userModules)
     .then(() => {
       console.log('hoodie now has your new data');
     })
