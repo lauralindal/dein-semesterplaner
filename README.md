@@ -1,7 +1,8 @@
 # Achtung
 
 Die weiterentwickelte Version findet sich in einem [neuen Repository](https://github.com/lauralindal/semester-on-rails)!
-The evolved version can be found in a [new repository]()https://github.com/lauralindal/semester-on-rails!
+
+The evolved version can be found in a [new repository](https://github.com/lauralindal/semester-on-rails)!
 
 # Dein Semesterplaner
 
